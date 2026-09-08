@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #17202a;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e1e5e8;
+
+    padding: 24px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #eef8f1;
+    color: #247a3b;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+
+    background: #2e9d50;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    width: 88%;
+    max-width: 1250px;
+
+    margin: 35px auto;
+}
+
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.overview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: white;
+
+    border: 1px solid #e1e5e8;
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.label {
+    display: block;
+
+    color: #7a838c;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.info-card strong {
+    font-size: 17px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.forecast-section,
+.legend-section,
+.environment,
+.model-section {
+    background: white;
+
+    border: 1px solid #e1e5e8;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #7a838c;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   DAY BUTTONS
+========================= */
+
+.day-selector {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.day-button {
+    border: 1px solid #d7dce0;
+
+    background: #ffffff;
+
+    padding: 10px 22px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.day-button:hover {
+    background: #f0f3f5;
+}
+
+.day-button.active {
+    background: #17202a;
+
+    color: white;
+
+    border-color: #17202a;
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.map-container {
+    background: #edf1f4;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.map-container img {
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================
+   MAP INFO
+========================= */
+
+.map-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+.map-info > div {
+    background: #f7f8f9;
+
+    padding: 15px;
+
+    border-radius: 8px;
+}
+
+.map-info strong {
+    font-size: 15px;
+}
+
+
+/* =========================
+   LEGEND
+========================= */
+
+.legend-section h2 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.legend {
+    display: flex;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.legend-box {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 4px;
+}
+
+.legend-box.normal {
+    background: #4caf50;
+}
+
+.legend-box.elevated {
+    background: #f2c94c;
+}
+
+.legend-box.strong {
+    background: #e74c3c;
+}
+
+.legend-item strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.legend-item small {
+    color: #7a838c;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   ENVIRONMENT
+========================= */
+
+.environment-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+.environment-card {
+    border: 1px solid #e1e5e8;
+
+    border-radius: 9px;
+
+    padding: 18px;
+
+    text-align: center;
+}
+
+.environment-card .icon {
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.environment-card strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.environment-card span:last-child {
+    color: #7a838c;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   MODEL
+========================= */
+
+.model-section h2 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.model-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.model-grid > div {
+    background: #f7f8f9;
+
+    padding: 17px;
+
+    border-radius: 8px;
+}
+
+.model-grid strong {
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: white;
+
+    border-top: 1px solid #e1e5e8;
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #7a838c;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .overview {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .environment-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .model-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+    .day-selector {
+        overflow-x: auto;
+    }
+
+    .day-button {
+        white-space: nowrap;
+    }
+
+    .map-info {
+        grid-template-columns: 1fr;
+    }
+
+    .environment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .model-grid {
+        grid-template-columns: 1fr;
+    }
+    /* =========================
+   WARNING LEVELS
+========================= */
+
+.warning-normal {
+    color: #247a3b;
+}
+
+.warning-elevated {
+    color: #b77900;
+}
+
+.warning-strong {
+    color: #c0392b;
+    font-weight: 700;
+}
+/* ============================================================
+   DYNAMIC WARNING DISPLAY
+============================================================ */
+
+.warning-normal {
+    color: #247a3b;
+    font-weight: 700;
+}
+
+.warning-elevated {
+    color: #b77900;
+    font-weight: 700;
+}
+
+.warning-strong {
+    color: #c0392b;
+    font-weight: 700;
+}
+
+
+/* Smooth warning transition */
+
+#warning-level {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Slight emphasis for strong warning */
+
+.warning-strong {
+    transform: scale(1.03);
+}
+/* ============================================================
+   WARNING LEVEL DISPLAY
+============================================================ */
+
+#warning-level {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+
+/* Normal */
+
+.warning-normal {
+    color: #247a3b;
+    background: #e8f5e9;
+}
+
+
+/* Elevated */
+
+.warning-elevated {
+    color: #9a6700;
+    background: #fff4cc;
+}
+
+
+/* Strong */
+
+.warning-strong {
+    color: #b42318;
+    background: #fde8e7;
+    transform: scale(1.03);
+}
+
+}
