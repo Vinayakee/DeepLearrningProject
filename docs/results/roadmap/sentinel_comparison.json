@@ -1,0 +1,2706 @@
+{
+  "period": [
+    "2024-02-12",
+    "2024-02-15"
+  ],
+  "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc",
+  "sentinel_export_sha256": "c135138bfa2334ebf8051c9b7d5cc95426c18879ab1964ef15e8abd6c51d5d37",
+  "decision_rule": {
+    "type": "score_ratios",
+    "scales": [
+      1.0,
+      1.2840254166877414,
+      0.7788007830714049
+    ]
+  },
+  "origins": [
+    {
+      "input_end_date": "2024-02-12",
+      "forecast_dates": [
+        "2024-02-13",
+        "2024-02-14",
+        "2024-02-15",
+        "2024-02-16",
+        "2024-02-17"
+      ],
+      "agreement": {
+        "overlap_cell_days": 212,
+        "log10_bias": -0.10906845331192017,
+        "log10_rmse": 0.16963189840316772,
+        "median_ratio": 0.7430136799812317,
+        "modis_valid_cell_days": 8245,
+        "additional_cell_days": 3610,
+        "retained_for_training": false
+      },
+      "qc": {
+        "late_publication_days_excluded": 0,
+        "valid_cell_days": 3822,
+        "native_qc_verified_export": true
+      },
+      "source_available_at_utc": "2024-02-12T11:01:40.348776Z",
+      "modis": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                0,
+                4640,
+                0,
+                359,
+                3246
+              ],
+              "valid_observations": 8245,
+              "observed_input_days": 3,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                0.0,
+                81.64701742037657,
+                0.0,
+                6.3170860461024105,
+                57.11771951434101
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            0.0,
+            81.64701742037657,
+            0.0,
+            6.3170860461024105,
+            57.11771951434101
+          ],
+          "chlorophyll_mean_input_coverage_percent": 29.016364596163996,
+          "valid_observations": 8245,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 232,
+            "elevated_risk_pixels": 108,
+            "high_risk_percentage": 4.094599364631133,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.36830154061317444,
+            "mean_elevated_probability": 0.235088050365448,
+            "max_probability": 0.6824120283126831,
+            "mean_probability": 0.15136340260505676
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 310,
+            "elevated_risk_pixels": 405,
+            "high_risk_percentage": 5.471231909636428,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.3645099997520447,
+            "mean_elevated_probability": 0.23310711979866028,
+            "max_probability": 0.7643259763717651,
+            "mean_probability": 0.15678414702415466
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 160,
+            "elevated_risk_pixels": 202,
+            "high_risk_percentage": 2.8238616307800917,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.3721446096897125,
+            "mean_elevated_probability": 0.2421727180480957,
+            "max_probability": 0.6306049227714539,
+            "mean_probability": 0.15159043669700623
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 185,
+            "elevated_risk_pixels": 332,
+            "high_risk_percentage": 3.265090010589481,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.35083824396133423,
+            "mean_elevated_probability": 0.22433193027973175,
+            "max_probability": 0.6661897301673889,
+            "mean_probability": 0.1556699126958847
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 314,
+            "elevated_risk_pixels": 132,
+            "high_risk_percentage": 5.54182845040593,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.34947457909584045,
+            "mean_elevated_probability": 0.2310355007648468,
+            "max_probability": 0.6716142892837524,
+            "mean_probability": 0.17261622846126556
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.8658580521196109,
+          "macro_f1": 0.47704031586612405,
+          "valid_pixel_forecasts": 8327,
+          "confusion_matrix": [
+            [
+              7005,
+              396,
+              157
+            ],
+            [
+              199,
+              106,
+              55
+            ],
+            [
+              210,
+              100,
+              99
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9448340976530888,
+              "recall": 0.9268324953691452,
+              "f1": 0.9357467272241518,
+              "support": 7558
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.1760797342192691,
+              "recall": 0.29444444444444445,
+              "f1": 0.2203742203742204,
+              "support": 360
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.3183279742765273,
+              "recall": 0.24205378973105135,
+              "f1": 0.27499999999999997,
+              "support": 409
+            }
+          ]
+        }
+      },
+      "modis_sentinel": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                0,
+                4640,
+                0,
+                3969,
+                3246
+              ],
+              "valid_observations": 11855,
+              "observed_input_days": 3,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                0.0,
+                81.64701742037657,
+                0.0,
+                69.83987330635227,
+                57.11771951434101
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-12"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            0.0,
+            81.64701742037657,
+            0.0,
+            69.83987330635227,
+            57.11771951434101
+          ],
+          "chlorophyll_mean_input_coverage_percent": 41.72092204821397,
+          "valid_observations": 11855,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 524,
+            "elevated_risk_pixels": 146,
+            "high_risk_percentage": 9.2481468408048,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.36830154061317444,
+            "mean_elevated_probability": 0.23011887073516846,
+            "max_probability": 0.6855959296226501,
+            "mean_probability": 0.16524727642536163
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 574,
+            "elevated_risk_pixels": 259,
+            "high_risk_percentage": 10.13060360042358,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.3645099997520447,
+            "mean_elevated_probability": 0.22677281498908997,
+            "max_probability": 0.7696059346199036,
+            "mean_probability": 0.17167288064956665
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 434,
+            "elevated_risk_pixels": 245,
+            "high_risk_percentage": 7.659724673490999,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.3721446096897125,
+            "mean_elevated_probability": 0.2392120063304901,
+            "max_probability": 0.633220911026001,
+            "mean_probability": 0.16382938623428345
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 467,
+            "elevated_risk_pixels": 275,
+            "high_risk_percentage": 8.242146134839393,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.35083824396133423,
+            "mean_elevated_probability": 0.22114819288253784,
+            "max_probability": 0.6684345006942749,
+            "mean_probability": 0.1683693826198578
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 560,
+            "elevated_risk_pixels": 149,
+            "high_risk_percentage": 9.883515707730322,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.34947457909584045,
+            "mean_elevated_probability": 0.22869743406772614,
+            "max_probability": 0.6755026578903198,
+            "mean_probability": 0.1844332069158554
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.8537288339137745,
+          "macro_f1": 0.48863742509020297,
+          "valid_pixel_forecasts": 8327,
+          "confusion_matrix": [
+            [
+              6814,
+              357,
+              387
+            ],
+            [
+              141,
+              59,
+              160
+            ],
+            [
+              83,
+              90,
+              236
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9681727763569196,
+              "recall": 0.9015612595924848,
+              "f1": 0.9336804604001097,
+              "support": 7558
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.116600790513834,
+              "recall": 0.1638888888888889,
+              "f1": 0.13625866050808313,
+              "support": 360
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.30140485312899107,
+              "recall": 0.5770171149144254,
+              "f1": 0.39597315436241615,
+              "support": 409
+            }
+          ]
+        }
+      },
+      "horizon_one_truth": {
+        "qualified": true,
+        "strong_fraction_percent": 3.571428571428571,
+        "level": "NORMAL"
+      }
+    },
+    {
+      "input_end_date": "2024-02-13",
+      "forecast_dates": [
+        "2024-02-14",
+        "2024-02-15",
+        "2024-02-16",
+        "2024-02-17",
+        "2024-02-18"
+      ],
+      "agreement": {
+        "overlap_cell_days": 212,
+        "log10_bias": -0.10906845331192017,
+        "log10_rmse": 0.16963189840316772,
+        "median_ratio": 0.7430136799812317,
+        "modis_valid_cell_days": 9423,
+        "additional_cell_days": 3610,
+        "retained_for_training": false
+      },
+      "qc": {
+        "late_publication_days_excluded": 0,
+        "valid_cell_days": 3822,
+        "native_qc_verified_export": true
+      },
+      "source_available_at_utc": "2024-02-12T11:01:40.348776Z",
+      "modis": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                4640,
+                0,
+                359,
+                3246,
+                1178
+              ],
+              "valid_observations": 9423,
+              "observed_input_days": 4,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                81.64701742037657,
+                0.0,
+                6.3170860461024105,
+                57.11771951434101,
+                20.728488474397324
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            81.64701742037657,
+            0.0,
+            6.3170860461024105,
+            57.11771951434101,
+            20.728488474397324
+          ],
+          "chlorophyll_mean_input_coverage_percent": 33.16206229104346,
+          "valid_observations": 9423,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 324,
+            "elevated_risk_pixels": 151,
+            "high_risk_percentage": 5.7183198023296855,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.369174063205719,
+            "mean_elevated_probability": 0.24009697139263153,
+            "max_probability": 0.6935136318206787,
+            "mean_probability": 0.15872065722942352
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 387,
+            "elevated_risk_pixels": 321,
+            "high_risk_percentage": 6.830215319449347,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.368924081325531,
+            "mean_elevated_probability": 0.23780274391174316,
+            "max_probability": 0.7568120360374451,
+            "mean_probability": 0.16296172142028809
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 186,
+            "elevated_risk_pixels": 313,
+            "high_risk_percentage": 3.2827391457818567,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.3746775686740875,
+            "mean_elevated_probability": 0.2472635805606842,
+            "max_probability": 0.6406201124191284,
+            "mean_probability": 0.1586018055677414
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 240,
+            "elevated_risk_pixels": 350,
+            "high_risk_percentage": 4.235792446170137,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.3555784225463867,
+            "mean_elevated_probability": 0.22925794124603271,
+            "max_probability": 0.6715542674064636,
+            "mean_probability": 0.16239303350448608
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 380,
+            "elevated_risk_pixels": 163,
+            "high_risk_percentage": 6.7066713731027185,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.3541637659072876,
+            "mean_elevated_probability": 0.2356666773557663,
+            "max_probability": 0.6659272909164429,
+            "mean_probability": 0.1783638447523117
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.872430802959715,
+          "macro_f1": 0.47826711163983426,
+          "valid_pixel_forecasts": 7298,
+          "confusion_matrix": [
+            [
+              6192,
+              232,
+              172
+            ],
+            [
+              195,
+              81,
+              59
+            ],
+            [
+              196,
+              77,
+              94
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9406045875740544,
+              "recall": 0.9387507580351728,
+              "f1": 0.939676758479399,
+              "support": 6596
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.2076923076923077,
+              "recall": 0.2417910447761194,
+              "f1": 0.223448275862069,
+              "support": 335
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.28923076923076924,
+              "recall": 0.2561307901907357,
+              "f1": 0.2716763005780347,
+              "support": 367
+            }
+          ]
+        }
+      },
+      "modis_sentinel": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                4640,
+                0,
+                3969,
+                3246,
+                1178
+              ],
+              "valid_observations": 13033,
+              "observed_input_days": 4,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                81.64701742037657,
+                0.0,
+                69.83987330635227,
+                57.11771951434101,
+                20.728488474397324
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-13"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            81.64701742037657,
+            0.0,
+            69.83987330635227,
+            57.11771951434101,
+            20.728488474397324
+          ],
+          "chlorophyll_mean_input_coverage_percent": 45.86661974309344,
+          "valid_observations": 13033,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 512,
+            "elevated_risk_pixels": 97,
+            "high_risk_percentage": 9.036357218496294,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.3691506087779999,
+            "mean_elevated_probability": 0.23607486486434937,
+            "max_probability": 0.6954436302185059,
+            "mean_probability": 0.1693972647190094
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 559,
+            "elevated_risk_pixels": 242,
+            "high_risk_percentage": 9.865866572537946,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.3689044415950775,
+            "mean_elevated_probability": 0.23278330266475677,
+            "max_probability": 0.7655304074287415,
+            "mean_probability": 0.17511552572250366
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 438,
+            "elevated_risk_pixels": 189,
+            "high_risk_percentage": 7.730321214260501,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.374647319316864,
+            "mean_elevated_probability": 0.24467626214027405,
+            "max_probability": 0.6420193314552307,
+            "mean_probability": 0.16801029443740845
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 466,
+            "elevated_risk_pixels": 236,
+            "high_risk_percentage": 8.224496999647018,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.35555219650268555,
+            "mean_elevated_probability": 0.2266281098127365,
+            "max_probability": 0.6755793690681458,
+            "mean_probability": 0.1724240630865097
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 552,
+            "elevated_risk_pixels": 109,
+            "high_risk_percentage": 9.742322626191315,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.3541296124458313,
+            "mean_elevated_probability": 0.23338568210601807,
+            "max_probability": 0.6732084155082703,
+            "mean_probability": 0.1880548596382141
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.8688681830638532,
+          "macro_f1": 0.48849608863252264,
+          "valid_pixel_forecasts": 7298,
+          "confusion_matrix": [
+            [
+              6102,
+              166,
+              328
+            ],
+            [
+              153,
+              42,
+              140
+            ],
+            [
+              127,
+              43,
+              197
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9561266060795989,
+              "recall": 0.9251061249241965,
+              "f1": 0.9403606102635229,
+              "support": 6596
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.16733067729083664,
+              "recall": 0.1253731343283582,
+              "f1": 0.14334470989761092,
+              "support": 335
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.2962406015037594,
+              "recall": 0.5367847411444142,
+              "f1": 0.3817829457364341,
+              "support": 367
+            }
+          ]
+        }
+      },
+      "horizon_one_truth": {
+        "qualified": true,
+        "strong_fraction_percent": 4.220328908262334,
+        "level": "NORMAL"
+      }
+    },
+    {
+      "input_end_date": "2024-02-14",
+      "forecast_dates": [
+        "2024-02-15",
+        "2024-02-16",
+        "2024-02-17",
+        "2024-02-18",
+        "2024-02-19"
+      ],
+      "agreement": {
+        "overlap_cell_days": 212,
+        "log10_bias": -0.10906845331192017,
+        "log10_rmse": 0.16963189840316772,
+        "median_ratio": 0.7430136799812317,
+        "modis_valid_cell_days": 9841,
+        "additional_cell_days": 3610,
+        "retained_for_training": false
+      },
+      "qc": {
+        "late_publication_days_excluded": 0,
+        "valid_cell_days": 3822,
+        "native_qc_verified_export": true
+      },
+      "source_available_at_utc": "2024-02-12T11:01:40.348776Z",
+      "modis": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                0,
+                359,
+                3246,
+                1178,
+                5058
+              ],
+              "valid_observations": 9841,
+              "observed_input_days": 4,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                0.0,
+                6.3170860461024105,
+                57.11771951434101,
+                20.728488474397324,
+                89.00228752419497
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            0.0,
+            6.3170860461024105,
+            57.11771951434101,
+            20.728488474397324,
+            89.00228752419497
+          ],
+          "chlorophyll_mean_input_coverage_percent": 34.63311631180714,
+          "valid_observations": 9841,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 406,
+            "elevated_risk_pixels": 290,
+            "high_risk_percentage": 7.165548888104483,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.36920252442359924,
+            "mean_elevated_probability": 0.23258964717388153,
+            "max_probability": 0.671331524848938,
+            "mean_probability": 0.16428528726100922
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 483,
+            "elevated_risk_pixels": 379,
+            "high_risk_percentage": 8.524532297917402,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.3595139682292938,
+            "mean_elevated_probability": 0.2342858910560608,
+            "max_probability": 0.7526217699050903,
+            "mean_probability": 0.17245033383369446
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 236,
+            "elevated_risk_pixels": 471,
+            "high_risk_percentage": 4.165195905400635,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.3721058964729309,
+            "mean_elevated_probability": 0.240168035030365,
+            "max_probability": 0.6210698485374451,
+            "mean_probability": 0.1633702516555786
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 290,
+            "elevated_risk_pixels": 483,
+            "high_risk_percentage": 5.118249205788916,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.3470485210418701,
+            "mean_elevated_probability": 0.22499282658100128,
+            "max_probability": 0.6579345464706421,
+            "mean_probability": 0.1686468869447708
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 433,
+            "elevated_risk_pixels": 302,
+            "high_risk_percentage": 7.642075538298624,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.34710827469825745,
+            "mean_elevated_probability": 0.23058578372001648,
+            "max_probability": 0.6620887517929077,
+            "mean_probability": 0.1854240745306015
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.8611316568047337,
+          "macro_f1": 0.5009169428385137,
+          "valid_pixel_forecasts": 5408,
+          "confusion_matrix": [
+            [
+              4491,
+              336,
+              178
+            ],
+            [
+              69,
+              76,
+              62
+            ],
+            [
+              55,
+              51,
+              90
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9731310942578548,
+              "recall": 0.8973026973026973,
+              "f1": 0.9336798336798338,
+              "support": 5005
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.16414686825053995,
+              "recall": 0.3671497584541063,
+              "f1": 0.22686567164179103,
+              "support": 207
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.2727272727272727,
+              "recall": 0.45918367346938777,
+              "f1": 0.34220532319391633,
+              "support": 196
+            }
+          ]
+        }
+      },
+      "modis_sentinel": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                0,
+                3969,
+                3246,
+                1178,
+                5058
+              ],
+              "valid_observations": 13451,
+              "observed_input_days": 4,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                0.0,
+                69.83987330635227,
+                57.11771951434101,
+                20.728488474397324,
+                89.00228752419497
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            0.0,
+            69.83987330635227,
+            57.11771951434101,
+            20.728488474397324,
+            89.00228752419497
+          ],
+          "chlorophyll_mean_input_coverage_percent": 47.33767376385712,
+          "valid_observations": 13451,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 561,
+            "elevated_risk_pixels": 155,
+            "high_risk_percentage": 9.901164842922697,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.3691290020942688,
+            "mean_elevated_probability": 0.23041103780269623,
+            "max_probability": 0.67481529712677,
+            "mean_probability": 0.1689213365316391
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 614,
+            "elevated_risk_pixels": 251,
+            "high_risk_percentage": 10.836569008118602,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.3594490885734558,
+            "mean_elevated_probability": 0.2302291989326477,
+            "max_probability": 0.758375883102417,
+            "mean_probability": 0.17742681503295898
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 459,
+            "elevated_risk_pixels": 265,
+            "high_risk_percentage": 8.100953053300389,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.3720196485519409,
+            "mean_elevated_probability": 0.23895253241062164,
+            "max_probability": 0.6238008737564087,
+            "mean_probability": 0.16735516488552094
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 502,
+            "elevated_risk_pixels": 284,
+            "high_risk_percentage": 8.859865866572537,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.3469706177711487,
+            "mean_elevated_probability": 0.2229667454957962,
+            "max_probability": 0.6628624796867371,
+            "mean_probability": 0.17275899648666382
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 593,
+            "elevated_risk_pixels": 157,
+            "high_risk_percentage": 10.465937169078716,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.3470178246498108,
+            "mean_elevated_probability": 0.22915038466453552,
+            "max_probability": 0.6671950221061707,
+            "mean_probability": 0.18932536244392395
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.8596523668639053,
+          "macro_f1": 0.4766608025893977,
+          "valid_pixel_forecasts": 5408,
+          "confusion_matrix": [
+            [
+              4492,
+              204,
+              309
+            ],
+            [
+              67,
+              44,
+              96
+            ],
+            [
+              45,
+              38,
+              113
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9756733275412685,
+              "recall": 0.8975024975024976,
+              "f1": 0.9349568113227184,
+              "support": 5005
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.15384615384615385,
+              "recall": 0.21256038647342995,
+              "f1": 0.17849898580121704,
+              "support": 207
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.21814671814671815,
+              "recall": 0.576530612244898,
+              "f1": 0.3165266106442577,
+              "support": 196
+            }
+          ]
+        }
+      },
+      "horizon_one_truth": {
+        "qualified": false,
+        "strong_fraction_percent": null,
+        "level": "UNKNOWN"
+      }
+    },
+    {
+      "input_end_date": "2024-02-15",
+      "forecast_dates": [
+        "2024-02-16",
+        "2024-02-17",
+        "2024-02-18",
+        "2024-02-19",
+        "2024-02-20"
+      ],
+      "agreement": {
+        "overlap_cell_days": 0,
+        "modis_valid_cell_days": 9841,
+        "additional_cell_days": 0,
+        "retained_for_training": false
+      },
+      "qc": {
+        "late_publication_days_excluded": 0,
+        "valid_cell_days": 3822,
+        "native_qc_verified_export": true,
+        "source_age_gate": "Outside runtime maximum source age; MODIS fallback."
+      },
+      "source_available_at_utc": "2024-02-12T11:01:40.348776Z",
+      "modis": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                359,
+                3246,
+                1178,
+                5058,
+                0
+              ],
+              "valid_observations": 9841,
+              "observed_input_days": 4,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                6.3170860461024105,
+                57.11771951434101,
+                20.728488474397324,
+                89.00228752419497,
+                0.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            6.3170860461024105,
+            57.11771951434101,
+            20.728488474397324,
+            89.00228752419497,
+            0.0
+          ],
+          "chlorophyll_mean_input_coverage_percent": 34.63311631180714,
+          "valid_observations": 9841,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 544,
+            "elevated_risk_pixels": 143,
+            "high_risk_percentage": 9.601129544652313,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.36377474665641785,
+            "mean_elevated_probability": 0.22834590077400208,
+            "max_probability": 0.693902313709259,
+            "mean_probability": 0.1717388927936554
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 590,
+            "elevated_risk_pixels": 261,
+            "high_risk_percentage": 10.412989763501589,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.3638337254524231,
+            "mean_elevated_probability": 0.23418238759040833,
+            "max_probability": 0.7611140608787537,
+            "mean_probability": 0.18373049795627594
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 434,
+            "elevated_risk_pixels": 260,
+            "high_risk_percentage": 7.659724673490999,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.36763277649879456,
+            "mean_elevated_probability": 0.23646174371242523,
+            "max_probability": 0.6407522559165955,
+            "mean_probability": 0.16998547315597534
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 489,
+            "elevated_risk_pixels": 257,
+            "high_risk_percentage": 8.630427109071656,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.34902361035346985,
+            "mean_elevated_probability": 0.22394098341464996,
+            "max_probability": 0.6732101440429688,
+            "mean_probability": 0.17677263915538788
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 578,
+            "elevated_risk_pixels": 142,
+            "high_risk_percentage": 10.201200141193082,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.3460807204246521,
+            "mean_elevated_probability": 0.22872468829154968,
+            "max_probability": 0.6697317957878113,
+            "mean_probability": 0.1942521333694458
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.870223370869485,
+          "macro_f1": 0.4707258808412724,
+          "valid_pixel_forecasts": 5417,
+          "confusion_matrix": [
+            [
+              4583,
+              197,
+              234
+            ],
+            [
+              103,
+              35,
+              69
+            ],
+            [
+              79,
+              21,
+              96
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9618048268625393,
+              "recall": 0.9140406860789788,
+              "f1": 0.9373146538500869,
+              "support": 5014
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.1383399209486166,
+              "recall": 0.16908212560386474,
+              "f1": 0.15217391304347827,
+              "support": 207
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.24060150375939848,
+              "recall": 0.4897959183673469,
+              "f1": 0.32268907563025206,
+              "support": 196
+            }
+          ]
+        }
+      },
+      "modis_sentinel": {
+        "coverage": {
+          "state": "observed",
+          "observation_status": "VALID OBSERVATION",
+          "prediction_availability": "supported_prototype",
+          "features": {
+            "chlorophyll": {
+              "daily_valid_observations": [
+                359,
+                3246,
+                1178,
+                5058,
+                0
+              ],
+              "valid_observations": 9841,
+              "observed_input_days": 4,
+              "required_minimum_observed_days": 2,
+              "daily_coverage_percent": [
+                6.3170860461024105,
+                57.11771951434101,
+                20.728488474397324,
+                89.00228752419497,
+                0.0
+              ],
+              "most_recent_observed_input_date": "2024-02-14"
+            },
+            "sst": {
+              "daily_valid_observations": [
+                5437,
+                5437,
+                5437,
+                5437,
+                5437
+              ],
+              "valid_observations": 27185,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314,
+                95.67130036952314
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "wind_u": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "wind_v": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "rainfall": {
+              "daily_valid_observations": [
+                5683,
+                5683,
+                5683,
+                5683,
+                5683
+              ],
+              "valid_observations": 28415,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "current_u": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            },
+            "current_v": {
+              "daily_valid_observations": [
+                5624,
+                5624,
+                5624,
+                5624,
+                5624
+              ],
+              "valid_observations": 28120,
+              "observed_input_days": 5,
+              "required_minimum_observed_days": 1,
+              "daily_coverage_percent": [
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284,
+                98.961815942284
+              ],
+              "most_recent_observed_input_date": "2024-02-15"
+            }
+          },
+          "missing_input_features": [],
+          "insufficient_input_features": [],
+          "chlorophyll_daily_coverage_percent": [
+            6.3170860461024105,
+            57.11771951434101,
+            20.728488474397324,
+            89.00228752419497,
+            0.0
+          ],
+          "chlorophyll_mean_input_coverage_percent": 34.63311631180714,
+          "valid_observations": 9841,
+          "required_minimum_observations": 1421,
+          "marine_supported_pixels": 5683,
+          "minimum_demo_quality_percent": 5.0,
+          "policy": {
+            "minimum_chlorophyll_mean_percent": 5.0,
+            "minimum_chlorophyll_observed_days": 2,
+            "minimum_environment_observed_days": 1,
+            "minimum_target_coverage_percent": 5.0
+          },
+          "note": "Valid observations count cell-days, not independent samples. 5% coverage and two observed chlorophyll days are explicit prototype safeguards; their regional tradeoffs are reported, not claimed as validated reliability/confidence."
+        },
+        "days": [
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 544,
+            "elevated_risk_pixels": 143,
+            "high_risk_percentage": 9.601129544652313,
+            "warning_level": "NORMAL",
+            "day": 1,
+            "max_elevated_probability": 0.36377474665641785,
+            "mean_elevated_probability": 0.22834590077400208,
+            "max_probability": 0.693902313709259,
+            "mean_probability": 0.1717388927936554
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 590,
+            "elevated_risk_pixels": 261,
+            "high_risk_percentage": 10.412989763501589,
+            "warning_level": "NORMAL",
+            "day": 2,
+            "max_elevated_probability": 0.3638337254524231,
+            "mean_elevated_probability": 0.23418238759040833,
+            "max_probability": 0.7611140608787537,
+            "mean_probability": 0.18373049795627594
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 434,
+            "elevated_risk_pixels": 260,
+            "high_risk_percentage": 7.659724673490999,
+            "warning_level": "NORMAL",
+            "day": 3,
+            "max_elevated_probability": 0.36763277649879456,
+            "mean_elevated_probability": 0.23646174371242523,
+            "max_probability": 0.6407522559165955,
+            "mean_probability": 0.16998547315597534
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 489,
+            "elevated_risk_pixels": 257,
+            "high_risk_percentage": 8.630427109071656,
+            "warning_level": "NORMAL",
+            "day": 4,
+            "max_elevated_probability": 0.34902361035346985,
+            "mean_elevated_probability": 0.22394098341464996,
+            "max_probability": 0.6732101440429688,
+            "mean_probability": 0.17677263915538788
+          },
+          {
+            "supported_pixels": 5666,
+            "high_risk_pixels": 578,
+            "elevated_risk_pixels": 142,
+            "high_risk_percentage": 10.201200141193082,
+            "warning_level": "NORMAL",
+            "day": 5,
+            "max_elevated_probability": 0.3460807204246521,
+            "mean_elevated_probability": 0.22872468829154968,
+            "max_probability": 0.6697317957878113,
+            "mean_probability": 0.1942521333694458
+          }
+        ],
+        "conditional_pixel_metrics": {
+          "accuracy": 0.870223370869485,
+          "macro_f1": 0.4707258808412724,
+          "valid_pixel_forecasts": 5417,
+          "confusion_matrix": [
+            [
+              4583,
+              197,
+              234
+            ],
+            [
+              103,
+              35,
+              69
+            ],
+            [
+              79,
+              21,
+              96
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9618048268625393,
+              "recall": 0.9140406860789788,
+              "f1": 0.9373146538500869,
+              "support": 5014
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.1383399209486166,
+              "recall": 0.16908212560386474,
+              "f1": 0.15217391304347827,
+              "support": 207
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.24060150375939848,
+              "recall": 0.4897959183673469,
+              "f1": 0.32268907563025206,
+              "support": 196
+            }
+          ]
+        }
+      },
+      "horizon_one_truth": {
+        "qualified": true,
+        "strong_fraction_percent": 7.319391634980989,
+        "level": "NORMAL"
+      }
+    }
+  ],
+  "conditional_pixel_metrics": {
+    "modis": {
+      "accuracy": 0.8675992438563327,
+      "macro_f1": 0.48252092321946805,
+      "valid_pixel_forecasts": 26450,
+      "confusion_matrix": [
+        [
+          22271,
+          1161,
+          741
+        ],
+        [
+          566,
+          298,
+          245
+        ],
+        [
+          540,
+          249,
+          379
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9526885400179663,
+          "recall": 0.9213171720514624,
+          "f1": 0.9367402733964247,
+          "support": 24173
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.17447306791569087,
+          "recall": 0.26871055004508565,
+          "f1": 0.21157259495917644,
+          "support": 1109
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.27765567765567767,
+          "recall": 0.324486301369863,
+          "f1": 0.299249901302803,
+          "support": 1168
+        }
+      ]
+    },
+    "modis_sentinel": {
+      "accuracy": 0.8624952741020794,
+      "macro_f1": 0.48322103406210465,
+      "valid_pixel_forecasts": 26450,
+      "confusion_matrix": [
+        [
+          21991,
+          924,
+          1258
+        ],
+        [
+          464,
+          180,
+          465
+        ],
+        [
+          334,
+          192,
+          642
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9649831058844179,
+          "recall": 0.9097340007446324,
+          "f1": 0.936544440185682,
+          "support": 24173
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.1388888888888889,
+          "recall": 0.1623083859332732,
+          "f1": 0.14968814968814972,
+          "support": 1109
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.2714587737843552,
+          "recall": 0.5496575342465754,
+          "f1": 0.36343051231248236,
+          "support": 1168
+        }
+      ]
+    }
+  },
+  "qualified_input_pixel_metrics": {
+    "modis": {
+      "accuracy": 0.8675992438563327,
+      "macro_f1": 0.48252092321946805,
+      "valid_pixel_forecasts": 26450,
+      "confusion_matrix": [
+        [
+          22271,
+          1161,
+          741
+        ],
+        [
+          566,
+          298,
+          245
+        ],
+        [
+          540,
+          249,
+          379
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9526885400179663,
+          "recall": 0.9213171720514624,
+          "f1": 0.9367402733964247,
+          "support": 24173
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.17447306791569087,
+          "recall": 0.26871055004508565,
+          "f1": 0.21157259495917644,
+          "support": 1109
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.27765567765567767,
+          "recall": 0.324486301369863,
+          "f1": 0.299249901302803,
+          "support": 1168
+        }
+      ]
+    },
+    "modis_sentinel": {
+      "accuracy": 0.8624952741020794,
+      "macro_f1": 0.48322103406210465,
+      "valid_pixel_forecasts": 26450,
+      "confusion_matrix": [
+        [
+          21991,
+          924,
+          1258
+        ],
+        [
+          464,
+          180,
+          465
+        ],
+        [
+          334,
+          192,
+          642
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9649831058844179,
+          "recall": 0.9097340007446324,
+          "f1": 0.936544440185682,
+          "support": 24173
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.1388888888888889,
+          "recall": 0.1623083859332732,
+          "f1": 0.14968814968814972,
+          "support": 1109
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.2714587737843552,
+          "recall": 0.5496575342465754,
+          "f1": 0.36343051231248236,
+          "support": 1168
+        }
+      ]
+    }
+  },
+  "same_qualified_input_cohort": {
+    "modis": {
+      "accuracy": 0.8675992438563327,
+      "macro_f1": 0.48252092321946805,
+      "valid_pixel_forecasts": 26450,
+      "confusion_matrix": [
+        [
+          22271,
+          1161,
+          741
+        ],
+        [
+          566,
+          298,
+          245
+        ],
+        [
+          540,
+          249,
+          379
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9526885400179663,
+          "recall": 0.9213171720514624,
+          "f1": 0.9367402733964247,
+          "support": 24173
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.17447306791569087,
+          "recall": 0.26871055004508565,
+          "f1": 0.21157259495917644,
+          "support": 1109
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.27765567765567767,
+          "recall": 0.324486301369863,
+          "f1": 0.299249901302803,
+          "support": 1168
+        }
+      ]
+    },
+    "modis_sentinel": {
+      "accuracy": 0.8624952741020794,
+      "macro_f1": 0.48322103406210465,
+      "valid_pixel_forecasts": 26450,
+      "confusion_matrix": [
+        [
+          21991,
+          924,
+          1258
+        ],
+        [
+          464,
+          180,
+          465
+        ],
+        [
+          334,
+          192,
+          642
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9649831058844179,
+          "recall": 0.9097340007446324,
+          "f1": 0.936544440185682,
+          "support": 24173
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.1388888888888889,
+          "recall": 0.1623083859332732,
+          "f1": 0.14968814968814972,
+          "support": 1109
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.2714587737843552,
+          "recall": 0.5496575342465754,
+          "f1": 0.36343051231248236,
+          "support": 1168
+        }
+      ]
+    }
+  },
+  "promoted": false,
+  "training_changed": false,
+  "test_2025_inference": false,
+  "interpretation": "Bounded development diagnostic, including conditional scores on withheld-input windows. Qualified-input cohorts differ and are not a controlled skill comparison. Too little real satellite support for promotion or retraining decisions.",
+  "timing_limit": "Sentinel native publication is checked; historical MODIS/environment source publication latency remains unverified.",
+  "regional_horizon_one": {
+    "modis": {
+      "any_warning": {
+        "qualified_days": 3,
+        "warning_days": 0,
+        "actual_high_risk_days": 0,
+        "correctly_warned_high_risk_days": 0,
+        "missed_high_risk_days": 0,
+        "false_warning_days": 0,
+        "true_negative_days": 3,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "detection_rate": 0.0,
+        "f1": 0.0
+      },
+      "strong_warning": {
+        "qualified_days": 3,
+        "warning_days": 0,
+        "actual_high_risk_days": 0,
+        "correctly_warned_high_risk_days": 0,
+        "missed_high_risk_days": 0,
+        "false_warning_days": 0,
+        "true_negative_days": 3,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "detection_rate": 0.0,
+        "f1": 0.0
+      }
+    },
+    "modis_sentinel": {
+      "any_warning": {
+        "qualified_days": 3,
+        "warning_days": 0,
+        "actual_high_risk_days": 0,
+        "correctly_warned_high_risk_days": 0,
+        "missed_high_risk_days": 0,
+        "false_warning_days": 0,
+        "true_negative_days": 3,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "detection_rate": 0.0,
+        "f1": 0.0
+      },
+      "strong_warning": {
+        "qualified_days": 3,
+        "warning_days": 0,
+        "actual_high_risk_days": 0,
+        "correctly_warned_high_risk_days": 0,
+        "missed_high_risk_days": 0,
+        "false_warning_days": 0,
+        "true_negative_days": 3,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "detection_rate": 0.0,
+        "f1": 0.0
+      }
+    }
+  },
+  "acceptance": {
+    "promoted": false,
+    "macro_f1_change": 0.0007001108426366032,
+    "elevated_f1_change": -0.06188444527102671,
+    "strong_f1_change": 0.06418061100967937,
+    "reason": "One observed Sentinel day and four overlapping development origins cannot validate fusion generalization. No deployed setting is selected from this pilot."
+  }
+}

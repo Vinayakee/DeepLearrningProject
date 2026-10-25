@@ -1,0 +1,1265 @@
+{
+  "period": "2024 development; no independent test claim",
+  "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc",
+  "cache_sha256": "773b2907cb55035abe06d172e30cafd67ebea89063b9876a94d2f2a1bf8133c9",
+  "test_inference_performed": false,
+  "model_all_observed_targets": {
+    "accuracy": 0.8445518296155285,
+    "macro_f1": 0.46522802281749875,
+    "valid_pixel_forecasts": 798993,
+    "confusion_matrix": [
+      [
+        655942,
+        42730,
+        10931
+      ],
+      [
+        39433,
+        9639,
+        4348
+      ],
+      [
+        18949,
+        7811,
+        9210
+      ]
+    ],
+    "classes": [
+      {
+        "name": "Normal",
+        "precision": 0.9182695807504718,
+        "recall": 0.9243788428177445,
+        "f1": 0.9213140842192051,
+        "support": 709603
+      },
+      {
+        "name": "Elevated risk",
+        "precision": 0.16016949152542373,
+        "recall": 0.1804380381879446,
+        "f1": 0.1697007042253521,
+        "support": 53420
+      },
+      {
+        "name": "Strong bloom risk",
+        "precision": 0.3760872228347421,
+        "recall": 0.25604670558799,
+        "f1": 0.30466928000793925,
+        "support": 35970
+      }
+    ]
+  },
+  "common_cohort": {
+    "valid_pixel_forecasts": 426898,
+    "all_observed_targets": 798993,
+    "excluded_missing_baseline_support": 372095,
+    "definition": "Identical observed targets with train-fitted cell/month climatology and at least one input-window label for persistence; missing baseline inputs abstain."
+  },
+  "comparisons": {
+    "model": {
+      "pooled": {
+        "accuracy": 0.8646561942196965,
+        "macro_f1": 0.5179888939061503,
+        "valid_pixel_forecasts": 426898,
+        "confusion_matrix": [
+          [
+            355440,
+            20391,
+            9448
+          ],
+          [
+            14188,
+            5303,
+            3704
+          ],
+          [
+            6006,
+            4041,
+            8377
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9462402231959833,
+            "recall": 0.9225522283851443,
+            "f1": 0.9342460964656931,
+            "support": 385279
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.1783420211871532,
+            "recall": 0.2286268592369045,
+            "f1": 0.2003778575477045,
+            "support": 23195
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.3891030702773004,
+            "recall": 0.45467867998263134,
+            "f1": 0.41934272770505343,
+            "support": 18424
+          }
+        ]
+      },
+      "horizons": [
+        {
+          "accuracy": 0.8719161233311838,
+          "macro_f1": 0.5194337173352936,
+          "valid_pixel_forecasts": 83742,
+          "confusion_matrix": [
+            [
+              70431,
+              3410,
+              1604
+            ],
+            [
+              2844,
+              1037,
+              746
+            ],
+            [
+              1345,
+              777,
+              1548
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.94386223532565,
+              "recall": 0.9335409901252568,
+              "f1": 0.9386732415953087,
+              "support": 75445
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.19850689127105667,
+              "recall": 0.22411929976226497,
+              "f1": 0.21053700131966296,
+              "support": 4627
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.39712673165726015,
+              "recall": 0.4217983651226158,
+              "f1": 0.40909090909090906,
+              "support": 3670
+            }
+          ]
+        },
+        {
+          "accuracy": 0.855298810340617,
+          "macro_f1": 0.5131392089374397,
+          "valid_pixel_forecasts": 85991,
+          "confusion_matrix": [
+            [
+              70642,
+              5016,
+              2207
+            ],
+            [
+              2406,
+              1308,
+              829
+            ],
+            [
+              977,
+              1008,
+              1598
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9542992232353934,
+              "recall": 0.9072368843511205,
+              "f1": 0.9301731516228848,
+              "support": 77865
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.1783960720130933,
+              "recall": 0.28791547435615233,
+              "f1": 0.22029473684210524,
+              "support": 4543
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.3448424687095382,
+              "recall": 0.44599497627686296,
+              "f1": 0.38894973834732877,
+              "support": 3583
+            }
+          ]
+        },
+        {
+          "accuracy": 0.8667558497572452,
+          "macro_f1": 0.5125783860122298,
+          "valid_pixel_forecasts": 86713,
+          "confusion_matrix": [
+            [
+              72625,
+              4204,
+              1376
+            ],
+            [
+              3070,
+              1060,
+              608
+            ],
+            [
+              1405,
+              891,
+              1474
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.941958495460441,
+              "recall": 0.9286490633591202,
+              "f1": 0.9352564308940472,
+              "support": 78205
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.17221770917952883,
+              "recall": 0.223723089911355,
+              "f1": 0.19462039842100431,
+              "support": 4738
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.42625795257374205,
+              "recall": 0.39098143236074273,
+              "f1": 0.4078583287216381,
+              "support": 3770
+            }
+          ]
+        },
+        {
+          "accuracy": 0.8631615515465153,
+          "macro_f1": 0.5250290864925037,
+          "valid_pixel_forecasts": 83478,
+          "confusion_matrix": [
+            [
+              69291,
+              4249,
+              1627
+            ],
+            [
+              2936,
+              1030,
+              653
+            ],
+            [
+              1124,
+              834,
+              1734
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9446496980272934,
+              "recall": 0.9218273976612077,
+              "f1": 0.933099018300812,
+              "support": 75167
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.16849337477506954,
+              "recall": 0.2229919896081403,
+              "f1": 0.19194931047335076,
+              "support": 4619
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.4319880418535127,
+              "recall": 0.4696641386782232,
+              "f1": 0.45003893070334805,
+              "support": 3692
+            }
+          ]
+        },
+        {
+          "accuracy": 0.8662588819647251,
+          "macro_f1": 0.5178103929410406,
+          "valid_pixel_forecasts": 86974,
+          "confusion_matrix": [
+            [
+              72451,
+              3512,
+              2634
+            ],
+            [
+              2932,
+              868,
+              868
+            ],
+            [
+              1155,
+              531,
+              2023
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9466016880503803,
+              "recall": 0.9218036311818517,
+              "f1": 0.9340380958519999,
+              "support": 78597
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.17674608022805946,
+              "recall": 0.18594687232219365,
+              "f1": 0.18122977346278316,
+              "support": 4668
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.36615384615384616,
+              "recall": 0.5454300350498786,
+              "f1": 0.43816330950833876,
+              "support": 3709
+            }
+          ]
+        }
+      ]
+    },
+    "seasonal": {
+      "pooled": {
+        "accuracy": 0.9025083275161748,
+        "macro_f1": 0.31625208134023336,
+        "valid_pixel_forecasts": 426898,
+        "confusion_matrix": [
+          [
+            385279,
+            0,
+            0
+          ],
+          [
+            23195,
+            0,
+            0
+          ],
+          [
+            18424,
+            0,
+            0
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9025083275161748,
+            "recall": 1.0,
+            "f1": 0.9487562440207,
+            "support": 385279
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 23195
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 18424
+          }
+        ]
+      },
+      "horizons": [
+        {
+          "accuracy": 0.9009218791048698,
+          "macro_f1": 0.31595963656998793,
+          "valid_pixel_forecasts": 83742,
+          "confusion_matrix": [
+            [
+              75445,
+              0,
+              0
+            ],
+            [
+              4627,
+              0,
+              0
+            ],
+            [
+              3670,
+              0,
+              0
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9009218791048698,
+              "recall": 1.0,
+              "f1": 0.9478789097099638,
+              "support": 75445
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4627
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3670
+            }
+          ]
+        },
+        {
+          "accuracy": 0.9055017385540347,
+          "macro_f1": 0.31680255834391174,
+          "valid_pixel_forecasts": 85991,
+          "confusion_matrix": [
+            [
+              77865,
+              0,
+              0
+            ],
+            [
+              4543,
+              0,
+              0
+            ],
+            [
+              3583,
+              0,
+              0
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9055017385540347,
+              "recall": 1.0,
+              "f1": 0.9504076750317352,
+              "support": 77865
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4543
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3583
+            }
+          ]
+        },
+        {
+          "accuracy": 0.9018832239687244,
+          "macro_f1": 0.31613690844338804,
+          "valid_pixel_forecasts": 86713,
+          "confusion_matrix": [
+            [
+              78205,
+              0,
+              0
+            ],
+            [
+              4738,
+              0,
+              0
+            ],
+            [
+              3770,
+              0,
+              0
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9018832239687244,
+              "recall": 1.0,
+              "f1": 0.9484107253301641,
+              "support": 78205
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4738
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3770
+            }
+          ]
+        },
+        {
+          "accuracy": 0.9004408347109418,
+          "macro_f1": 0.31587086471892173,
+          "valid_pixel_forecasts": 83478,
+          "confusion_matrix": [
+            [
+              75167,
+              0,
+              0
+            ],
+            [
+              4619,
+              0,
+              0
+            ],
+            [
+              3692,
+              0,
+              0
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9004408347109418,
+              "recall": 1.0,
+              "f1": 0.9476125941567651,
+              "support": 75167
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4619
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3692
+            }
+          ]
+        },
+        {
+          "accuracy": 0.9036838595442316,
+          "macro_f1": 0.31646846368023385,
+          "valid_pixel_forecasts": 86974,
+          "confusion_matrix": [
+            [
+              78597,
+              0,
+              0
+            ],
+            [
+              4668,
+              0,
+              0
+            ],
+            [
+              3709,
+              0,
+              0
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9036838595442316,
+              "recall": 1.0,
+              "f1": 0.9494053910407015,
+              "support": 78597
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 4668
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 3709
+            }
+          ]
+        }
+      ]
+    },
+    "persistence": {
+      "pooled": {
+        "accuracy": 0.8840706679347291,
+        "macro_f1": 0.5354965367914507,
+        "valid_pixel_forecasts": 426898,
+        "confusion_matrix": [
+          [
+            364059,
+            14376,
+            6844
+          ],
+          [
+            14040,
+            5124,
+            4031
+          ],
+          [
+            6907,
+            3292,
+            8225
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9455930556926385,
+            "recall": 0.9449230298043755,
+            "f1": 0.9452579240151372,
+            "support": 385279
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.22481572481572482,
+            "recall": 0.22090967881008838,
+            "f1": 0.2228455867962685,
+            "support": 23195
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.4306282722513089,
+            "recall": 0.44642857142857145,
+            "f1": 0.4383860995629464,
+            "support": 18424
+          }
+        ]
+      },
+      "horizons": [
+        {
+          "accuracy": 0.8863891476200711,
+          "macro_f1": 0.549815913212333,
+          "valid_pixel_forecasts": 83742,
+          "confusion_matrix": [
+            [
+              71378,
+              2817,
+              1250
+            ],
+            [
+              2675,
+              1067,
+              885
+            ],
+            [
+              1210,
+              677,
+              1783
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9483810105895327,
+              "recall": 0.9460931804625886,
+              "f1": 0.9472357140961329,
+              "support": 75445
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.2339399254549441,
+              "recall": 0.2306029824940566,
+              "f1": 0.2322594688724423,
+              "support": 4627
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.4550791220010209,
+              "recall": 0.48583106267029974,
+              "f1": 0.46995255666842384,
+              "support": 3670
+            }
+          ]
+        },
+        {
+          "accuracy": 0.8888488330174088,
+          "macro_f1": 0.544763886967179,
+          "valid_pixel_forecasts": 85991,
+          "confusion_matrix": [
+            [
+              73686,
+              2898,
+              1281
+            ],
+            [
+              2635,
+              1038,
+              870
+            ],
+            [
+              1191,
+              683,
+              1709
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9506399009185674,
+              "recall": 0.9463301868618763,
+              "f1": 0.948480148284495,
+              "support": 77865
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.22472396622645593,
+              "recall": 0.2284833810257539,
+              "f1": 0.2265880812049771,
+              "support": 4543
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.4427461139896373,
+              "recall": 0.47697460228858496,
+              "f1": 0.459223431412065,
+              "support": 3583
+            }
+          ]
+        },
+        {
+          "accuracy": 0.8800987164554335,
+          "macro_f1": 0.5295725494336904,
+          "valid_pixel_forecasts": 86713,
+          "confusion_matrix": [
+            [
+              73622,
+              3086,
+              1497
+            ],
+            [
+              2857,
+              1079,
+              802
+            ],
+            [
+              1490,
+              665,
+              1615
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9442470725544768,
+              "recall": 0.9413976088485391,
+              "f1": 0.9428201877393163,
+              "support": 78205
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.22339544513457557,
+              "recall": 0.22773322076825664,
+              "f1": 0.22554347826086957,
+              "support": 4738
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.41262135922330095,
+              "recall": 0.42838196286472147,
+              "f1": 0.42035398230088494,
+              "support": 3770
+            }
+          ]
+        },
+        {
+          "accuracy": 0.8810824408826278,
+          "macro_f1": 0.5277469888349712,
+          "valid_pixel_forecasts": 83478,
+          "confusion_matrix": [
+            [
+              71012,
+              2758,
+              1397
+            ],
+            [
+              2912,
+              965,
+              742
+            ],
+            [
+              1478,
+              640,
+              1574
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9417787326596112,
+              "recall": 0.9447230832679234,
+              "f1": 0.9432486102717027,
+              "support": 75167
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.22117808847123538,
+              "recall": 0.2089196795843256,
+              "f1": 0.21487419283010467,
+              "support": 4619
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.42391597091300837,
+              "recall": 0.42632719393282775,
+              "f1": 0.42511816340310604,
+              "support": 3692
+            }
+          ]
+        },
+        {
+          "accuracy": 0.883942327592154,
+          "macro_f1": 0.5253962215293991,
+          "valid_pixel_forecasts": 86974,
+          "confusion_matrix": [
+            [
+              74361,
+              2817,
+              1419
+            ],
+            [
+              2961,
+              975,
+              732
+            ],
+            [
+              1538,
+              627,
+              1544
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9429495308141009,
+              "recall": 0.9461048131608076,
+              "f1": 0.9445245368576818,
+              "support": 78597
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.22063815342837745,
+              "recall": 0.20886889460154243,
+              "f1": 0.21459227467811157,
+              "support": 4668
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.4178619756427605,
+              "recall": 0.4162847128606093,
+              "f1": 0.41707185305240413,
+              "support": 3709
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "uncertainty": {
+    "method": "Moving contiguous calendar-origin blocks; all pixels and horizons stay together.",
+    "block_days": 14,
+    "replicates": 1000,
+    "seed": 42,
+    "intervals_95_percent": {
+      "macro_f1": [
+        0.3827339576805817,
+        0.5017061908846208
+      ],
+      "strong_precision": [
+        0.17373848842771816,
+        0.4324407108646693
+      ],
+      "strong_recall": [
+        0.033854098759735676,
+        0.43143145477366
+      ]
+    },
+    "limitations": "Development uncertainty conditional on the selected model and observed labels; longer seasonal dependence and model-selection uncertainty remain."
+  },
+  "events": {
+    "definition": "Consecutive observed, qualified horizon-one chlorophyll-proxy risk days; unknown/missing days split episodes.",
+    "episodes": [
+      {
+        "start": "2024-01-23",
+        "end": "2024-01-23",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      },
+      {
+        "start": "2024-02-11",
+        "end": "2024-02-11",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      },
+      {
+        "start": "2024-02-28",
+        "end": "2024-02-28",
+        "observed_days": 1,
+        "detected": true,
+        "warned_before_onset": true,
+        "lead_days_before_onset": 2
+      },
+      {
+        "start": "2024-04-28",
+        "end": "2024-04-28",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      },
+      {
+        "start": "2024-06-30",
+        "end": "2024-06-30",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      },
+      {
+        "start": "2024-08-10",
+        "end": "2024-08-10",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      },
+      {
+        "start": "2024-09-28",
+        "end": "2024-09-28",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      },
+      {
+        "start": "2024-09-30",
+        "end": "2024-09-30",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      },
+      {
+        "start": "2024-10-05",
+        "end": "2024-10-05",
+        "observed_days": 1,
+        "detected": false,
+        "warned_before_onset": false,
+        "lead_days_before_onset": null
+      }
+    ],
+    "episode_count": 9,
+    "detected_episodes": 1,
+    "warned_before_onset": 1,
+    "limitations": "Not confirmed ecological HAB events. Uses saved hindcast origins, whose source-publication latency was not independently established."
+  },
+  "probability_by_horizon": [
+    {
+      "day": 1,
+      "strong_brier": 0.049519964286412116,
+      "strong_reliability_bins": [
+        {
+          "count": 80908,
+          "mean_score": 0.07804730264452946,
+          "observed_frequency": 0.017464280417264052
+        },
+        {
+          "count": 47053,
+          "mean_score": 0.14149030836318183,
+          "observed_frequency": 0.025205619195375426
+        },
+        {
+          "count": 16487,
+          "mean_score": 0.23695781061443544,
+          "observed_frequency": 0.08182204160854006
+        },
+        {
+          "count": 6234,
+          "mean_score": 0.345662639945755,
+          "observed_frequency": 0.1657042027590632
+        },
+        {
+          "count": 3549,
+          "mean_score": 0.4450170280111108,
+          "observed_frequency": 0.23527754296985065
+        },
+        {
+          "count": 1731,
+          "mean_score": 0.5448170731275637,
+          "observed_frequency": 0.3269786250722126
+        },
+        {
+          "count": 1452,
+          "mean_score": 0.6448382169582956,
+          "observed_frequency": 0.5640495867768595
+        },
+        {
+          "count": 9,
+          "mean_score": 0.7162125176853604,
+          "observed_frequency": 0.2222222222222222
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "strong_brier": 0.05298403083880571,
+      "strong_reliability_bins": [
+        {
+          "count": 77256,
+          "mean_score": 0.08493545674938317,
+          "observed_frequency": 0.016516516516516516
+        },
+        {
+          "count": 53228,
+          "mean_score": 0.1385220471186436,
+          "observed_frequency": 0.02521229428120538
+        },
+        {
+          "count": 14403,
+          "mean_score": 0.24029827251278227,
+          "observed_frequency": 0.08574602513365272
+        },
+        {
+          "count": 6247,
+          "mean_score": 0.3447059411296124,
+          "observed_frequency": 0.13462461981751242
+        },
+        {
+          "count": 4451,
+          "mean_score": 0.4482133679378169,
+          "observed_frequency": 0.1660301055942485
+        },
+        {
+          "count": 2786,
+          "mean_score": 0.5446412829469625,
+          "observed_frequency": 0.22792534099066764
+        },
+        {
+          "count": 1642,
+          "mean_score": 0.6464767957721065,
+          "observed_frequency": 0.42021924482338613
+        },
+        {
+          "count": 830,
+          "mean_score": 0.7196265633565834,
+          "observed_frequency": 0.536144578313253
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "strong_brier": 0.0510926386321398,
+      "strong_reliability_bins": [
+        {
+          "count": 76251,
+          "mean_score": 0.08044081303934927,
+          "observed_frequency": 0.0178620608254318
+        },
+        {
+          "count": 51417,
+          "mean_score": 0.14271873867546295,
+          "observed_frequency": 0.02785071085438668
+        },
+        {
+          "count": 18203,
+          "mean_score": 0.23727089256033468,
+          "observed_frequency": 0.07064769543481844
+        },
+        {
+          "count": 6629,
+          "mean_score": 0.3479939274324661,
+          "observed_frequency": 0.1529642480012068
+        },
+        {
+          "count": 3837,
+          "mean_score": 0.43977733824381704,
+          "observed_frequency": 0.21344800625488664
+        },
+        {
+          "count": 2068,
+          "mean_score": 0.5556828023674871,
+          "observed_frequency": 0.4086073500967118
+        },
+        {
+          "count": 882,
+          "mean_score": 0.6150464286474414,
+          "observed_frequency": 0.4875283446712018
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "strong_brier": 0.053462686855244815,
+      "strong_reliability_bins": [
+        {
+          "count": 70536,
+          "mean_score": 0.08460731134900258,
+          "observed_frequency": 0.01782068730860837
+        },
+        {
+          "count": 55572,
+          "mean_score": 0.1403710874259946,
+          "observed_frequency": 0.02562441517310876
+        },
+        {
+          "count": 17230,
+          "mean_score": 0.23812108782146535,
+          "observed_frequency": 0.07248984329657573
+        },
+        {
+          "count": 6703,
+          "mean_score": 0.3461644830507039,
+          "observed_frequency": 0.11442637624944055
+        },
+        {
+          "count": 5439,
+          "mean_score": 0.4427860716365019,
+          "observed_frequency": 0.15848501562787276
+        },
+        {
+          "count": 2497,
+          "mean_score": 0.5495661257456244,
+          "observed_frequency": 0.40969162995594716
+        },
+        {
+          "count": 1310,
+          "mean_score": 0.627401112645637,
+          "observed_frequency": 0.46259541984732827
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "strong_brier": 0.05647638481680478,
+      "strong_reliability_bins": [
+        {
+          "count": 5029,
+          "mean_score": 0.09858307184762238,
+          "observed_frequency": 0.009743487770928615
+        },
+        {
+          "count": 120213,
+          "mean_score": 0.12703576641896344,
+          "observed_frequency": 0.019265803199321203
+        },
+        {
+          "count": 19576,
+          "mean_score": 0.23968839702247038,
+          "observed_frequency": 0.07207805476093175
+        },
+        {
+          "count": 7602,
+          "mean_score": 0.34445000208386994,
+          "observed_frequency": 0.11023414890818206
+        },
+        {
+          "count": 5076,
+          "mean_score": 0.44491445495093124,
+          "observed_frequency": 0.15189125295508274
+        },
+        {
+          "count": 3497,
+          "mean_score": 0.5478170932549424,
+          "observed_frequency": 0.365742064626823
+        },
+        {
+          "count": 1160,
+          "mean_score": 0.6214608647700014,
+          "observed_frequency": 0.4517241379310345
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        },
+        {
+          "count": 0,
+          "mean_score": null,
+          "observed_frequency": null
+        }
+      ]
+    }
+  ]
+}

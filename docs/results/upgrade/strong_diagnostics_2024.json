@@ -1,0 +1,1910 @@
+{
+  "period": "2024 development only",
+  "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc",
+  "unique_training_label_counts": [
+    423344,
+    84669,
+    56450
+  ],
+  "unique_2024_label_counts": [
+    148271,
+    10783,
+    7221
+  ],
+  "metrics_by_stratum": {
+    "all": {
+      "accuracy": 0.8445518296155285,
+      "macro_f1": 0.46522802281749875,
+      "valid_pixel_forecasts": 798993,
+      "confusion_matrix": [
+        [
+          655942,
+          42730,
+          10931
+        ],
+        [
+          39433,
+          9639,
+          4348
+        ],
+        [
+          18949,
+          7811,
+          9210
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9182695807504718,
+          "recall": 0.9243788428177445,
+          "f1": 0.9213140842192051,
+          "support": 709603
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.16016949152542373,
+          "recall": 0.1804380381879446,
+          "f1": 0.1697007042253521,
+          "support": 53420
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.3760872228347421,
+          "recall": 0.25604670558799,
+          "f1": 0.30466928000793925,
+          "support": 35970
+        }
+      ]
+    },
+    "coverage/observed": {
+      "accuracy": 0.8761594771156048,
+      "macro_f1": 0.4958155762354204,
+      "valid_pixel_forecasts": 609542,
+      "confusion_matrix": [
+        [
+          519633,
+          24166,
+          10521
+        ],
+        [
+          22395,
+          5540,
+          4083
+        ],
+        [
+          9890,
+          4431,
+          8883
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9415039915349744,
+          "recall": 0.9374242314908356,
+          "f1": 0.9394596822745196,
+          "support": 554320
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.16228725429885463,
+          "recall": 0.17302767193453683,
+          "f1": 0.16748545083515987,
+          "support": 32018
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.3782092221228765,
+          "recall": 0.3828219272539217,
+          "f1": 0.38050159559658175,
+          "support": 23204
+        }
+      ]
+    },
+    "cell_input/missing": {
+      "accuracy": 0.8216083916083916,
+      "macro_f1": 0.37686435084925773,
+      "valid_pixel_forecasts": 371800,
+      "confusion_matrix": [
+        [
+          300322,
+          22324,
+          1483
+        ],
+        [
+          25212,
+          4319,
+          644
+        ],
+        [
+          12918,
+          3745,
+          833
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8873400068547387,
+          "recall": 0.9265508485818917,
+          "f1": 0.9065216177342845,
+          "support": 324129
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.14212847176517046,
+          "recall": 0.14313173156586578,
+          "f1": 0.14262833743374667,
+          "support": 30175
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.2814189189189189,
+          "recall": 0.0476108824874257,
+          "f1": 0.08144309737974188,
+          "support": 17496
+        }
+      ]
+    },
+    "cell_input/observed": {
+      "accuracy": 0.8645202519704208,
+      "macro_f1": 0.5178736212259748,
+      "valid_pixel_forecasts": 427193,
+      "confusion_matrix": [
+        [
+          355620,
+          20406,
+          9448
+        ],
+        [
+          14221,
+          5320,
+          3704
+        ],
+        [
+          6031,
+          4066,
+          8377
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.94611995572961,
+          "recall": 0.9225524938128122,
+          "f1": 0.9341876098383651,
+          "support": 385474
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.17857142857142858,
+          "recall": 0.2288664228866423,
+          "f1": 0.20061466523370478,
+          "support": 23245
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.3891030702773004,
+          "recall": 0.4534480892064523,
+          "f1": 0.4188185886058546,
+          "support": 18474
+        }
+      ]
+    },
+    "latitude/8-9N": {
+      "accuracy": 0.8818838195156888,
+      "macro_f1": 0.42325136485503595,
+      "valid_pixel_forecasts": 258305,
+      "confusion_matrix": [
+        [
+          223875,
+          18217,
+          1180
+        ],
+        [
+          6104,
+          3481,
+          403
+        ],
+        [
+          2091,
+          2515,
+          439
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9646873788081183,
+          "recall": 0.9202662040843171,
+          "f1": 0.9419533725191546,
+          "support": 243272
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.1437657456738116,
+          "recall": 0.3485182218662395,
+          "f1": 0.20356129937721118,
+          "support": 9988
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.21711177052423344,
+          "recall": 0.08701684836471754,
+          "f1": 0.12423942266874204,
+          "support": 5045
+        }
+      ]
+    },
+    "latitude/9-10N": {
+      "accuracy": 0.8906359807673834,
+      "macro_f1": 0.4116034814839776,
+      "valid_pixel_forecasts": 197789,
+      "confusion_matrix": [
+        [
+          174503,
+          7673,
+          1579
+        ],
+        [
+          8341,
+          1022,
+          500
+        ],
+        [
+          2853,
+          685,
+          633
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.939719004615045,
+          "recall": 0.9496503496503497,
+          "f1": 0.9446585754035707,
+          "support": 183755
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.10895522388059702,
+          "recall": 0.10361958836053939,
+          "f1": 0.10622044379774463,
+          "support": 9863
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.2334070796460177,
+          "recall": 0.1517621673459602,
+          "f1": 0.18393142525061745,
+          "support": 4171
+        }
+      ]
+    },
+    "latitude/10-11N": {
+      "accuracy": 0.8427725826397476,
+      "macro_f1": 0.4335052131543728,
+      "valid_pixel_forecasts": 143938,
+      "confusion_matrix": [
+        [
+          118627,
+          6781,
+          3146
+        ],
+        [
+          7856,
+          1519,
+          855
+        ],
+        [
+          3081,
+          912,
+          1161
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9155861196011238,
+          "recall": 0.9227795323366056,
+          "f1": 0.9191687522760907,
+          "support": 128554
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.16489361702127658,
+          "recall": 0.1484848484848485,
+          "f1": 0.15625964406954018,
+          "support": 10230
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.22491282448663308,
+          "recall": 0.22526193247962747,
+          "f1": 0.2250872431174874,
+          "support": 5154
+        }
+      ]
+    },
+    "latitude/11-12N": {
+      "accuracy": 0.7634120532115023,
+      "macro_f1": 0.46158022994901476,
+      "valid_pixel_forecasts": 119072,
+      "confusion_matrix": [
+        [
+          85690,
+          5522,
+          2733
+        ],
+        [
+          10254,
+          2513,
+          1162
+        ],
+        [
+          6276,
+          2224,
+          2698
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8382899628252788,
+          "recall": 0.9121294374367981,
+          "f1": 0.8736522825172687,
+          "support": 93945
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.24495564869870357,
+          "recall": 0.1804149615909254,
+          "f1": 0.20778898627418552,
+          "support": 13929
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.4092219020172911,
+          "recall": 0.24093588140739416,
+          "f1": 0.30329942105558994,
+          "support": 11198
+        }
+      ]
+    },
+    "latitude/12-13N": {
+      "accuracy": 0.7338932769217289,
+      "macro_f1": 0.4838804550307758,
+      "valid_pixel_forecasts": 79889,
+      "confusion_matrix": [
+        [
+          53247,
+          4537,
+          2293
+        ],
+        [
+          6878,
+          1104,
+          1428
+        ],
+        [
+          4648,
+          1475,
+          4279
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8220554860821638,
+          "recall": 0.8863125655408892,
+          "f1": 0.8529755706848218,
+          "support": 60077
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.1551433389544688,
+          "recall": 0.11732199787460149,
+          "f1": 0.13360764855379403,
+          "support": 9410
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.534875,
+          "recall": 0.4113631993847337,
+          "f1": 0.4650581458537115,
+          "support": 10402
+        }
+      ]
+    },
+    "coverage/insufficient_inputs": {
+      "accuracy": 0.7741274603058462,
+      "macro_f1": 0.365186732041563,
+      "valid_pixel_forecasts": 41001,
+      "confusion_matrix": [
+        [
+          30916,
+          4762,
+          62
+        ],
+        [
+          3114,
+          777,
+          31
+        ],
+        [
+          700,
+          592,
+          47
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.890181399366542,
+          "recall": 0.8650251818690543,
+          "f1": 0.8774230168866184,
+          "support": 35740
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.12673299624857282,
+          "recall": 0.19811320754716982,
+          "f1": 0.1545807221724858,
+          "support": 3922
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.3357142857142857,
+          "recall": 0.0351008215085885,
+          "f1": 0.06355645706558485,
+          "support": 1339
+        }
+      ]
+    },
+    "coverage/low_coverage": {
+      "accuracy": 0.740910839665288,
+      "macro_f1": 0.34948934156952977,
+      "valid_pixel_forecasts": 124764,
+      "confusion_matrix": [
+        [
+          89860,
+          9698,
+          179
+        ],
+        [
+          12160,
+          2457,
+          114
+        ],
+        [
+          7876,
+          2298,
+          122
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8176821722355682,
+          "recall": 0.9009695499162799,
+          "f1": 0.857307771200145,
+          "support": 99737
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.16999930810212413,
+          "recall": 0.16679112076573213,
+          "f1": 0.1683799342105263,
+          "support": 14731
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.29397590361445786,
+          "recall": 0.01184926184926185,
+          "f1": 0.02278031929791803,
+          "support": 10296
+        }
+      ]
+    },
+    "coverage/missing_data": {
+      "accuracy": 0.6989782994173773,
+      "macro_f1": 0.41251820704959297,
+      "valid_pixel_forecasts": 23686,
+      "confusion_matrix": [
+        [
+          15533,
+          4104,
+          169
+        ],
+        [
+          1764,
+          865,
+          120
+        ],
+        [
+          483,
+          490,
+          158
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8736220472440945,
+          "recall": 0.7842572957689589,
+          "f1": 0.8265311552173682,
+          "support": 19806
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.15845392929107896,
+          "recall": 0.3146598763186613,
+          "f1": 0.21076998050682264,
+          "support": 2749
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.3534675615212528,
+          "recall": 0.13969938107869143,
+          "f1": 0.2002534854245881,
+          "support": 1131
+        }
+      ]
+    },
+    "month/01": {
+      "accuracy": 0.9212169719966009,
+      "macro_f1": 0.4357982711649195,
+      "valid_pixel_forecasts": 101202,
+      "confusion_matrix": [
+        [
+          92344,
+          1642,
+          901
+        ],
+        [
+          2612,
+          320,
+          523
+        ],
+        [
+          1973,
+          322,
+          565
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9526973351628512,
+          "recall": 0.9731997006966181,
+          "f1": 0.9628393877465905,
+          "support": 94887
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.14010507880910683,
+          "recall": 0.09261939218523878,
+          "f1": 0.11151768600801533,
+          "support": 3455
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.2840623428858723,
+          "recall": 0.19755244755244755,
+          "f1": 0.2330377397401526,
+          "support": 2860
+        }
+      ]
+    },
+    "month/02": {
+      "accuracy": 0.8823295666211349,
+      "macro_f1": 0.5274430487238684,
+      "valid_pixel_forecasts": 201325,
+      "confusion_matrix": [
+        [
+          169054,
+          4630,
+          6581
+        ],
+        [
+          4422,
+          983,
+          2860
+        ],
+        [
+          3556,
+          1641,
+          7598
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9549347010709928,
+          "recall": 0.9378082267772446,
+          "f1": 0.9462939795184399,
+          "support": 180265
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.13551144196305487,
+          "recall": 0.11893526920750151,
+          "f1": 0.12668342032347443,
+          "support": 8265
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.4459181876870708,
+          "recall": 0.5938257131692067,
+          "f1": 0.5093517463296909,
+          "support": 12795
+        }
+      ]
+    },
+    "month/03": {
+      "accuracy": 0.915949864831654,
+      "macro_f1": 0.47235448538397223,
+      "valid_pixel_forecasts": 61035,
+      "confusion_matrix": [
+        [
+          55156,
+          1791,
+          1113
+        ],
+        [
+          1376,
+          185,
+          284
+        ],
+        [
+          402,
+          164,
+          564
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9687708574841044,
+          "recall": 0.9499827764381674,
+          "f1": 0.9592848322521176,
+          "support": 58060
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.08644859813084112,
+          "recall": 0.1002710027100271,
+          "f1": 0.09284818067754076,
+          "support": 1845
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.2876083630800612,
+          "recall": 0.49911504424778763,
+          "f1": 0.3649304432222582,
+          "support": 1130
+        }
+      ]
+    },
+    "month/04": {
+      "accuracy": 0.6899018497546244,
+      "macro_f1": 0.2920173897025083,
+      "valid_pixel_forecasts": 52980,
+      "confusion_matrix": [
+        [
+          36342,
+          296,
+          137
+        ],
+        [
+          10765,
+          90,
+          15
+        ],
+        [
+          4981,
+          235,
+          119
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.6977038857318384,
+          "recall": 0.9882256968048946,
+          "f1": 0.8179332230512137,
+          "support": 36775
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.14492753623188406,
+          "recall": 0.00827966881324747,
+          "f1": 0.01566443303454878,
+          "support": 10870
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.43911439114391143,
+          "recall": 0.022305529522024366,
+          "f1": 0.0424545130217624,
+          "support": 5335
+        }
+      ]
+    },
+    "month/05": {
+      "accuracy": 0.8435436690346845,
+      "macro_f1": 0.30667201524344384,
+      "valid_pixel_forecasts": 11965,
+      "confusion_matrix": [
+        [
+          10089,
+          59,
+          2
+        ],
+        [
+          1561,
+          4,
+          0
+        ],
+        [
+          250,
+          0,
+          0
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8478151260504202,
+          "recall": 0.9939901477832512,
+          "f1": 0.9151020408163265,
+          "support": 10150
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.06349206349206349,
+          "recall": 0.0025559105431309905,
+          "f1": 0.004914004914004914,
+          "support": 1565
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 250
+        }
+      ]
+    },
+    "month/06": {
+      "accuracy": 0.5675178753830439,
+      "macro_f1": 0.4434706267745278,
+      "valid_pixel_forecasts": 4895,
+      "confusion_matrix": [
+        [
+          2312,
+          798,
+          60
+        ],
+        [
+          692,
+          280,
+          108
+        ],
+        [
+          156,
+          303,
+          186
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.7316455696202532,
+          "recall": 0.7293375394321766,
+          "f1": 0.7304897314375985,
+          "support": 3170
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.20275162925416365,
+          "recall": 0.25925925925925924,
+          "f1": 0.22754977651361236,
+          "support": 1080
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.5254237288135594,
+          "recall": 0.28837209302325584,
+          "f1": 0.37237237237237236,
+          "support": 645
+        }
+      ]
+    },
+    "month/07": {
+      "accuracy": 0.7469553450608931,
+      "macro_f1": 0.3242063784090649,
+      "valid_pixel_forecasts": 11085,
+      "confusion_matrix": [
+        [
+          8106,
+          2297,
+          132
+        ],
+        [
+          262,
+          174,
+          19
+        ],
+        [
+          32,
+          63,
+          0
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.965,
+          "recall": 0.7694352159468438,
+          "f1": 0.8561922365988909,
+          "support": 10535
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.06866614048934491,
+          "recall": 0.3824175824175824,
+          "f1": 0.11642689862830378,
+          "support": 455
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 95
+        }
+      ]
+    },
+    "month/08": {
+      "accuracy": 0.587875150060024,
+      "macro_f1": 0.3320740525294659,
+      "valid_pixel_forecasts": 24990,
+      "confusion_matrix": [
+        [
+          13125,
+          5322,
+          13
+        ],
+        [
+          2990,
+          1559,
+          21
+        ],
+        [
+          1071,
+          882,
+          7
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.7637030140812289,
+          "recall": 0.7109967497291441,
+          "f1": 0.7364080121191717,
+          "support": 18460
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.20082442354759758,
+          "recall": 0.3411378555798687,
+          "f1": 0.2528176437201005,
+          "support": 4570
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.17073170731707318,
+          "recall": 0.0035714285714285713,
+          "f1": 0.0069965017491254375,
+          "support": 1960
+        }
+      ]
+    },
+    "month/09": {
+      "accuracy": 0.5771423876427574,
+      "macro_f1": 0.3349118239574902,
+      "valid_pixel_forecasts": 60855,
+      "confusion_matrix": [
+        [
+          31499,
+          10224,
+          82
+        ],
+        [
+          7353,
+          3574,
+          93
+        ],
+        [
+          5326,
+          2655,
+          49
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.7130019466702884,
+          "recall": 0.7534744647769406,
+          "f1": 0.7326797157577661,
+          "support": 41805
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.21722482222087158,
+          "recall": 0.32431941923774954,
+          "f1": 0.26018272485713245,
+          "support": 11020
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.21875,
+          "recall": 0.0061021170610211705,
+          "f1": 0.011873031257572086,
+          "support": 8030
+        }
+      ]
+    },
+    "month/10": {
+      "accuracy": 0.89982197536139,
+      "macro_f1": 0.3932911314397038,
+      "valid_pixel_forecasts": 70215,
+      "confusion_matrix": [
+        [
+          62276,
+          2778,
+          41
+        ],
+        [
+          2494,
+          901,
+          5
+        ],
+        [
+          640,
+          1076,
+          4
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9520868368750955,
+          "recall": 0.9566940625240034,
+          "f1": 0.9543848894678364,
+          "support": 65095
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.18948475289169295,
+          "recall": 0.265,
+          "f1": 0.22096873083997545,
+          "support": 3400
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.08,
+          "recall": 0.002325581395348837,
+          "f1": 0.004519774011299434,
+          "support": 1720
+        }
+      ]
+    },
+    "month/11": {
+      "accuracy": 0.964920608937633,
+      "macro_f1": 0.32738239042961753,
+      "valid_pixel_forecasts": 61090,
+      "confusion_matrix": [
+        [
+          58947,
+          62,
+          1
+        ],
+        [
+          1875,
+          0,
+          0
+        ],
+        [
+          205,
+          0,
+          0
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9659167253838465,
+          "recall": 0.998932384341637,
+          "f1": 0.9821471712888526,
+          "support": 59010
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1875
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 205
+        }
+      ]
+    },
+    "month/12": {
+      "accuracy": 0.8618407641457235,
+      "macro_f1": 0.3854232220838583,
+      "valid_pixel_forecasts": 137356,
+      "confusion_matrix": [
+        [
+          116692,
+          12831,
+          1868
+        ],
+        [
+          3031,
+          1569,
+          420
+        ],
+        [
+          357,
+          470,
+          118
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9717854763491006,
+          "recall": 0.8881278017520225,
+          "f1": 0.9280752054908916,
+          "support": 131391
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.10551445864156019,
+          "recall": 0.31254980079681277,
+          "f1": 0.15776772247360485,
+          "support": 5020
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.049044056525353284,
+          "recall": 0.12486772486772486,
+          "f1": 0.07042673828707849,
+          "support": 945
+        }
+      ]
+    }
+  },
+  "strong_score_quantiles": [
+    [
+      0.12290370836853981,
+      0.15468260496854783,
+      0.07616962343454362
+    ],
+    [
+      0.24086767807602882,
+      0.21659955009818077,
+      0.14693273231387138
+    ],
+    [
+      0.41314470767974854,
+      0.2636661231517792,
+      0.2710024416446686
+    ],
+    [
+      0.6158796399831772,
+      0.2988887280225754,
+      0.4693881720304489
+    ],
+    [
+      0.7671340435743331,
+      0.36035545915365214,
+      0.6344720810651778
+    ]
+  ],
+  "strong_forecasts_without_cell_input_observations": 17496,
+  "strong_forecasts": 35970,
+  "miss_examples": [
+    {
+      "input_end_date": "2024-01-05",
+      "target_date": "2024-01-06",
+      "horizon": 1,
+      "latitude": 10.437498092651367,
+      "longitude": 75.77084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7130844593048096,
+        0.19564726948738098,
+        0.09126830101013184
+      ],
+      "input_coverage_percent": 6.419144817877881,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.64374351501465,
+        "wind_u": -2.8811774253845215,
+        "wind_v": 1.8397725820541382,
+        "rainfall": 10.739407539367676,
+        "current_u": 0.0067141177132725716,
+        "current_v": -0.020215297117829323
+      }
+    },
+    {
+      "input_end_date": "2024-01-06",
+      "target_date": "2024-01-11",
+      "horizon": 5,
+      "latitude": 10.395831108093262,
+      "longitude": 75.35417175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6946571469306946,
+        0.19193632900714874,
+        0.11340654641389847
+      ],
+      "input_coverage_percent": 8.404011965511174,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.758325576782227,
+        "wind_u": -1.1887506246566772,
+        "wind_v": 1.7700930833816528,
+        "rainfall": 1.0278797149658203,
+        "current_u": 0.08564283698797226,
+        "current_v": -0.016747266054153442
+      }
+    },
+    {
+      "input_end_date": "2024-01-07",
+      "target_date": "2024-01-11",
+      "horizon": 4,
+      "latitude": 11.437498092651367,
+      "longitude": 74.27084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7596831917762756,
+        0.14957661926746368,
+        0.09074017405509949
+      ],
+      "input_coverage_percent": 8.175259546014429,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": 0.23892398178577423,
+        "sst": 29.49165916442871,
+        "wind_u": -0.434431254863739,
+        "wind_v": 0.44510090351104736,
+        "rainfall": 1.8538589477539062,
+        "current_u": 0.31964924931526184,
+        "current_v": 0.24038328230381012
+      }
+    },
+    {
+      "input_end_date": "2024-01-08",
+      "target_date": "2024-01-11",
+      "horizon": 3,
+      "latitude": 11.437498092651367,
+      "longitude": 74.27084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7725780010223389,
+        0.14801868796348572,
+        0.0794033631682396
+      ],
+      "input_coverage_percent": 8.175259546014429,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.566450119018555,
+        "wind_u": -1.145405888557434,
+        "wind_v": 1.855786681175232,
+        "rainfall": 16.891193389892578,
+        "current_u": 0.254609078168869,
+        "current_v": 0.3755395710468292
+      }
+    },
+    {
+      "input_end_date": "2024-01-09",
+      "target_date": "2024-01-11",
+      "horizon": 2,
+      "latitude": 10.395831108093262,
+      "longitude": 75.35417175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6976122856140137,
+        0.21317319571971893,
+        0.08921454101800919
+      ],
+      "input_coverage_percent": 8.428646841456978,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.74492073059082,
+        "wind_u": -4.056267738342285,
+        "wind_v": -2.3498294353485107,
+        "rainfall": 54.025909423828125,
+        "current_u": -0.05027981474995613,
+        "current_v": -0.17235460877418518
+      }
+    },
+    {
+      "input_end_date": "2024-01-10",
+      "target_date": "2024-01-11",
+      "horizon": 1,
+      "latitude": 11.437498092651367,
+      "longitude": 74.31250762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.785731852054596,
+        0.135872021317482,
+        0.07839620113372803
+      ],
+      "input_coverage_percent": 8.090797114200246,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.652494430541992,
+        "wind_u": -1.0072287321090698,
+        "wind_v": -1.8479597568511963,
+        "rainfall": 0.10082525759935379,
+        "current_u": 0.29919716715812683,
+        "current_v": 0.33650603890419006
+      }
+    },
+    {
+      "input_end_date": "2024-01-11",
+      "target_date": "2024-01-12",
+      "horizon": 1,
+      "latitude": 11.020831108093262,
+      "longitude": 75.35417175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7542911767959595,
+        0.1594371497631073,
+        0.08627170324325562
+      ],
+      "input_coverage_percent": 11.9303184937533,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.742979049682617,
+        "wind_u": -1.042923927307129,
+        "wind_v": -0.7784317135810852,
+        "rainfall": 0.0,
+        "current_u": 0.05031665787100792,
+        "current_v": -0.04413565248250961
+      }
+    },
+    {
+      "input_end_date": "2024-01-12",
+      "target_date": "2024-01-14",
+      "horizon": 2,
+      "latitude": 12.354164123535156,
+      "longitude": 74.35417175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.5784753561019897,
+        0.282004177570343,
+        0.13952036201953888
+      ],
+      "input_coverage_percent": 12.697518916065459,
+      "input_state": "observed",
+      "cell_observed_days": 2,
+      "environment": {
+        "chlorophyll": 0.17359353601932526,
+        "sst": 29.402559280395508,
+        "wind_u": -1.1541619300842285,
+        "wind_v": 0.2092505395412445,
+        "rainfall": 0.0,
+        "current_u": -0.2727600336074829,
+        "current_v": 0.13382361829280853
+      }
+    },
+    {
+      "input_end_date": "2024-01-13",
+      "target_date": "2024-01-14",
+      "horizon": 1,
+      "latitude": 12.354164123535156,
+      "longitude": 74.35417175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.5446363091468811,
+        0.29957079887390137,
+        0.1557929664850235
+      ],
+      "input_coverage_percent": 13.232447650888615,
+      "input_state": "observed",
+      "cell_observed_days": 2,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.510061264038086,
+        "wind_u": 0.19033294916152954,
+        "wind_v": -2.2308342456817627,
+        "rainfall": 0.0,
+        "current_u": -0.28008487820625305,
+        "current_v": 0.080569326877594
+      }
+    },
+    {
+      "input_end_date": "2024-01-14",
+      "target_date": "2024-01-18",
+      "horizon": 4,
+      "latitude": 9.479164123535156,
+      "longitude": 76.27084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.4230119585990906,
+        0.2562061846256256,
+        0.3207818865776062
+      ],
+      "input_coverage_percent": 23.206053140946683,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": 1.965958595275879,
+        "sst": 29.531723022460938,
+        "wind_u": 0.4009094834327698,
+        "wind_v": 0.19937191903591156,
+        "rainfall": 0.7450605630874634,
+        "current_u": 0.0070939077995717525,
+        "current_v": -0.03292333334684372
+      }
+    },
+    {
+      "input_end_date": "2024-01-15",
+      "target_date": "2024-01-18",
+      "horizon": 3,
+      "latitude": 9.479164123535156,
+      "longitude": 76.27084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.5018228888511658,
+        0.24014243483543396,
+        0.25803473591804504
+      ],
+      "input_coverage_percent": 23.206053140946683,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.333389282226562,
+        "wind_u": 0.4942683279514313,
+        "wind_v": 1.7305305004119873,
+        "rainfall": 1.5547082424163818,
+        "current_u": 0.006216553971171379,
+        "current_v": -0.026093846186995506
+      }
+    },
+    {
+      "input_end_date": "2024-01-16",
+      "target_date": "2024-01-18",
+      "horizon": 2,
+      "latitude": 9.479164123535156,
+      "longitude": 76.27084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.49234262108802795,
+        0.26353809237480164,
+        0.24411918222904205
+      ],
+      "input_coverage_percent": 17.38166461376034,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.06256103515625,
+        "wind_u": 0.9624292254447937,
+        "wind_v": 2.2871367931365967,
+        "rainfall": 4.001453876495361,
+        "current_u": -0.011254781857132912,
+        "current_v": 0.024148931726813316
+      }
+    },
+    {
+      "input_end_date": "2024-01-17",
+      "target_date": "2024-01-18",
+      "horizon": 1,
+      "latitude": 9.479164123535156,
+      "longitude": 76.27084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6420058012008667,
+        0.20728804171085358,
+        0.1507062315940857
+      ],
+      "input_coverage_percent": 11.138483195495336,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.044157028198242,
+        "wind_u": 0.3632659912109375,
+        "wind_v": 1.5444505214691162,
+        "rainfall": 1.4025733470916748,
+        "current_u": -0.03387665003538132,
+        "current_v": 0.073206827044487
+      }
+    },
+    {
+      "input_end_date": "2024-01-18",
+      "target_date": "2024-01-23",
+      "horizon": 5,
+      "latitude": 12.770831108093262,
+      "longitude": 74.43750762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6539634466171265,
+        0.22615118324756622,
+        0.1198854073882103
+      ],
+      "input_coverage_percent": 13.214851310927328,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.365615844726562,
+        "wind_u": 0.841305136680603,
+        "wind_v": -4.426246166229248,
+        "rainfall": 0.5675786137580872,
+        "current_u": -0.14469340443611145,
+        "current_v": 0.04840783774852753
+      }
+    },
+    {
+      "input_end_date": "2024-01-19",
+      "target_date": "2024-01-23",
+      "horizon": 4,
+      "latitude": 12.812498092651367,
+      "longitude": 74.52084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6792302131652832,
+        0.21316857635974884,
+        0.10760121047496796
+      ],
+      "input_coverage_percent": 8.66091852894598,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.456865310668945,
+        "wind_u": 0.6838749647140503,
+        "wind_v": -3.7506299018859863,
+        "rainfall": 0.11069203913211823,
+        "current_u": -0.12138313055038452,
+        "current_v": 0.056000083684921265
+      }
+    },
+    {
+      "input_end_date": "2024-01-20",
+      "target_date": "2024-01-23",
+      "horizon": 3,
+      "latitude": 12.395831108093262,
+      "longitude": 74.72917175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6900925636291504,
+        0.2102183848619461,
+        0.0996890664100647
+      ],
+      "input_coverage_percent": 8.949498504311103,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.47297477722168,
+        "wind_u": 1.302537441253662,
+        "wind_v": -4.46815824508667,
+        "rainfall": 0.17689825594425201,
+        "current_u": -0.028837651014328003,
+        "current_v": 0.06133851036429405
+      }
+    },
+    {
+      "input_end_date": "2024-01-21",
+      "target_date": "2024-01-24",
+      "horizon": 3,
+      "latitude": 12.479164123535156,
+      "longitude": 74.68750762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7225078344345093,
+        0.18862685561180115,
+        0.0888652503490448
+      ],
+      "input_coverage_percent": 8.949498504311103,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.568115234375,
+        "wind_u": 1.1798229217529297,
+        "wind_v": -3.853057861328125,
+        "rainfall": 0.0,
+        "current_u": -0.044590070843696594,
+        "current_v": 0.019907211884856224
+      }
+    },
+    {
+      "input_end_date": "2024-01-22",
+      "target_date": "2024-01-23",
+      "horizon": 1,
+      "latitude": 12.437498092651367,
+      "longitude": 74.68750762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7665294408798218,
+        0.15571723878383636,
+        0.07775335013866425
+      ],
+      "input_coverage_percent": 8.949498504311103,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.536865234375,
+        "wind_u": 1.3389370441436768,
+        "wind_v": -4.785555839538574,
+        "rainfall": 0.011563079431653023,
+        "current_u": -0.029217058792710304,
+        "current_v": -0.024040305987000465
+      }
+    },
+    {
+      "input_end_date": "2024-01-23",
+      "target_date": "2024-01-26",
+      "horizon": 3,
+      "latitude": 10.812498092651367,
+      "longitude": 75.60417175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7648332118988037,
+        0.15351805090904236,
+        0.08164873719215393
+      ],
+      "input_coverage_percent": 7.985219074432518,
+      "input_state": "observed",
+      "cell_observed_days": 0,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.471452713012695,
+        "wind_u": 1.014409065246582,
+        "wind_v": -2.929236888885498,
+        "rainfall": 0.20803043246269226,
+        "current_u": 0.02288890816271305,
+        "current_v": -0.132107213139534
+      }
+    },
+    {
+      "input_end_date": "2024-01-24",
+      "target_date": "2024-01-28",
+      "horizon": 4,
+      "latitude": 10.979164123535156,
+      "longitude": 75.52084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7598135471343994,
+        0.15158386528491974,
+        0.08860259503126144
+      ],
+      "input_coverage_percent": 7.193383776174556,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": 0.19630740582942963,
+        "sst": 29.340757369995117,
+        "wind_u": 1.5893362760543823,
+        "wind_v": -3.3184914588928223,
+        "rainfall": 0.06454133242368698,
+        "current_u": 0.01121641043573618,
+        "current_v": -0.12081430107355118
+      }
+    },
+    {
+      "input_end_date": "2024-01-25",
+      "target_date": "2024-01-26",
+      "horizon": 1,
+      "latitude": 11.020831108093262,
+      "longitude": 75.52084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7842341661453247,
+        0.13797321915626526,
+        0.07779256999492645
+      ],
+      "input_coverage_percent": 7.24617279605842,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.29916000366211,
+        "wind_u": 2.119055986404419,
+        "wind_v": -4.556576251983643,
+        "rainfall": 0.0,
+        "current_u": 0.0117122707888484,
+        "current_v": -0.16907033324241638
+      }
+    },
+    {
+      "input_end_date": "2024-01-26",
+      "target_date": "2024-01-28",
+      "horizon": 2,
+      "latitude": 10.979164123535156,
+      "longitude": 75.52084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6751431226730347,
+        0.18634189665317535,
+        0.1385149359703064
+      ],
+      "input_coverage_percent": 20.47158191096252,
+      "input_state": "observed",
+      "cell_observed_days": 2,
+      "environment": {
+        "chlorophyll": 0.35200998187065125,
+        "sst": 29.099924087524414,
+        "wind_u": 0.9958458542823792,
+        "wind_v": -2.950321912765503,
+        "rainfall": 0.020907901227474213,
+        "current_u": 0.016022535040974617,
+        "current_v": -0.14915691316127777
+      }
+    },
+    {
+      "input_end_date": "2024-01-27",
+      "target_date": "2024-01-28",
+      "horizon": 1,
+      "latitude": 10.979164123535156,
+      "longitude": 75.52084350585938,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7726078629493713,
+        0.14035369455814362,
+        0.08703836798667908
+      ],
+      "input_coverage_percent": 20.47158191096252,
+      "input_state": "observed",
+      "cell_observed_days": 2,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.119232177734375,
+        "wind_u": 0.03864461928606033,
+        "wind_v": -1.239885687828064,
+        "rainfall": 0.1718161255121231,
+        "current_u": 0.018692219629883766,
+        "current_v": -0.16762007772922516
+      }
+    },
+    {
+      "input_end_date": "2024-01-28",
+      "target_date": "2024-02-02",
+      "horizon": 5,
+      "latitude": 10.895831108093262,
+      "longitude": 75.31250762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7098510265350342,
+        0.1740506887435913,
+        0.11609825491905212
+      ],
+      "input_coverage_percent": 33.09167693119831,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 28.9516544342041,
+        "wind_u": 0.43069785833358765,
+        "wind_v": -1.930679440498352,
+        "rainfall": 0.1502569019794464,
+        "current_u": 0.011750426143407822,
+        "current_v": -0.14099626243114471
+      }
+    },
+    {
+      "input_end_date": "2024-01-29",
+      "target_date": "2024-02-02",
+      "horizon": 4,
+      "latitude": 10.770831108093262,
+      "longitude": 75.56250762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.6883435249328613,
+        0.18102967739105225,
+        0.13062676787376404
+      ],
+      "input_coverage_percent": 28.727784620798875,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 28.70165252685547,
+        "wind_u": 0.28056803345680237,
+        "wind_v": -2.1702144145965576,
+        "rainfall": 0.06767652928829193,
+        "current_u": 0.020447595044970512,
+        "current_v": -0.12767916917800903
+      }
+    },
+    {
+      "input_end_date": "2024-01-30",
+      "target_date": "2024-02-04",
+      "horizon": 5,
+      "latitude": 9.43749713897705,
+      "longitude": 75.81250762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7224083542823792,
+        0.17879782617092133,
+        0.09879376739263535
+      ],
+      "input_coverage_percent": 28.745380960760166,
+      "input_state": "observed",
+      "cell_observed_days": 2,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.15998077392578,
+        "wind_u": 0.46249592304229736,
+        "wind_v": -1.0076109170913696,
+        "rainfall": 0.027148928493261337,
+        "current_u": 0.0008390136645175517,
+        "current_v": 0.06954258680343628
+      }
+    },
+    {
+      "input_end_date": "2024-01-31",
+      "target_date": "2024-02-04",
+      "horizon": 4,
+      "latitude": 9.43749713897705,
+      "longitude": 75.81250762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7689342498779297,
+        0.15253016352653503,
+        0.07853564620018005
+      ],
+      "input_coverage_percent": 15.519971845856062,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.07811164855957,
+        "wind_u": 1.7010834217071533,
+        "wind_v": -2.3964152336120605,
+        "rainfall": 0.002414042130112648,
+        "current_u": -0.0077439709566533566,
+        "current_v": -0.0019084764644503593
+      }
+    },
+    {
+      "input_end_date": "2024-02-01",
+      "target_date": "2024-02-04",
+      "horizon": 3,
+      "latitude": 12.229164123535156,
+      "longitude": 74.68750762939453,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7651408910751343,
+        0.15505045652389526,
+        0.07980869710445404
+      ],
+      "input_coverage_percent": 15.519971845856062,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.27686882019043,
+        "wind_u": 1.5818551778793335,
+        "wind_v": -5.489144802093506,
+        "rainfall": 5.961434726486914e-05,
+        "current_u": -0.006405219901353121,
+        "current_v": -0.07363152503967285
+      }
+    },
+    {
+      "input_end_date": "2024-02-02",
+      "target_date": "2024-02-06",
+      "horizon": 4,
+      "latitude": 9.43749713897705,
+      "longitude": 74.97917175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.7586358189582825,
+        0.15881741046905518,
+        0.08254672586917877
+      ],
+      "input_coverage_percent": 12.567306000351927,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": 0.15212111175060272,
+        "sst": 29.17186737060547,
+        "wind_u": 0.5815234184265137,
+        "wind_v": -4.861824035644531,
+        "rainfall": 0.08165925741195679,
+        "current_u": -0.010337448678910732,
+        "current_v": 0.19634681940078735
+      }
+    },
+    {
+      "input_end_date": "2024-02-03",
+      "target_date": "2024-02-06",
+      "horizon": 3,
+      "latitude": 9.43749713897705,
+      "longitude": 74.97917175292969,
+      "true_class": 2,
+      "predicted_class": 0,
+      "raw_scores": [
+        0.762873113155365,
+        0.15942594408988953,
+        0.0777008906006813
+      ],
+      "input_coverage_percent": 11.673411930318494,
+      "input_state": "observed",
+      "cell_observed_days": 1,
+      "environment": {
+        "chlorophyll": null,
+        "sst": 29.178953170776367,
+        "wind_u": 0.6394322514533997,
+        "wind_v": -2.7186739444732666,
+        "rainfall": 0.7091876268386841,
+        "current_u": 0.0666455402970314,
+        "current_v": 0.21584095060825348
+      }
+    }
+  ],
+  "interpretation": "Adjacent proxy quantiles, class imbalance and missing observations are possible contributors. Strata are associations, not causal diagnoses. These data do not establish a model capacity limit. No architecture expansion is justified by this report alone.",
+  "independent_data": "No separate region, field HAB records or genuinely uninspected period identified. Historical 2025 evaluation is not rerun.",
+  "month_grouping": "actual_target_date"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "hab-occurrence-v1",
+  "definition_id": "REPLACE_WITH_REVIEWED_DEFINITION_ID",
+  "event_definition": "REPLACE_WITH_EVIDENCE_BASED_HAB_OCCURRENCE_DEFINITION",
+  "negative_definition": "REPLACE_WITH_ZONE_MONITORING_REQUIREMENTS_FOR_VERIFIED_ABSENCE",
+  "input_days": 14,
+  "output_days": 5,
+  "splits": {
+    "train": [null, null],
+    "validation": [null, null],
+    "calibration": [null, null],
+    "test": [null, null]
+  },
+  "zones": [
+    {"id": "REPLACE_ZONE_ID", "name": "REPLACE_ZONE_NAME", "bounds": [74.0, 8.0, 78.0, 12.0]}
+  ]
+}

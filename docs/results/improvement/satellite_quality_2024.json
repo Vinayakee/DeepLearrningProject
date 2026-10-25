@@ -1,0 +1,100 @@
+{
+  "modis": {
+    "period": "2024 only",
+    "marine_support_pixels": 5683,
+    "marine_coverage_percent": 8.298164692126552,
+    "days_without_marine_observations": 207,
+    "longest_empty_run_days": 12,
+    "marine_cells_never_observed_in_2024": 0,
+    "marine_cell_observed_days_quantiles": [
+      7.0,
+      26.0,
+      30.0,
+      34.0,
+      53.0
+    ],
+    "months": {
+      "1": {
+        "mean_coverage_percent": 13.331781828089435,
+        "empty_days": 11
+      },
+      "2": {
+        "mean_coverage_percent": 24.481969819243115,
+        "empty_days": 12
+      },
+      "3": {
+        "mean_coverage_percent": 6.9335255686172115,
+        "empty_days": 20
+      },
+      "4": {
+        "mean_coverage_percent": 6.909496158132441,
+        "empty_days": 14
+      },
+      "5": {
+        "mean_coverage_percent": 2.9022608458730907,
+        "empty_days": 25
+      },
+      "6": {
+        "mean_coverage_percent": 0.8387588714880637,
+        "empty_days": 20
+      },
+      "7": {
+        "mean_coverage_percent": 1.5149881082799295,
+        "empty_days": 23
+      },
+      "8": {
+        "mean_coverage_percent": 3.287109829542552,
+        "empty_days": 18
+      },
+      "9": {
+        "mean_coverage_percent": 7.447944160947856,
+        "empty_days": 19
+      },
+      "10": {
+        "mean_coverage_percent": 7.985332599206461,
+        "empty_days": 15
+      },
+      "11": {
+        "mean_coverage_percent": 7.212739750131972,
+        "empty_days": 16
+      },
+      "12": {
+        "mean_coverage_percent": 17.42832329585124,
+        "empty_days": 14
+      }
+    },
+    "latitude_bands": {
+      "8..9N": {
+        "marine_cells": 1684,
+        "valid_cell_days": 54779
+      },
+      "9..10N": {
+        "marine_cells": 1349,
+        "valid_cell_days": 42527
+      },
+      "10..11N": {
+        "marine_cells": 1166,
+        "valid_cell_days": 31364
+      },
+      "11..12N": {
+        "marine_cells": 920,
+        "valid_cell_days": 26274
+      },
+      "12..13N": {
+        "marine_cells": 564,
+        "valid_cell_days": 17656
+      }
+    },
+    "missing_cause": "Processed masks cannot distinguish each cloud, glint, retrieval failure or missing acquisition. These are plausible mechanisms, not proven causes for individual gaps.",
+    "handling": "Missing values remain masked. Model inputs use zero standardized value plus observation flag 0. Missing targets remain class 255 and excluded from loss/scoring."
+  },
+  "sentinel3": {
+    "fusion_retained": false,
+    "reason": "Only CHL_OC4ME and dataMask were requested/retained. No per-pixel science/quality flags or independent source georeferencing are available in the saved bundle. dataMask and tile-level cloud filtering do not establish valid chlorophyll retrievals.",
+    "documentation": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/S3OLCIL2.html",
+    "future_requirement": "Acquire original OLCI water products and documented per-pixel quality flags; apply appropriate retrieval/cloud/land/glint checks before resampling, validate georeferencing and MODIS agreement on training/development data, preserve source provenance. No blind fusion or boundary-value clipping.",
+    "available": true,
+    "2024_unverified_availability_percent": 37.5473202120407,
+    "2024_empty_days": 27
+  }
+}

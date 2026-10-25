@@ -1,0 +1,6 @@
+{
+  "comparison": "Training/2024 validation history only; no test metrics inspected",
+  "same_epochs": true,
+  "maximum_absolute_history_difference": 0.0,
+  "exact_history_reproduction": true
+}

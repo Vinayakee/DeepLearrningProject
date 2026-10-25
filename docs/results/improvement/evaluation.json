@@ -1,0 +1,2350 @@
+{
+  "created_at_utc": "2026-09-13T02:50:13.693878+00:00",
+  "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc",
+  "final_freeze_sha256": "aa7f335575ff40d99ee02dee948d581170604ad4a1c906aee671786e393e1f22",
+  "calibration": {
+    "regional_elevated_percent": 13.72073536133259,
+    "regional_strong_percent": 24.172538490914004,
+    "regional_method": "P75/P90 of daily observed strong-label fractions on training days with >=5% support coverage. Demonstration heuristic; not operationally validated.",
+    "regional_fit_days": 332,
+    "regional_fit_split": "train (2021-2023)",
+    "decision_rule": {
+      "type": "score_ratios",
+      "scales": [
+        1.0,
+        1.2840254166877414,
+        0.7788007830714049
+      ]
+    },
+    "strong_probability_threshold": null,
+    "threshold_fit_split": "2024 development only",
+    "threshold_selection": "Macro F1 is primary. Candidates within 0.005 absolute F1 of the best form the near-tie set; choose highest regional any-warning F1, then minimum rare-class F1, lower false-warning frequency, fewer missed strong days, macro F1. Report all class-specific and warning tradeoffs. Seasonal inputs are eligible only after the predeclared controlled experiment retains them.",
+    "coverage_policy": {
+      "minimum_chlorophyll_mean_percent": 5.0,
+      "minimum_chlorophyll_observed_days": 2,
+      "minimum_environment_observed_days": 1,
+      "minimum_target_coverage_percent": 5.0
+    },
+    "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc",
+    "preprocessing_sha256": "a1f935b3be972f41412acbcd929bfbe6466fed57e85440497bc568815ad4534f",
+    "created_at_utc": "2026-09-13T02:49:23.007012+00:00",
+    "operational_warning_validated": false,
+    "regional_validation_status": "Research prototype: regional skill is insufficient and labels are chlorophyll proxies. Independent verified HAB validation is required before operational warning delivery.",
+    "regional_validation_2024": {
+      "any_warning": {
+        "qualified_days": 78,
+        "warning_days": 1,
+        "actual_high_risk_days": 9,
+        "correctly_warned_high_risk_days": 1,
+        "missed_high_risk_days": 8,
+        "false_warning_days": 0,
+        "true_negative_days": 69,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 1.0,
+        "recall": 0.1111111111111111,
+        "detection_rate": 0.1111111111111111,
+        "f1": 0.19999999999999998,
+        "abstained_high_risk_days": 4,
+        "mean_input_coverage_on_warning_days_percent": 25.644905859581208,
+        "available_input_cohort": {
+          "qualified_days": 50,
+          "warning_days": 1,
+          "actual_high_risk_days": 5,
+          "correctly_warned_high_risk_days": 1,
+          "missed_high_risk_days": 4,
+          "false_warning_days": 0,
+          "true_negative_days": 45,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 1.0,
+          "recall": 0.2,
+          "detection_rate": 0.2,
+          "f1": 0.33333333333333337
+        }
+      },
+      "strong_warning": {
+        "qualified_days": 78,
+        "warning_days": 0,
+        "actual_high_risk_days": 5,
+        "correctly_warned_high_risk_days": 0,
+        "missed_high_risk_days": 5,
+        "false_warning_days": 0,
+        "true_negative_days": 73,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "detection_rate": 0.0,
+        "f1": 0.0,
+        "abstained_high_risk_days": 2,
+        "mean_input_coverage_on_warning_days_percent": null,
+        "available_input_cohort": {
+          "qualified_days": 50,
+          "warning_days": 0,
+          "actual_high_risk_days": 3,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 3,
+          "false_warning_days": 0,
+          "true_negative_days": 47,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "validation": {
+    "model": {
+      "accuracy": 0.8445518296155285,
+      "macro_f1": 0.46522802281749875,
+      "valid_pixel_forecasts": 798993,
+      "confusion_matrix": [
+        [
+          655942,
+          42730,
+          10931
+        ],
+        [
+          39433,
+          9639,
+          4348
+        ],
+        [
+          18949,
+          7811,
+          9210
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9182695807504718,
+          "recall": 0.9243788428177445,
+          "f1": 0.9213140842192051,
+          "support": 709603
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.16016949152542373,
+          "recall": 0.1804380381879446,
+          "f1": 0.1697007042253521,
+          "support": 53420
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.3760872228347421,
+          "recall": 0.25604670558799,
+          "f1": 0.30466928000793925,
+          "support": 35970
+        }
+      ],
+      "false_warning_pixel_rate": 0.07562115718225543,
+      "missed_risk_pixel_rate": 0.6531155610247231,
+      "decision_rule": {
+        "type": "score_ratios",
+        "scales": [
+          1.0,
+          1.2840254166877414,
+          0.7788007830714049
+        ]
+      }
+    },
+    "regional": {
+      "policy": {
+        "minimum_chlorophyll_mean_percent": 5.0,
+        "minimum_chlorophyll_observed_days": 2,
+        "minimum_environment_observed_days": 1,
+        "minimum_target_coverage_percent": 5.0
+      },
+      "decision_rule": {
+        "type": "score_ratios",
+        "scales": [
+          1.0,
+          1.2840254166877414,
+          0.7788007830714049
+        ]
+      },
+      "daily_horizon_1": {
+        "forecast_cases": 325,
+        "truth_qualified_cases": 78,
+        "unknown_truth_cases": 247,
+        "unavailable_cases": 161,
+        "insufficient_data_frequency": 0.49538461538461537,
+        "input_state_counts": {
+          "observed": 164,
+          "low_coverage": 86,
+          "insufficient_inputs": 49,
+          "missing_data": 26
+        },
+        "mean_input_coverage_percent": 8.522356826703122,
+        "warnings_without_qualified_truth": 0,
+        "any_warning": {
+          "qualified_days": 78,
+          "warning_days": 1,
+          "actual_high_risk_days": 9,
+          "correctly_warned_high_risk_days": 1,
+          "missed_high_risk_days": 8,
+          "false_warning_days": 0,
+          "true_negative_days": 69,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 1.0,
+          "recall": 0.1111111111111111,
+          "detection_rate": 0.1111111111111111,
+          "f1": 0.19999999999999998,
+          "abstained_high_risk_days": 4,
+          "mean_input_coverage_on_warning_days_percent": 25.644905859581208,
+          "available_input_cohort": {
+            "qualified_days": 50,
+            "warning_days": 1,
+            "actual_high_risk_days": 5,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 4,
+            "false_warning_days": 0,
+            "true_negative_days": 45,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 1.0,
+            "recall": 0.2,
+            "detection_rate": 0.2,
+            "f1": 0.33333333333333337
+          }
+        },
+        "strong_warning": {
+          "qualified_days": 78,
+          "warning_days": 0,
+          "actual_high_risk_days": 5,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 5,
+          "false_warning_days": 0,
+          "true_negative_days": 73,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0,
+          "abstained_high_risk_days": 2,
+          "mean_input_coverage_on_warning_days_percent": null,
+          "available_input_cohort": {
+            "qualified_days": 50,
+            "warning_days": 0,
+            "actual_high_risk_days": 3,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 3,
+            "false_warning_days": 0,
+            "true_negative_days": 47,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "all_horizon_cases": {
+        "forecast_cases": 1625,
+        "truth_qualified_cases": 388,
+        "unknown_truth_cases": 1237,
+        "unavailable_cases": 805,
+        "insufficient_data_frequency": 0.49538461538461537,
+        "input_state_counts": {
+          "observed": 820,
+          "low_coverage": 430,
+          "insufficient_inputs": 245,
+          "missing_data": 130
+        },
+        "mean_input_coverage_percent": 8.522356826703122,
+        "warnings_without_qualified_truth": 3,
+        "any_warning": {
+          "qualified_days": 388,
+          "warning_days": 5,
+          "actual_high_risk_days": 45,
+          "correctly_warned_high_risk_days": 2,
+          "missed_high_risk_days": 43,
+          "false_warning_days": 3,
+          "true_negative_days": 340,
+          "false_warning_frequency": 0.007731958762886598,
+          "false_warning_rate_on_nonrisk_days": 0.008746355685131196,
+          "precision": 0.4,
+          "recall": 0.044444444444444446,
+          "detection_rate": 0.044444444444444446,
+          "f1": 0.07999999999999999,
+          "abstained_high_risk_days": 23,
+          "mean_input_coverage_on_warning_days_percent": 21.354214323420727,
+          "available_input_cohort": {
+            "qualified_days": 255,
+            "warning_days": 5,
+            "actual_high_risk_days": 22,
+            "correctly_warned_high_risk_days": 2,
+            "missed_high_risk_days": 20,
+            "false_warning_days": 3,
+            "true_negative_days": 230,
+            "false_warning_frequency": 0.011764705882352941,
+            "false_warning_rate_on_nonrisk_days": 0.012875536480686695,
+            "precision": 0.4,
+            "recall": 0.09090909090909091,
+            "detection_rate": 0.09090909090909091,
+            "f1": 0.14814814814814814
+          }
+        },
+        "strong_warning": {
+          "qualified_days": 388,
+          "warning_days": 0,
+          "actual_high_risk_days": 25,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 25,
+          "false_warning_days": 0,
+          "true_negative_days": 363,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0,
+          "abstained_high_risk_days": 13,
+          "mean_input_coverage_on_warning_days_percent": null,
+          "available_input_cohort": {
+            "qualified_days": 255,
+            "warning_days": 0,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 12,
+            "false_warning_days": 0,
+            "true_negative_days": 243,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "by_horizon": {
+        "1": {
+          "forecast_cases": 325,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 247,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49538461538461537,
+          "input_state_counts": {
+            "observed": 164,
+            "low_coverage": 86,
+            "insufficient_inputs": 49,
+            "missing_data": 26
+          },
+          "mean_input_coverage_percent": 8.522356826703122,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 1,
+            "actual_high_risk_days": 9,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 8,
+            "false_warning_days": 0,
+            "true_negative_days": 69,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 1.0,
+            "recall": 0.1111111111111111,
+            "detection_rate": 0.1111111111111111,
+            "f1": 0.19999999999999998,
+            "abstained_high_risk_days": 4,
+            "mean_input_coverage_on_warning_days_percent": 25.644905859581208,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 1,
+              "actual_high_risk_days": 5,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 4,
+              "false_warning_days": 0,
+              "true_negative_days": 45,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 1.0,
+              "recall": 0.2,
+              "detection_rate": 0.2,
+              "f1": 0.33333333333333337
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 5,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 5,
+            "false_warning_days": 0,
+            "true_negative_days": 73,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 2,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 0,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 0,
+              "true_negative_days": 47,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "2": {
+          "forecast_cases": 325,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 247,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49538461538461537,
+          "input_state_counts": {
+            "observed": 164,
+            "low_coverage": 86,
+            "insufficient_inputs": 49,
+            "missing_data": 26
+          },
+          "mean_input_coverage_percent": 8.522356826703122,
+          "warnings_without_qualified_truth": 2,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 2,
+            "actual_high_risk_days": 9,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 8,
+            "false_warning_days": 1,
+            "true_negative_days": 68,
+            "false_warning_frequency": 0.01282051282051282,
+            "false_warning_rate_on_nonrisk_days": 0.014492753623188406,
+            "precision": 0.5,
+            "recall": 0.1111111111111111,
+            "detection_rate": 0.1111111111111111,
+            "f1": 0.1818181818181818,
+            "abstained_high_risk_days": 4,
+            "mean_input_coverage_on_warning_days_percent": 18.85271863452402,
+            "available_input_cohort": {
+              "qualified_days": 49,
+              "warning_days": 2,
+              "actual_high_risk_days": 5,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 4,
+              "false_warning_days": 1,
+              "true_negative_days": 43,
+              "false_warning_frequency": 0.02040816326530612,
+              "false_warning_rate_on_nonrisk_days": 0.022727272727272728,
+              "precision": 0.5,
+              "recall": 0.2,
+              "detection_rate": 0.2,
+              "f1": 0.28571428571428575
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 5,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 5,
+            "false_warning_days": 0,
+            "true_negative_days": 73,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 2,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 49,
+              "warning_days": 0,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 0,
+              "true_negative_days": 46,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "3": {
+          "forecast_cases": 325,
+          "truth_qualified_cases": 77,
+          "unknown_truth_cases": 248,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49538461538461537,
+          "input_state_counts": {
+            "observed": 164,
+            "low_coverage": 86,
+            "insufficient_inputs": 49,
+            "missing_data": 26
+          },
+          "mean_input_coverage_percent": 8.522356826703122,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 77,
+            "warning_days": 0,
+            "actual_high_risk_days": 9,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 9,
+            "false_warning_days": 0,
+            "true_negative_days": 68,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 5,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 0,
+              "actual_high_risk_days": 4,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 4,
+              "false_warning_days": 0,
+              "true_negative_days": 48,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 77,
+            "warning_days": 0,
+            "actual_high_risk_days": 5,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 5,
+            "false_warning_days": 0,
+            "true_negative_days": 72,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 3,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 0,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 0,
+              "true_negative_days": 50,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "4": {
+          "forecast_cases": 325,
+          "truth_qualified_cases": 77,
+          "unknown_truth_cases": 248,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49538461538461537,
+          "input_state_counts": {
+            "observed": 164,
+            "low_coverage": 86,
+            "insufficient_inputs": 49,
+            "missing_data": 26
+          },
+          "mean_input_coverage_percent": 8.522356826703122,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 77,
+            "warning_days": 0,
+            "actual_high_risk_days": 9,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 9,
+            "false_warning_days": 0,
+            "true_negative_days": 68,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 5,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 0,
+              "actual_high_risk_days": 4,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 4,
+              "false_warning_days": 0,
+              "true_negative_days": 48,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 77,
+            "warning_days": 0,
+            "actual_high_risk_days": 5,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 5,
+            "false_warning_days": 0,
+            "true_negative_days": 72,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 3,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 0,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 0,
+              "true_negative_days": 50,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "5": {
+          "forecast_cases": 325,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 247,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49538461538461537,
+          "input_state_counts": {
+            "observed": 164,
+            "low_coverage": 86,
+            "insufficient_inputs": 49,
+            "missing_data": 26
+          },
+          "mean_input_coverage_percent": 8.522356826703122,
+          "warnings_without_qualified_truth": 1,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 2,
+            "actual_high_risk_days": 9,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 9,
+            "false_warning_days": 2,
+            "true_negative_days": 67,
+            "false_warning_frequency": 0.02564102564102564,
+            "false_warning_rate_on_nonrisk_days": 0.028985507246376812,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 5,
+            "mean_input_coverage_on_warning_days_percent": 21.7103642442372,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 2,
+              "actual_high_risk_days": 4,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 4,
+              "false_warning_days": 2,
+              "true_negative_days": 46,
+              "false_warning_frequency": 0.038461538461538464,
+              "false_warning_rate_on_nonrisk_days": 0.041666666666666664,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 5,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 5,
+            "false_warning_days": 0,
+            "true_negative_days": 73,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 3,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 0,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 0,
+              "true_negative_days": 50,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      "methodology": "Primary daily counts use horizon 1: one target day per origin. All-horizon counts are distinct forecast cases, not independent days. Actual regional strong fraction uses only observed proxy labels, qualified at >=5% marine support. Predicted fraction uses dense training-supported cells. P75/P90 thresholds are fixed from 2021-2023. Missing target observations are UNKNOWN. Unavailable-input high-risk days remain missed warnings, with abstention counts reported. Hindcast availability is assessed at origin, not using today's age; product delivery latency is unknown."
+    }
+  },
+  "test": {
+    "model": {
+      "accuracy": 0.7928643550156605,
+      "macro_f1": 0.3980793136553303,
+      "valid_pixel_forecasts": 640783,
+      "confusion_matrix": [
+        [
+          490127,
+          53613,
+          9673
+        ],
+        [
+          35312,
+          16518,
+          1434
+        ],
+        [
+          18930,
+          13767,
+          1409
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9003580292044551,
+          "recall": 0.8856441753265645,
+          "f1": 0.8929404927389956,
+          "support": 553413
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.19688192805549595,
+          "recall": 0.3101156503454491,
+          "f1": 0.24085388081246992,
+          "support": 53264
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.11257590284435923,
+          "recall": 0.04131237905353897,
+          "f1": 0.060443567414525334,
+          "support": 34106
+        }
+      ],
+      "decision_rule": {
+        "type": "score_ratios",
+        "scales": [
+          1.0,
+          1.2840254166877414,
+          0.7788007830714049
+        ]
+      },
+      "horizons": [
+        {
+          "accuracy": 0.7997707061630465,
+          "macro_f1": 0.4005497657154604,
+          "valid_pixel_forecasts": 129092,
+          "confusion_matrix": [
+            [
+              99721,
+              9902,
+              1964
+            ],
+            [
+              7079,
+              3250,
+              306
+            ],
+            [
+              4086,
+              2511,
+              273
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.8993110040942951,
+              "recall": 0.8936614480181383,
+              "f1": 0.8964773253383557,
+              "support": 111587
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.20749537125710274,
+              "recall": 0.305594734367654,
+              "f1": 0.24716708494942582,
+              "support": 10635
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.10735351946519858,
+              "recall": 0.03973799126637555,
+              "f1": 0.058004886858599815,
+              "support": 6870
+            }
+          ]
+        },
+        {
+          "accuracy": 0.7706023166023166,
+          "macro_f1": 0.4019291984732582,
+          "valid_pixel_forecasts": 129500,
+          "confusion_matrix": [
+            [
+              95578,
+              13713,
+              2648
+            ],
+            [
+              6512,
+              3778,
+              401
+            ],
+            [
+              3444,
+              2989,
+              437
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9056607349290277,
+              "recall": 0.8538400378777727,
+              "f1": 0.8789872765814608,
+              "support": 111939
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.18447265625,
+              "recall": 0.35338134879805444,
+              "f1": 0.2424047993327131,
+              "support": 10691
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.1253585771658061,
+              "recall": 0.0636098981077147,
+              "f1": 0.08439551950560062,
+              "support": 6870
+            }
+          ]
+        },
+        {
+          "accuracy": 0.7932906120336018,
+          "macro_f1": 0.39463559050143754,
+          "valid_pixel_forecasts": 127493,
+          "confusion_matrix": [
+            [
+              97305,
+              11683,
+              1070
+            ],
+            [
+              6788,
+              3687,
+              171
+            ],
+            [
+              3698,
+              2944,
+              147
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.9027191509495227,
+              "recall": 0.8841247342310418,
+              "f1": 0.8933251931383663,
+              "support": 110058
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.2013213934694769,
+              "recall": 0.34632725906443734,
+              "f1": 0.25462707182320443,
+              "support": 10646
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.10590778097982709,
+              "recall": 0.021652673442333185,
+              "f1": 0.035954506542741835,
+              "support": 6789
+            }
+          ]
+        },
+        {
+          "accuracy": 0.7961064529032966,
+          "macro_f1": 0.3891522775743475,
+          "valid_pixel_forecasts": 127493,
+          "confusion_matrix": [
+            [
+              98286,
+              10248,
+              1524
+            ],
+            [
+              7404,
+              3008,
+              234
+            ],
+            [
+              3813,
+              2772,
+              204
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.8975644502890332,
+              "recall": 0.8930382162132694,
+              "f1": 0.8952956126087968,
+              "support": 110058
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.18767157474419766,
+              "recall": 0.28254743565658463,
+              "f1": 0.22553797705630954,
+              "support": 10646
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.10397553516819572,
+              "recall": 0.030048608042421564,
+              "f1": 0.046623243057936234,
+              "support": 6789
+            }
+          ]
+        },
+        {
+          "accuracy": 0.8048425769427302,
+          "macro_f1": 0.40096081696534447,
+          "valid_pixel_forecasts": 127205,
+          "confusion_matrix": [
+            [
+              99237,
+              8067,
+              2467
+            ],
+            [
+              7529,
+              2795,
+              322
+            ],
+            [
+              3889,
+              2551,
+              348
+            ]
+          ],
+          "classes": [
+            {
+              "name": "Normal",
+              "precision": 0.8968144232072658,
+              "recall": 0.9040365852547576,
+              "f1": 0.9004110222931959,
+              "support": 109771
+            },
+            {
+              "name": "Elevated risk",
+              "precision": 0.20837992991873555,
+              "recall": 0.2625399210971257,
+              "f1": 0.23234548401845465,
+              "support": 10646
+            },
+            {
+              "name": "Strong bloom risk",
+              "precision": 0.11093401338858783,
+              "recall": 0.05126694166175604,
+              "f1": 0.07012594458438287,
+              "support": 6788
+            }
+          ]
+        }
+      ],
+      "strong_probability_brier_score": 0.065063426891017,
+      "false_warning_pixel_rate": 0.11435582467343557,
+      "missed_risk_pixel_rate": 0.620830948838274
+    },
+    "regional": {
+      "policy": {
+        "minimum_chlorophyll_mean_percent": 5.0,
+        "minimum_chlorophyll_observed_days": 2,
+        "minimum_environment_observed_days": 1,
+        "minimum_target_coverage_percent": 5.0
+      },
+      "decision_rule": {
+        "type": "score_ratios",
+        "scales": [
+          1.0,
+          1.2840254166877414,
+          0.7788007830714049
+        ]
+      },
+      "daily_horizon_1": {
+        "forecast_cases": 328,
+        "truth_qualified_cases": 78,
+        "unknown_truth_cases": 250,
+        "unavailable_cases": 161,
+        "insufficient_data_frequency": 0.49085365853658536,
+        "input_state_counts": {
+          "observed": 167,
+          "insufficient_inputs": 78,
+          "low_coverage": 60,
+          "missing_data": 23
+        },
+        "mean_input_coverage_percent": 7.256730600035192,
+        "warnings_without_qualified_truth": 0,
+        "any_warning": {
+          "qualified_days": 78,
+          "warning_days": 0,
+          "actual_high_risk_days": 12,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 12,
+          "false_warning_days": 0,
+          "true_negative_days": 66,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0,
+          "abstained_high_risk_days": 9,
+          "mean_input_coverage_on_warning_days_percent": null,
+          "available_input_cohort": {
+            "qualified_days": 51,
+            "warning_days": 0,
+            "actual_high_risk_days": 3,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 3,
+            "false_warning_days": 0,
+            "true_negative_days": 48,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0
+          }
+        },
+        "strong_warning": {
+          "qualified_days": 78,
+          "warning_days": 0,
+          "actual_high_risk_days": 8,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 8,
+          "false_warning_days": 0,
+          "true_negative_days": 70,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0,
+          "abstained_high_risk_days": 6,
+          "mean_input_coverage_on_warning_days_percent": null,
+          "available_input_cohort": {
+            "qualified_days": 51,
+            "warning_days": 0,
+            "actual_high_risk_days": 2,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 2,
+            "false_warning_days": 0,
+            "true_negative_days": 49,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "all_horizon_cases": {
+        "forecast_cases": 1640,
+        "truth_qualified_cases": 390,
+        "unknown_truth_cases": 1250,
+        "unavailable_cases": 805,
+        "insufficient_data_frequency": 0.49085365853658536,
+        "input_state_counts": {
+          "observed": 835,
+          "insufficient_inputs": 390,
+          "low_coverage": 300,
+          "missing_data": 115
+        },
+        "mean_input_coverage_percent": 7.256730600035193,
+        "warnings_without_qualified_truth": 0,
+        "any_warning": {
+          "qualified_days": 390,
+          "warning_days": 0,
+          "actual_high_risk_days": 60,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 60,
+          "false_warning_days": 0,
+          "true_negative_days": 330,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0,
+          "abstained_high_risk_days": 40,
+          "mean_input_coverage_on_warning_days_percent": null,
+          "available_input_cohort": {
+            "qualified_days": 247,
+            "warning_days": 0,
+            "actual_high_risk_days": 20,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 20,
+            "false_warning_days": 0,
+            "true_negative_days": 227,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0
+          }
+        },
+        "strong_warning": {
+          "qualified_days": 390,
+          "warning_days": 0,
+          "actual_high_risk_days": 40,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 40,
+          "false_warning_days": 0,
+          "true_negative_days": 350,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0,
+          "abstained_high_risk_days": 28,
+          "mean_input_coverage_on_warning_days_percent": null,
+          "available_input_cohort": {
+            "qualified_days": 247,
+            "warning_days": 0,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 12,
+            "false_warning_days": 0,
+            "true_negative_days": 235,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "by_horizon": {
+        "1": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 250,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49085365853658536,
+          "input_state_counts": {
+            "observed": 167,
+            "insufficient_inputs": 78,
+            "low_coverage": 60,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 12,
+            "false_warning_days": 0,
+            "true_negative_days": 66,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 9,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 51,
+              "warning_days": 0,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 0,
+              "true_negative_days": 48,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 8,
+            "false_warning_days": 0,
+            "true_negative_days": 70,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 6,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 51,
+              "warning_days": 0,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 0,
+              "true_negative_days": 49,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "2": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 79,
+          "unknown_truth_cases": 249,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49085365853658536,
+          "input_state_counts": {
+            "observed": 167,
+            "insufficient_inputs": 78,
+            "low_coverage": 60,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 79,
+            "warning_days": 0,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 12,
+            "false_warning_days": 0,
+            "true_negative_days": 67,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 9,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 0,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 0,
+              "true_negative_days": 47,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 79,
+            "warning_days": 0,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 8,
+            "false_warning_days": 0,
+            "true_negative_days": 71,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 6,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 0,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 0,
+              "true_negative_days": 48,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "3": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 250,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49085365853658536,
+          "input_state_counts": {
+            "observed": 167,
+            "insufficient_inputs": 78,
+            "low_coverage": 60,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 12,
+            "false_warning_days": 0,
+            "true_negative_days": 66,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 7,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 48,
+              "warning_days": 0,
+              "actual_high_risk_days": 5,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 5,
+              "false_warning_days": 0,
+              "true_negative_days": 43,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 8,
+            "false_warning_days": 0,
+            "true_negative_days": 70,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 5,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 48,
+              "warning_days": 0,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 0,
+              "true_negative_days": 45,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "4": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 250,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49085365853658536,
+          "input_state_counts": {
+            "observed": 167,
+            "insufficient_inputs": 78,
+            "low_coverage": 60,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 12,
+            "false_warning_days": 0,
+            "true_negative_days": 66,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 7,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 0,
+              "actual_high_risk_days": 5,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 5,
+              "false_warning_days": 0,
+              "true_negative_days": 45,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 0,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 8,
+            "false_warning_days": 0,
+            "true_negative_days": 70,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 5,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 0,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 0,
+              "true_negative_days": 47,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "5": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 77,
+          "unknown_truth_cases": 251,
+          "unavailable_cases": 161,
+          "insufficient_data_frequency": 0.49085365853658536,
+          "input_state_counts": {
+            "observed": 167,
+            "insufficient_inputs": 78,
+            "low_coverage": 60,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 0,
+          "any_warning": {
+            "qualified_days": 77,
+            "warning_days": 0,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 12,
+            "false_warning_days": 0,
+            "true_negative_days": 65,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 8,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 48,
+              "warning_days": 0,
+              "actual_high_risk_days": 4,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 4,
+              "false_warning_days": 0,
+              "true_negative_days": 44,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 77,
+            "warning_days": 0,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 0,
+            "missed_high_risk_days": 8,
+            "false_warning_days": 0,
+            "true_negative_days": 69,
+            "false_warning_frequency": 0.0,
+            "false_warning_rate_on_nonrisk_days": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "detection_rate": 0.0,
+            "f1": 0.0,
+            "abstained_high_risk_days": 6,
+            "mean_input_coverage_on_warning_days_percent": null,
+            "available_input_cohort": {
+              "qualified_days": 48,
+              "warning_days": 0,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 0,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 0,
+              "true_negative_days": 46,
+              "false_warning_frequency": 0.0,
+              "false_warning_rate_on_nonrisk_days": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "detection_rate": 0.0,
+              "f1": 0.0
+            }
+          }
+        }
+      },
+      "methodology": "Primary daily counts use horizon 1: one target day per origin. All-horizon counts are distinct forecast cases, not independent days. Actual regional strong fraction uses only observed proxy labels, qualified at >=5% marine support. Predicted fraction uses dense training-supported cells. P75/P90 thresholds are fixed from 2021-2023. Missing target observations are UNKNOWN. Unavailable-input high-risk days remain missed warnings, with abstention counts reported. Hindcast availability is assessed at origin, not using today's age; product delivery latency is unknown."
+    }
+  },
+  "baseline_test": {
+    "model": {
+      "accuracy": 0.7875895583996454,
+      "macro_f1": 0.38334026928946363,
+      "valid_pixel_forecasts": 640783,
+      "confusion_matrix": [
+        [
+          487041,
+          10,
+          66362
+        ],
+        [
+          34374,
+          0,
+          18890
+        ],
+        [
+          16473,
+          0,
+          17633
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.905469168302695,
+          "recall": 0.8800678697464642,
+          "f1": 0.8925878378192635,
+          "support": 553413
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 53264
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.1713855275307382,
+          "recall": 0.5170058054301296,
+          "f1": 0.25743297004912735,
+          "support": 34106
+        }
+      ]
+    },
+    "regional": {
+      "policy": {
+        "minimum_chlorophyll_mean_percent": 5.0,
+        "minimum_chlorophyll_observed_days": 1,
+        "minimum_environment_observed_days": 1,
+        "minimum_target_coverage_percent": 5.0
+      },
+      "decision_rule": {
+        "type": "strong_override",
+        "strong_threshold": 0.225
+      },
+      "daily_horizon_1": {
+        "forecast_cases": 328,
+        "truth_qualified_cases": 78,
+        "unknown_truth_cases": 250,
+        "unavailable_cases": 151,
+        "insufficient_data_frequency": 0.4603658536585366,
+        "input_state_counts": {
+          "observed": 177,
+          "low_coverage": 128,
+          "missing_data": 23
+        },
+        "mean_input_coverage_percent": 7.256730600035192,
+        "warnings_without_qualified_truth": 50,
+        "any_warning": {
+          "qualified_days": 78,
+          "warning_days": 16,
+          "actual_high_risk_days": 12,
+          "correctly_warned_high_risk_days": 1,
+          "missed_high_risk_days": 11,
+          "false_warning_days": 15,
+          "true_negative_days": 51,
+          "false_warning_frequency": 0.19230769230769232,
+          "false_warning_rate_on_nonrisk_days": 0.22727272727272727,
+          "precision": 0.0625,
+          "recall": 0.08333333333333333,
+          "detection_rate": 0.08333333333333333,
+          "f1": 0.07142857142857144,
+          "abstained_high_risk_days": 8,
+          "mean_input_coverage_on_warning_days_percent": 11.407707196903045,
+          "available_input_cohort": {
+            "qualified_days": 54,
+            "warning_days": 16,
+            "actual_high_risk_days": 4,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 3,
+            "false_warning_days": 15,
+            "true_negative_days": 35,
+            "false_warning_frequency": 0.2777777777777778,
+            "false_warning_rate_on_nonrisk_days": 0.3,
+            "precision": 0.0625,
+            "recall": 0.25,
+            "detection_rate": 0.25,
+            "f1": 0.1
+          }
+        },
+        "strong_warning": {
+          "qualified_days": 78,
+          "warning_days": 7,
+          "actual_high_risk_days": 8,
+          "correctly_warned_high_risk_days": 1,
+          "missed_high_risk_days": 7,
+          "false_warning_days": 6,
+          "true_negative_days": 64,
+          "false_warning_frequency": 0.07692307692307693,
+          "false_warning_rate_on_nonrisk_days": 0.08571428571428572,
+          "precision": 0.14285714285714285,
+          "recall": 0.125,
+          "detection_rate": 0.125,
+          "f1": 0.13333333333333333,
+          "abstained_high_risk_days": 6,
+          "mean_input_coverage_on_warning_days_percent": 9.67647872099746,
+          "available_input_cohort": {
+            "qualified_days": 54,
+            "warning_days": 7,
+            "actual_high_risk_days": 2,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 1,
+            "false_warning_days": 6,
+            "true_negative_days": 46,
+            "false_warning_frequency": 0.1111111111111111,
+            "false_warning_rate_on_nonrisk_days": 0.11538461538461539,
+            "precision": 0.14285714285714285,
+            "recall": 0.5,
+            "detection_rate": 0.5,
+            "f1": 0.22222222222222224
+          }
+        }
+      },
+      "all_horizon_cases": {
+        "forecast_cases": 1640,
+        "truth_qualified_cases": 390,
+        "unknown_truth_cases": 1250,
+        "unavailable_cases": 755,
+        "insufficient_data_frequency": 0.4603658536585366,
+        "input_state_counts": {
+          "observed": 885,
+          "low_coverage": 640,
+          "missing_data": 115
+        },
+        "mean_input_coverage_percent": 7.256730600035193,
+        "warnings_without_qualified_truth": 259,
+        "any_warning": {
+          "qualified_days": 390,
+          "warning_days": 93,
+          "actual_high_risk_days": 60,
+          "correctly_warned_high_risk_days": 8,
+          "missed_high_risk_days": 52,
+          "false_warning_days": 85,
+          "true_negative_days": 245,
+          "false_warning_frequency": 0.21794871794871795,
+          "false_warning_rate_on_nonrisk_days": 0.25757575757575757,
+          "precision": 0.08602150537634409,
+          "recall": 0.13333333333333333,
+          "detection_rate": 0.13333333333333333,
+          "f1": 0.10457516339869281,
+          "abstained_high_risk_days": 38,
+          "mean_input_coverage_on_warning_days_percent": 11.307218851167129,
+          "available_input_cohort": {
+            "qualified_days": 258,
+            "warning_days": 93,
+            "actual_high_risk_days": 22,
+            "correctly_warned_high_risk_days": 8,
+            "missed_high_risk_days": 14,
+            "false_warning_days": 85,
+            "true_negative_days": 151,
+            "false_warning_frequency": 0.32945736434108525,
+            "false_warning_rate_on_nonrisk_days": 0.3601694915254237,
+            "precision": 0.08602150537634409,
+            "recall": 0.36363636363636365,
+            "detection_rate": 0.36363636363636365,
+            "f1": 0.13913043478260867
+          }
+        },
+        "strong_warning": {
+          "qualified_days": 390,
+          "warning_days": 35,
+          "actual_high_risk_days": 40,
+          "correctly_warned_high_risk_days": 5,
+          "missed_high_risk_days": 35,
+          "false_warning_days": 30,
+          "true_negative_days": 320,
+          "false_warning_frequency": 0.07692307692307693,
+          "false_warning_rate_on_nonrisk_days": 0.08571428571428572,
+          "precision": 0.14285714285714285,
+          "recall": 0.125,
+          "detection_rate": 0.125,
+          "f1": 0.13333333333333333,
+          "abstained_high_risk_days": 28,
+          "mean_input_coverage_on_warning_days_percent": 9.735702973781452,
+          "available_input_cohort": {
+            "qualified_days": 258,
+            "warning_days": 35,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 5,
+            "missed_high_risk_days": 7,
+            "false_warning_days": 30,
+            "true_negative_days": 216,
+            "false_warning_frequency": 0.11627906976744186,
+            "false_warning_rate_on_nonrisk_days": 0.12195121951219512,
+            "precision": 0.14285714285714285,
+            "recall": 0.4166666666666667,
+            "detection_rate": 0.4166666666666667,
+            "f1": 0.21276595744680848
+          }
+        }
+      },
+      "by_horizon": {
+        "1": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 250,
+          "unavailable_cases": 151,
+          "insufficient_data_frequency": 0.4603658536585366,
+          "input_state_counts": {
+            "observed": 177,
+            "low_coverage": 128,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 50,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 16,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 11,
+            "false_warning_days": 15,
+            "true_negative_days": 51,
+            "false_warning_frequency": 0.19230769230769232,
+            "false_warning_rate_on_nonrisk_days": 0.22727272727272727,
+            "precision": 0.0625,
+            "recall": 0.08333333333333333,
+            "detection_rate": 0.08333333333333333,
+            "f1": 0.07142857142857144,
+            "abstained_high_risk_days": 8,
+            "mean_input_coverage_on_warning_days_percent": 11.407707196903045,
+            "available_input_cohort": {
+              "qualified_days": 54,
+              "warning_days": 16,
+              "actual_high_risk_days": 4,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 15,
+              "true_negative_days": 35,
+              "false_warning_frequency": 0.2777777777777778,
+              "false_warning_rate_on_nonrisk_days": 0.3,
+              "precision": 0.0625,
+              "recall": 0.25,
+              "detection_rate": 0.25,
+              "f1": 0.1
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 7,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 7,
+            "false_warning_days": 6,
+            "true_negative_days": 64,
+            "false_warning_frequency": 0.07692307692307693,
+            "false_warning_rate_on_nonrisk_days": 0.08571428571428572,
+            "precision": 0.14285714285714285,
+            "recall": 0.125,
+            "detection_rate": 0.125,
+            "f1": 0.13333333333333333,
+            "abstained_high_risk_days": 6,
+            "mean_input_coverage_on_warning_days_percent": 9.67647872099746,
+            "available_input_cohort": {
+              "qualified_days": 54,
+              "warning_days": 7,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 1,
+              "false_warning_days": 6,
+              "true_negative_days": 46,
+              "false_warning_frequency": 0.1111111111111111,
+              "false_warning_rate_on_nonrisk_days": 0.11538461538461539,
+              "precision": 0.14285714285714285,
+              "recall": 0.5,
+              "detection_rate": 0.5,
+              "f1": 0.22222222222222224
+            }
+          }
+        },
+        "2": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 79,
+          "unknown_truth_cases": 249,
+          "unavailable_cases": 151,
+          "insufficient_data_frequency": 0.4603658536585366,
+          "input_state_counts": {
+            "observed": 177,
+            "low_coverage": 128,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 55,
+          "any_warning": {
+            "qualified_days": 79,
+            "warning_days": 18,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 11,
+            "false_warning_days": 17,
+            "true_negative_days": 50,
+            "false_warning_frequency": 0.21518987341772153,
+            "false_warning_rate_on_nonrisk_days": 0.2537313432835821,
+            "precision": 0.05555555555555555,
+            "recall": 0.08333333333333333,
+            "detection_rate": 0.08333333333333333,
+            "f1": 0.06666666666666667,
+            "abstained_high_risk_days": 8,
+            "mean_input_coverage_on_warning_days_percent": 11.40399241402233,
+            "available_input_cohort": {
+              "qualified_days": 53,
+              "warning_days": 18,
+              "actual_high_risk_days": 4,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 17,
+              "true_negative_days": 32,
+              "false_warning_frequency": 0.32075471698113206,
+              "false_warning_rate_on_nonrisk_days": 0.3469387755102041,
+              "precision": 0.05555555555555555,
+              "recall": 0.25,
+              "detection_rate": 0.25,
+              "f1": 0.0909090909090909
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 79,
+            "warning_days": 8,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 7,
+            "false_warning_days": 7,
+            "true_negative_days": 64,
+            "false_warning_frequency": 0.08860759493670886,
+            "false_warning_rate_on_nonrisk_days": 0.09859154929577464,
+            "precision": 0.125,
+            "recall": 0.125,
+            "detection_rate": 0.125,
+            "f1": 0.125,
+            "abstained_high_risk_days": 6,
+            "mean_input_coverage_on_warning_days_percent": 10.424511701566075,
+            "available_input_cohort": {
+              "qualified_days": 53,
+              "warning_days": 8,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 1,
+              "false_warning_days": 7,
+              "true_negative_days": 44,
+              "false_warning_frequency": 0.1320754716981132,
+              "false_warning_rate_on_nonrisk_days": 0.13725490196078433,
+              "precision": 0.125,
+              "recall": 0.5,
+              "detection_rate": 0.5,
+              "f1": 0.2
+            }
+          }
+        },
+        "3": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 250,
+          "unavailable_cases": 151,
+          "insufficient_data_frequency": 0.4603658536585366,
+          "input_state_counts": {
+            "observed": 177,
+            "low_coverage": 128,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 55,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 18,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 2,
+            "missed_high_risk_days": 10,
+            "false_warning_days": 16,
+            "true_negative_days": 50,
+            "false_warning_frequency": 0.20512820512820512,
+            "false_warning_rate_on_nonrisk_days": 0.24242424242424243,
+            "precision": 0.1111111111111111,
+            "recall": 0.16666666666666666,
+            "detection_rate": 0.16666666666666666,
+            "f1": 0.13333333333333333,
+            "abstained_high_risk_days": 7,
+            "mean_input_coverage_on_warning_days_percent": 10.859483449664692,
+            "available_input_cohort": {
+              "qualified_days": 49,
+              "warning_days": 18,
+              "actual_high_risk_days": 5,
+              "correctly_warned_high_risk_days": 2,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 16,
+              "true_negative_days": 28,
+              "false_warning_frequency": 0.32653061224489793,
+              "false_warning_rate_on_nonrisk_days": 0.36363636363636365,
+              "precision": 0.1111111111111111,
+              "recall": 0.4,
+              "detection_rate": 0.4,
+              "f1": 0.1739130434782609
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 6,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 7,
+            "false_warning_days": 5,
+            "true_negative_days": 65,
+            "false_warning_frequency": 0.0641025641025641,
+            "false_warning_rate_on_nonrisk_days": 0.07142857142857142,
+            "precision": 0.16666666666666666,
+            "recall": 0.125,
+            "detection_rate": 0.125,
+            "f1": 0.14285714285714288,
+            "abstained_high_risk_days": 5,
+            "mean_input_coverage_on_warning_days_percent": 10.292685788022757,
+            "available_input_cohort": {
+              "qualified_days": 49,
+              "warning_days": 6,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 5,
+              "true_negative_days": 41,
+              "false_warning_frequency": 0.10204081632653061,
+              "false_warning_rate_on_nonrisk_days": 0.10869565217391304,
+              "precision": 0.16666666666666666,
+              "recall": 0.3333333333333333,
+              "detection_rate": 0.3333333333333333,
+              "f1": 0.2222222222222222
+            }
+          }
+        },
+        "4": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 78,
+          "unknown_truth_cases": 250,
+          "unavailable_cases": 151,
+          "insufficient_data_frequency": 0.4603658536585366,
+          "input_state_counts": {
+            "observed": 177,
+            "low_coverage": 128,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 47,
+          "any_warning": {
+            "qualified_days": 78,
+            "warning_days": 19,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 2,
+            "missed_high_risk_days": 10,
+            "false_warning_days": 17,
+            "true_negative_days": 49,
+            "false_warning_frequency": 0.21794871794871795,
+            "false_warning_rate_on_nonrisk_days": 0.25757575757575757,
+            "precision": 0.10526315789473684,
+            "recall": 0.16666666666666666,
+            "detection_rate": 0.16666666666666666,
+            "f1": 0.12903225806451615,
+            "abstained_high_risk_days": 7,
+            "mean_input_coverage_on_warning_days_percent": 11.421135982662976,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 19,
+              "actual_high_risk_days": 5,
+              "correctly_warned_high_risk_days": 2,
+              "missed_high_risk_days": 3,
+              "false_warning_days": 17,
+              "true_negative_days": 30,
+              "false_warning_frequency": 0.3269230769230769,
+              "false_warning_rate_on_nonrisk_days": 0.3617021276595745,
+              "precision": 0.10526315789473684,
+              "recall": 0.4,
+              "detection_rate": 0.4,
+              "f1": 0.16666666666666666
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 78,
+            "warning_days": 7,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 7,
+            "false_warning_days": 6,
+            "true_negative_days": 64,
+            "false_warning_frequency": 0.07692307692307693,
+            "false_warning_rate_on_nonrisk_days": 0.08571428571428572,
+            "precision": 0.14285714285714285,
+            "recall": 0.125,
+            "detection_rate": 0.125,
+            "f1": 0.13333333333333333,
+            "abstained_high_risk_days": 5,
+            "mean_input_coverage_on_warning_days_percent": 9.271762901887836,
+            "available_input_cohort": {
+              "qualified_days": 52,
+              "warning_days": 7,
+              "actual_high_risk_days": 3,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 6,
+              "true_negative_days": 43,
+              "false_warning_frequency": 0.11538461538461539,
+              "false_warning_rate_on_nonrisk_days": 0.12244897959183673,
+              "precision": 0.14285714285714285,
+              "recall": 0.3333333333333333,
+              "detection_rate": 0.3333333333333333,
+              "f1": 0.2
+            }
+          }
+        },
+        "5": {
+          "forecast_cases": 328,
+          "truth_qualified_cases": 77,
+          "unknown_truth_cases": 251,
+          "unavailable_cases": 151,
+          "insufficient_data_frequency": 0.4603658536585366,
+          "input_state_counts": {
+            "observed": 177,
+            "low_coverage": 128,
+            "missing_data": 23
+          },
+          "mean_input_coverage_percent": 7.256730600035192,
+          "warnings_without_qualified_truth": 52,
+          "any_warning": {
+            "qualified_days": 77,
+            "warning_days": 22,
+            "actual_high_risk_days": 12,
+            "correctly_warned_high_risk_days": 2,
+            "missed_high_risk_days": 10,
+            "false_warning_days": 20,
+            "true_negative_days": 45,
+            "false_warning_frequency": 0.2597402597402597,
+            "false_warning_rate_on_nonrisk_days": 0.3076923076923077,
+            "precision": 0.09090909090909091,
+            "recall": 0.16666666666666666,
+            "detection_rate": 0.16666666666666666,
+            "f1": 0.11764705882352942,
+            "abstained_high_risk_days": 8,
+            "mean_input_coverage_on_warning_days_percent": 11.42290403596052,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 22,
+              "actual_high_risk_days": 4,
+              "correctly_warned_high_risk_days": 2,
+              "missed_high_risk_days": 2,
+              "false_warning_days": 20,
+              "true_negative_days": 26,
+              "false_warning_frequency": 0.4,
+              "false_warning_rate_on_nonrisk_days": 0.43478260869565216,
+              "precision": 0.09090909090909091,
+              "recall": 0.5,
+              "detection_rate": 0.5,
+              "f1": 0.15384615384615385
+            }
+          },
+          "strong_warning": {
+            "qualified_days": 77,
+            "warning_days": 7,
+            "actual_high_risk_days": 8,
+            "correctly_warned_high_risk_days": 1,
+            "missed_high_risk_days": 7,
+            "false_warning_days": 6,
+            "true_negative_days": 63,
+            "false_warning_frequency": 0.07792207792207792,
+            "false_warning_rate_on_nonrisk_days": 0.08695652173913043,
+            "precision": 0.14285714285714285,
+            "recall": 0.125,
+            "detection_rate": 0.125,
+            "f1": 0.13333333333333333,
+            "abstained_high_risk_days": 6,
+            "mean_input_coverage_on_warning_days_percent": 8.994243483069807,
+            "available_input_cohort": {
+              "qualified_days": 50,
+              "warning_days": 7,
+              "actual_high_risk_days": 2,
+              "correctly_warned_high_risk_days": 1,
+              "missed_high_risk_days": 1,
+              "false_warning_days": 6,
+              "true_negative_days": 42,
+              "false_warning_frequency": 0.12,
+              "false_warning_rate_on_nonrisk_days": 0.125,
+              "precision": 0.14285714285714285,
+              "recall": 0.5,
+              "detection_rate": 0.5,
+              "f1": 0.22222222222222224
+            }
+          }
+        }
+      },
+      "methodology": "Primary daily counts use horizon 1: one target day per origin. All-horizon counts are distinct forecast cases, not independent days. Actual regional strong fraction uses only observed proxy labels, qualified at >=5% marine support. Predicted fraction uses dense training-supported cells. P75/P90 thresholds are fixed from 2021-2023. Missing target observations are UNKNOWN. Unavailable-input high-risk days remain missed warnings, with abstention counts reported. Hindcast availability is assessed at origin, not using today's age; product delivery latency is unknown."
+    }
+  },
+  "common_available_input_cohort_2025": {
+    "baseline": {
+      "forecast_cases": 51,
+      "truth_qualified_cases": 51,
+      "unknown_truth_cases": 0,
+      "unavailable_cases": 0,
+      "insufficient_data_frequency": 0.0,
+      "input_state_counts": {
+        "observed": 51
+      },
+      "mean_input_coverage_percent": 11.908374822742752,
+      "warnings_without_qualified_truth": 0,
+      "any_warning": {
+        "qualified_days": 51,
+        "warning_days": 15,
+        "actual_high_risk_days": 3,
+        "correctly_warned_high_risk_days": 1,
+        "missed_high_risk_days": 2,
+        "false_warning_days": 14,
+        "true_negative_days": 34,
+        "false_warning_frequency": 0.27450980392156865,
+        "false_warning_rate_on_nonrisk_days": 0.2916666666666667,
+        "precision": 0.06666666666666667,
+        "recall": 0.3333333333333333,
+        "detection_rate": 0.3333333333333333,
+        "f1": 0.1111111111111111,
+        "abstained_high_risk_days": 0,
+        "mean_input_coverage_on_warning_days_percent": 11.109859815824978,
+        "available_input_cohort": {
+          "qualified_days": 51,
+          "warning_days": 15,
+          "actual_high_risk_days": 3,
+          "correctly_warned_high_risk_days": 1,
+          "missed_high_risk_days": 2,
+          "false_warning_days": 14,
+          "true_negative_days": 34,
+          "false_warning_frequency": 0.27450980392156865,
+          "false_warning_rate_on_nonrisk_days": 0.2916666666666667,
+          "precision": 0.06666666666666667,
+          "recall": 0.3333333333333333,
+          "detection_rate": 0.3333333333333333,
+          "f1": 0.1111111111111111
+        }
+      },
+      "strong_warning": {
+        "qualified_days": 51,
+        "warning_days": 7,
+        "actual_high_risk_days": 2,
+        "correctly_warned_high_risk_days": 1,
+        "missed_high_risk_days": 1,
+        "false_warning_days": 6,
+        "true_negative_days": 43,
+        "false_warning_frequency": 0.11764705882352941,
+        "false_warning_rate_on_nonrisk_days": 0.12244897959183673,
+        "precision": 0.14285714285714285,
+        "recall": 0.5,
+        "detection_rate": 0.5,
+        "f1": 0.22222222222222224,
+        "abstained_high_risk_days": 0,
+        "mean_input_coverage_on_warning_days_percent": 9.67647872099746,
+        "available_input_cohort": {
+          "qualified_days": 51,
+          "warning_days": 7,
+          "actual_high_risk_days": 2,
+          "correctly_warned_high_risk_days": 1,
+          "missed_high_risk_days": 1,
+          "false_warning_days": 6,
+          "true_negative_days": 43,
+          "false_warning_frequency": 0.11764705882352941,
+          "false_warning_rate_on_nonrisk_days": 0.12244897959183673,
+          "precision": 0.14285714285714285,
+          "recall": 0.5,
+          "detection_rate": 0.5,
+          "f1": 0.22222222222222224
+        }
+      }
+    },
+    "final": {
+      "forecast_cases": 51,
+      "truth_qualified_cases": 51,
+      "unknown_truth_cases": 0,
+      "unavailable_cases": 0,
+      "insufficient_data_frequency": 0.0,
+      "input_state_counts": {
+        "observed": 51
+      },
+      "mean_input_coverage_percent": 11.908374822742752,
+      "warnings_without_qualified_truth": 0,
+      "any_warning": {
+        "qualified_days": 51,
+        "warning_days": 0,
+        "actual_high_risk_days": 3,
+        "correctly_warned_high_risk_days": 0,
+        "missed_high_risk_days": 3,
+        "false_warning_days": 0,
+        "true_negative_days": 48,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "detection_rate": 0.0,
+        "f1": 0.0,
+        "abstained_high_risk_days": 0,
+        "mean_input_coverage_on_warning_days_percent": null,
+        "available_input_cohort": {
+          "qualified_days": 51,
+          "warning_days": 0,
+          "actual_high_risk_days": 3,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 3,
+          "false_warning_days": 0,
+          "true_negative_days": 48,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0
+        }
+      },
+      "strong_warning": {
+        "qualified_days": 51,
+        "warning_days": 0,
+        "actual_high_risk_days": 2,
+        "correctly_warned_high_risk_days": 0,
+        "missed_high_risk_days": 2,
+        "false_warning_days": 0,
+        "true_negative_days": 49,
+        "false_warning_frequency": 0.0,
+        "false_warning_rate_on_nonrisk_days": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "detection_rate": 0.0,
+        "f1": 0.0,
+        "abstained_high_risk_days": 0,
+        "mean_input_coverage_on_warning_days_percent": null,
+        "available_input_cohort": {
+          "qualified_days": 51,
+          "warning_days": 0,
+          "actual_high_risk_days": 2,
+          "correctly_warned_high_risk_days": 0,
+          "missed_high_risk_days": 2,
+          "false_warning_days": 0,
+          "true_negative_days": 49,
+          "false_warning_frequency": 0.0,
+          "false_warning_rate_on_nonrisk_days": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "detection_rate": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  },
+  "test_disclosure": "2025 was inspected in earlier work. It was excluded from this improvement development; the final frozen configuration is evaluated once. This is a previously inspected holdout, not an untouched test.",
+  "scoring_note": "Pixel metrics use exactly the same valid corrected target labels for baseline and final, including low-input cases. Rolling horizons repeat dates at distinct origins. Regional metrics separately count coverage abstentions as misses on observed high-risk days. No parameters changed after the final freeze."
+}

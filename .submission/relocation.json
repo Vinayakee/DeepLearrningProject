@@ -1,0 +1,18 @@
+{
+  "original_prefix": "/Users/vinayaks/Documents/HAB-Early-Warning",
+  "runtime_prefix": "Dynamic project root from submission/bootstrap.py",
+  "immutable_archives_unchanged": true,
+  "original_access_blocked": true,
+  "editable_document_links_rebased": [
+    "docs/satellite_bloom_events_v2.md",
+    "docs/satellite_bloom_events.md",
+    "docs/SUBMISSION_HANDOFF.md",
+    "docs/bloom_inputs_v3.md",
+    "docs/results/bloom_events_v3/final_report.md"
+  ],
+  "code_changes": [
+    "Added submission bootstrap/launcher and sitecustomize",
+    "Makefile uses portable launcher without requiring .git"
+  ],
+  "scientific_logic_changes": false
+}

@@ -1,0 +1,128 @@
+{
+  "schema": "satellite-bloom-events-v1",
+  "title": "Satellite bloom-event forecast",
+  "minimum_patch_pixels": 3,
+  "duration_days": 3,
+  "spatial_connectivity": 4,
+  "event_connectivity": "6-neighbour observed space/time components",
+  "definition": "Strictly above training monthly relative-anomaly P90; a common four-connected patch of at least M pixels is observed high on every one of three consecutive days. All three days are event members.",
+  "unknown_policy": "Unobserved/unsupported, potentially qualifying high runs interrupted by missing observations, and unresolved split-edge high runs remain 255. Unknown never becomes a positive or a negative.",
+  "retrospective_confirmation": "Membership may require two following days; as-of persistence uses only completed trailing three-day confirmations. No triples cross splits.",
+  "patch_selection": {
+    "training_candidates": [
+      {
+        "minimum_patch_pixels": 1,
+        "training_events": 54,
+        "training_positive_pixel_days": 1059
+      },
+      {
+        "minimum_patch_pixels": 2,
+        "training_events": 28,
+        "training_positive_pixel_days": 978
+      },
+      {
+        "minimum_patch_pixels": 3,
+        "training_events": 23,
+        "training_positive_pixel_days": 944
+      },
+      {
+        "minimum_patch_pixels": 5,
+        "training_events": 19,
+        "training_positive_pixel_days": 893
+      },
+      {
+        "minimum_patch_pixels": 10,
+        "training_events": 8,
+        "training_positive_pixel_days": 677
+      },
+      {
+        "minimum_patch_pixels": 20,
+        "training_events": 3,
+        "training_positive_pixel_days": 429
+      }
+    ],
+    "criterion": "Largest M>=2 retaining at least 20 training components and 80% of singleton positive pixel-days; selected without validation/test counts."
+  },
+  "fit_period": [
+    "2021-01-01",
+    "2023-12-31"
+  ],
+  "monthly_p90": [
+    0.6032491683959965,
+    0.43013811707496674,
+    0.32558518946170817,
+    0.41329817771911603,
+    1.385845017433167,
+    1.7040218591690068,
+    2.4092964649200486,
+    2.907297754287722,
+    1.5878688216209418,
+    1.7145220518112203,
+    1.696562290191651,
+    1.6729731917381303
+  ],
+  "base_label_dir": "/Users/vinayaks/Documents/HAB-Early-Warning/outputs/improvement/baseline/labels",
+  "base_sequence_dir": "/Users/vinayaks/Documents/HAB-Early-Warning/outputs/improvement/final_preprocessing",
+  "fitted_sources": {
+    "/Users/vinayaks/Documents/HAB-Early-Warning/outputs/improvement/baseline/labels/label_metadata.json": "438afedd96230c92adb8b840c33b476b1dae712fe42336c54c02368ae97c2c1f",
+    "/Users/vinayaks/Documents/HAB-Early-Warning/outputs/improvement/baseline/labels/climatology_metadata.json": "f3042d0c190881a506ee133855ab65b968cf672f9ef4cf1cf644755c0ee24362",
+    "/Users/vinayaks/Documents/HAB-Early-Warning/outputs/improvement/baseline/labels/monthly_chl_climatology_2021_2025.npy": "251f33a8223c4dd73e66df78f9debbffd182cc1e23e1c6a25173416211fbd6a0",
+    "/Users/vinayaks/Documents/HAB-Early-Warning/outputs/improvement/baseline/labels/hab_p90_monthly.npy": "13a3f57dab797f01db1f9061fbbbdcb3c54f3c94c9d5001306b77cc8e5626592",
+    "/Users/vinayaks/Documents/HAB-Early-Warning/outputs/improvement/final_preprocessing/preprocessing.json": "a1f935b3be972f41412acbcd929bfbe6466fed57e85440497bc568815ad4534f"
+  },
+  "split_reports": {
+    "train": {
+      "events": 23,
+      "positive_pixel_days": 944,
+      "negative_pixel_days": 510813,
+      "unknown_pixel_days": 10525843,
+      "valid_pixel_days": 511757,
+      "positive_fraction_of_valid": 0.0018446254765445318,
+      "largest_event_pixel_days": 260,
+      "few_events_warning": false,
+      "period": [
+        "2021-01-01",
+        "2023-12-31"
+      ],
+      "observed_chlorophyll_pixel_days": 564463,
+      "uncertain_observed_pixel_days": 52706,
+      "windows": 1012
+    },
+    "validation": {
+      "events": 0,
+      "positive_pixel_days": 0,
+      "negative_pixel_days": 159329,
+      "unknown_pixel_days": 3529951,
+      "valid_pixel_days": 159329,
+      "positive_fraction_of_valid": 0.0,
+      "largest_event_pixel_days": 0,
+      "few_events_warning": true,
+      "period": [
+        "2024-01-01",
+        "2024-12-31"
+      ],
+      "observed_chlorophyll_pixel_days": 166275,
+      "uncertain_observed_pixel_days": 6946,
+      "windows": 325
+    },
+    "test": {
+      "events": 0,
+      "positive_pixel_days": 0,
+      "negative_pixel_days": 126763,
+      "unknown_pixel_days": 3552437,
+      "valid_pixel_days": 126763,
+      "positive_fraction_of_valid": 0.0,
+      "largest_event_pixel_days": 0,
+      "few_events_warning": true,
+      "period": [
+        "2025-01-01",
+        "2025-12-31"
+      ],
+      "observed_chlorophyll_pixel_days": 133548,
+      "uncertain_observed_pixel_days": 6785,
+      "windows": 323
+    }
+  },
+  "limitations": "Chlorophyll-derived satellite event membership, not verified harmful species, toxicity or field HAB occurrence. Components split by observation gaps are not independent biological events.",
+  "test_disclosure": "2025 was previously inspected for the original project. New model and threshold are frozen before one new satellite-event test evaluation."
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verified HAB occurrence forecast</title>
+  <link rel="stylesheet" href="hab.css">
+</head>
+<body>
+<main>
+  <nav><a href="./">Chlorophyll research dashboard</a> · <a href="bloom.html">Satellite bloom-event forecast</a></nav>
+  <h1>HAB occurrence forecast</h1>
+  <p>Five-day coastal-zone prediction workflow. Model availability below shows whether a verified-HAB model is ready.</p>
+  <p class="notice">Research forecasts. Zone occurrence does not establish bloom extent, severity or toxicity. Operational alerts remain disabled.</p>
+  <section aria-label="Run status"><h2>Model availability</h2><p id="hab-status" role="status">Checking the HAB model…</p><p id="hab-target"></p></section>
+  <form id="hab-form">
+    <label>Input ending date <input id="hab-date" type="date" required></label>
+    <label><input id="hab-demo" type="checkbox"> Historical demonstration</label>
+    <button id="hab-submit" disabled>Generate HAB forecast</button>
+  </form>
+  <p id="hab-message" role="status" aria-live="polite"></p>
+  <section id="hab-results" hidden>
+    <div class="toolbar"><label>Forecast day <select id="hab-day"></select></label><button id="hab-export" type="button">Export five-day CSV</button></div>
+    <p id="hab-context"></p>
+    <svg id="hab-map" viewBox="0 0 640 420" role="img" aria-label="Coastal analysis zones"></svg>
+    <p>Rectangles show the configured analysis zones; they do not represent observed bloom boundaries. Select a zone for input coverage.</p>
+    <div class="scroll"><table><thead><tr><th>Zone</th><th>HAB occurrence estimate</th><th>Risk category</th></tr></thead><tbody id="hab-rows"></tbody></table></div>
+    <p id="hab-zone-detail" aria-live="polite"></p>
+    <p id="hab-thresholds"></p>
+  </section>
+  <details><summary>Preparing a HAB model</summary><p>Supply adjudicated HAB observations and a reviewed zone/event definition. Run the preparation, training, calibration and evaluation commands in docs/hab_implementation.md, then configure HAB_OCCURRENCE_RUN_DIR. Missing reports remain unknown; chlorophyll thresholds are not used as HAB labels.</p></details>
+</main>
+<script src="hab.js"></script>
+</body></html>

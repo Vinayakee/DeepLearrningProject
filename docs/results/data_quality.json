@@ -1,0 +1,3244 @@
+{
+  "created_at_utc": "2026-09-12T17:02:12.813992+00:00",
+  "date_start": "2021-01-01",
+  "date_end": "2025-12-31",
+  "ocean_support_pixels": 5691,
+  "total_grid_pixels": 10080,
+  "ocean_mask_method": "Union of training-year SST/current availability; a support proxy, not an authoritative coastline.",
+  "coverage_definition": "Observed means mask=1 and finite; chlorophyll must also be positive. Grid coverage includes the whole rectangle; ocean coverage uses the fixed training marine support mask.",
+  "sources": {
+    "chlorophyll": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 4.877187320711418,
+      "ocean_coverage_percent": 8.583613218388482,
+      "days_without_ocean_observations": 962,
+      "longest_run_without_ocean_observations_days": 22,
+      "valid_pixels_outside_ocean_support": 5710,
+      "ocean_value_quantiles": {
+        "min": 0.04864540696144104,
+        "p01": 0.09493689358234406,
+        "median": 0.23956097662448883,
+        "p99": 15.423089103698722,
+        "max": 86.27859497070312
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 8.964695517796665,
+          "days_without_ocean_observations": 171
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 9.641611484607997,
+          "days_without_ocean_observations": 187
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 9.240449351655943,
+          "days_without_ocean_observations": 169
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 8.287363904084005,
+          "days_without_ocean_observations": 207
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 6.784757475754796,
+          "days_without_ocean_observations": 228
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 17.887326338701175,
+          "days_without_ocean_observations": 11
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 15.37766398072144,
+          "days_without_ocean_observations": 6
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 12.471871262491426,
+          "days_without_ocean_observations": 11
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 3.188660458033152,
+          "days_without_ocean_observations": 20
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 2.8760748436977455,
+          "days_without_ocean_observations": 15
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 2.62168335969074,
+          "days_without_ocean_observations": 18
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 2.8760748436977455,
+          "days_without_ocean_observations": 21
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 3.709875808435504,
+          "days_without_ocean_observations": 20
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 4.5358167867392964,
+          "days_without_ocean_observations": 18
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 6.868796798567065,
+          "days_without_ocean_observations": 11
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 5.81327241843847,
+          "days_without_ocean_observations": 11
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 29.334376293071685,
+          "days_without_ocean_observations": 9
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 26.046785813480255,
+          "days_without_ocean_observations": 5
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 12.487762632728368,
+          "days_without_ocean_observations": 9
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 7.118200214260208,
+          "days_without_ocean_observations": 17
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 3.536578222925087,
+          "days_without_ocean_observations": 23
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 3.2535809229060035,
+          "days_without_ocean_observations": 26
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 3.521935219352194,
+          "days_without_ocean_observations": 16
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 3.2439448818451315,
+          "days_without_ocean_observations": 18
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 4.01426134077009,
+          "days_without_ocean_observations": 19
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 9.903941896561824,
+          "days_without_ocean_observations": 14
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 14.698930399442242,
+          "days_without_ocean_observations": 12
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 9.951970948280911,
+          "days_without_ocean_observations": 14
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 17.82100770316459,
+          "days_without_ocean_observations": 14
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 16.533179156676358,
+          "days_without_ocean_observations": 14
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 12.819112885006401,
+          "days_without_ocean_observations": 10
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 14.226197561514786,
+          "days_without_ocean_observations": 14
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 8.78228782287823,
+          "days_without_ocean_observations": 10
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 3.9740166986923326,
+          "days_without_ocean_observations": 15
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 3.0896737538803962,
+          "days_without_ocean_observations": 18
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 2.4804303342572593,
+          "days_without_ocean_observations": 20
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 6.909608266589578,
+          "days_without_ocean_observations": 12
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 4.49423065659228,
+          "days_without_ocean_observations": 19
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 8.352180295996508,
+          "days_without_ocean_observations": 19
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 10.477947636619223,
+          "days_without_ocean_observations": 9
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 18.766473379019505,
+          "days_without_ocean_observations": 9
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 13.313040964511028,
+          "days_without_ocean_observations": 11
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 24.450584407321905,
+          "days_without_ocean_observations": 12
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 6.923778915208508,
+          "days_without_ocean_observations": 20
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 6.899783283547121,
+          "days_without_ocean_observations": 14
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 2.898181055543274,
+          "days_without_ocean_observations": 25
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 0.8375798043694723,
+          "days_without_ocean_observations": 20
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 1.5128584465568158,
+          "days_without_ocean_observations": 23
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 3.282489046088618,
+          "days_without_ocean_observations": 18
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 7.438060094886663,
+          "days_without_ocean_observations": 19
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 7.975241042733009,
+          "days_without_ocean_observations": 15
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 7.202600597434546,
+          "days_without_ocean_observations": 16
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 17.409492067270904,
+          "days_without_ocean_observations": 14
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 13.941084111301944,
+          "days_without_ocean_observations": 12
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 12.351582699500465,
+          "days_without_ocean_observations": 13
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 9.530611435146609,
+          "days_without_ocean_observations": 19
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 3.677151057224858,
+          "days_without_ocean_observations": 21
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 4.674613566412162,
+          "days_without_ocean_observations": 23
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 3.0984595560241317,
+          "days_without_ocean_observations": 21
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 0.37410512353971465,
+          "days_without_ocean_observations": 26
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 2.5246427579483166,
+          "days_without_ocean_observations": 23
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 5.832015463011773,
+          "days_without_ocean_observations": 19
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 8.055163500943765,
+          "days_without_ocean_observations": 18
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 8.31195454811691,
+          "days_without_ocean_observations": 17
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 9.38380351545451,
+          "days_without_ocean_observations": 16
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "chlorophyll",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 0,
+          "valid_ocean_pixels": 0,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 0.0,
+          "ocean_coverage_percent": 0.0
+        },
+        {
+          "source": "chlorophyll",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 408,
+          "valid_ocean_pixels": 408,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 4.0476190476190474,
+          "ocean_coverage_percent": 7.16921454928835
+        },
+        {
+          "source": "chlorophyll",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 0,
+          "valid_ocean_pixels": 0,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 0.0,
+          "ocean_coverage_percent": 0.0
+        },
+        {
+          "source": "chlorophyll",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 0,
+          "valid_ocean_pixels": 0,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 0.0,
+          "ocean_coverage_percent": 0.0
+        },
+        {
+          "source": "chlorophyll",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 0,
+          "valid_ocean_pixels": 0,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 0.0,
+          "ocean_coverage_percent": 0.0
+        }
+      ]
+    },
+    "sst": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 54.01785714285714,
+      "ocean_coverage_percent": 95.67738534528203,
+      "days_without_ocean_observations": 0,
+      "longest_run_without_ocean_observations_days": 0,
+      "valid_pixels_outside_ocean_support": 0,
+      "ocean_value_quantiles": {
+        "min": 23.221452713012695,
+        "p01": 26.229167346954345,
+        "median": 29.099164962768555,
+        "p99": 31.431177730560304,
+        "max": 32.648956298828125
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 95.67738534528203,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "sst",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 5445,
+          "valid_ocean_pixels": 5445,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 54.01785714285714,
+          "ocean_coverage_percent": 95.67738534528203
+        },
+        {
+          "source": "sst",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 5445,
+          "valid_ocean_pixels": 5445,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 54.01785714285714,
+          "ocean_coverage_percent": 95.67738534528203
+        },
+        {
+          "source": "sst",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 5445,
+          "valid_ocean_pixels": 5445,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 54.01785714285714,
+          "ocean_coverage_percent": 95.67738534528203
+        },
+        {
+          "source": "sst",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 5445,
+          "valid_ocean_pixels": 5445,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 54.01785714285714,
+          "ocean_coverage_percent": 95.67738534528203
+        },
+        {
+          "source": "sst",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 5445,
+          "valid_ocean_pixels": 5445,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 54.01785714285714,
+          "ocean_coverage_percent": 95.67738534528203
+        }
+      ]
+    },
+    "wind_u": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 100.0,
+      "ocean_coverage_percent": 100.0,
+      "days_without_ocean_observations": 0,
+      "longest_run_without_ocean_observations_days": 0,
+      "valid_pixels_outside_ocean_support": 8014314,
+      "ocean_value_quantiles": {
+        "min": -11.641149520874023,
+        "p01": -3.2829057574272156,
+        "median": 2.210939884185791,
+        "p99": 9.58734164237976,
+        "max": 14.55150318145752
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "wind_u",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_u",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_u",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_u",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_u",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        }
+      ]
+    },
+    "wind_v": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 100.0,
+      "ocean_coverage_percent": 100.0,
+      "days_without_ocean_observations": 0,
+      "longest_run_without_ocean_observations_days": 0,
+      "valid_pixels_outside_ocean_support": 8014314,
+      "ocean_value_quantiles": {
+        "min": -8.367410659790039,
+        "p01": -5.65688533782959,
+        "median": -1.2937626242637634,
+        "p99": 4.03318047523498,
+        "max": 12.97354507446289
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "wind_v",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_v",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_v",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_v",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "wind_v",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        }
+      ]
+    },
+    "rainfall": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 100.0,
+      "ocean_coverage_percent": 100.0,
+      "days_without_ocean_observations": 0,
+      "longest_run_without_ocean_observations_days": 0,
+      "valid_pixels_outside_ocean_support": 8014314,
+      "ocean_value_quantiles": {
+        "min": 0.0,
+        "p01": 0.0,
+        "median": 1.9808947443962097,
+        "p99": 60.38251056671104,
+        "max": 333.4453430175781
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 100.0,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "rainfall",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "rainfall",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "rainfall",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "rainfall",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        },
+        {
+          "source": "rainfall",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 10080,
+          "valid_ocean_pixels": 5691,
+          "valid_outside_ocean_pixels": 4389,
+          "grid_coverage_percent": 100.0,
+          "ocean_coverage_percent": 100.0
+        }
+      ]
+    },
+    "current_u": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 55.7936507936508,
+      "ocean_coverage_percent": 98.82270251273941,
+      "days_without_ocean_observations": 0,
+      "longest_run_without_ocean_observations_days": 0,
+      "valid_pixels_outside_ocean_support": 0,
+      "ocean_value_quantiles": {
+        "min": -0.9500834941864014,
+        "p01": -0.3727858164906502,
+        "median": 0.03273043967783451,
+        "p99": 0.5689415895938867,
+        "max": 1.467788815498352
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "current_u",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_u",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_u",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_u",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_u",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        }
+      ]
+    },
+    "current_v": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 55.7936507936508,
+      "ocean_coverage_percent": 98.82270251273941,
+      "days_without_ocean_observations": 0,
+      "longest_run_without_ocean_observations_days": 0,
+      "valid_pixels_outside_ocean_support": 0,
+      "ocean_value_quantiles": {
+        "min": -1.1996469497680664,
+        "p01": -0.5616171956062317,
+        "median": -0.0617242231965065,
+        "p99": 0.5000473123788833,
+        "max": 1.2458767890930176
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 98.82270251273941,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "current_v",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_v",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_v",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_v",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        },
+        {
+          "source": "current_v",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 5624,
+          "valid_ocean_pixels": 5624,
+          "valid_outside_ocean_pixels": 0,
+          "grid_coverage_percent": 55.7936507936508,
+          "ocean_coverage_percent": 98.82270251273941
+        }
+      ]
+    },
+    "sentinel3": {
+      "shape": [
+        1826,
+        120,
+        84
+      ],
+      "integrity_issues": {
+        "masked_nonfinite_pixels": 0,
+        "finite_unmasked_pixels": 0,
+        "masked_nonpositive_chlorophyll_pixels": 0
+      },
+      "grid_coverage_percent": 21.244208435473496,
+      "ocean_coverage_percent": 37.182342250585705,
+      "days_without_ocean_observations": 107,
+      "longest_run_without_ocean_observations_days": 3,
+      "valid_pixels_outside_ocean_support": 46324,
+      "ocean_value_quantiles": {
+        "min": 0.009999999776482582,
+        "p01": 0.09202879324555398,
+        "median": 0.22272983193397522,
+        "p99": 16.233191947937,
+        "max": 100.0
+      },
+      "yearly_coverage": {
+        "2021": {
+          "days": 365,
+          "ocean_coverage_percent": 31.76921984484033,
+          "days_without_ocean_observations": 26
+        },
+        "2022": {
+          "days": 365,
+          "ocean_coverage_percent": 37.19610151091726,
+          "days_without_ocean_observations": 24
+        },
+        "2023": {
+          "days": 365,
+          "ocean_coverage_percent": 40.61091413262469,
+          "days_without_ocean_observations": 12
+        },
+        "2024": {
+          "days": 366,
+          "ocean_coverage_percent": 37.50855775536678,
+          "days_without_ocean_observations": 27
+        },
+        "2025": {
+          "days": 365,
+          "ocean_coverage_percent": 38.82602426807047,
+          "days_without_ocean_observations": 18
+        }
+      },
+      "monthly_coverage": {
+        "2021-01": {
+          "days": 31,
+          "ocean_coverage_percent": 38.55096615482284,
+          "days_without_ocean_observations": 2
+        },
+        "2021-02": {
+          "days": 28,
+          "ocean_coverage_percent": 47.635364108743126,
+          "days_without_ocean_observations": 1
+        },
+        "2021-03": {
+          "days": 31,
+          "ocean_coverage_percent": 36.39929486852472,
+          "days_without_ocean_observations": 3
+        },
+        "2021-04": {
+          "days": 30,
+          "ocean_coverage_percent": 37.76196333391905,
+          "days_without_ocean_observations": 1
+        },
+        "2021-05": {
+          "days": 31,
+          "ocean_coverage_percent": 27.208779000232397,
+          "days_without_ocean_observations": 3
+        },
+        "2021-06": {
+          "days": 30,
+          "ocean_coverage_percent": 20.190359046447607,
+          "days_without_ocean_observations": 1
+        },
+        "2021-07": {
+          "days": 31,
+          "ocean_coverage_percent": 12.06035562659774,
+          "days_without_ocean_observations": 5
+        },
+        "2021-08": {
+          "days": 31,
+          "ocean_coverage_percent": 18.839027099948417,
+          "days_without_ocean_observations": 5
+        },
+        "2021-09": {
+          "days": 30,
+          "ocean_coverage_percent": 31.721431500029283,
+          "days_without_ocean_observations": 4
+        },
+        "2021-10": {
+          "days": 31,
+          "ocean_coverage_percent": 24.935240135811494,
+          "days_without_ocean_observations": 0
+        },
+        "2021-11": {
+          "days": 30,
+          "ocean_coverage_percent": 22.66151232940901,
+          "days_without_ocean_observations": 1
+        },
+        "2021-12": {
+          "days": 31,
+          "ocean_coverage_percent": 64.32624234076442,
+          "days_without_ocean_observations": 0
+        },
+        "2022-01": {
+          "days": 31,
+          "ocean_coverage_percent": 67.902914052182,
+          "days_without_ocean_observations": 0
+        },
+        "2022-02": {
+          "days": 28,
+          "ocean_coverage_percent": 55.41330923513317,
+          "days_without_ocean_observations": 0
+        },
+        "2022-03": {
+          "days": 31,
+          "ocean_coverage_percent": 50.99109516440786,
+          "days_without_ocean_observations": 0
+        },
+        "2022-04": {
+          "days": 30,
+          "ocean_coverage_percent": 40.58689158320155,
+          "days_without_ocean_observations": 1
+        },
+        "2022-05": {
+          "days": 31,
+          "ocean_coverage_percent": 16.5484834571848,
+          "days_without_ocean_observations": 3
+        },
+        "2022-06": {
+          "days": 30,
+          "ocean_coverage_percent": 19.61459614596146,
+          "days_without_ocean_observations": 5
+        },
+        "2022-07": {
+          "days": 31,
+          "ocean_coverage_percent": 12.577300888216255,
+          "days_without_ocean_observations": 8
+        },
+        "2022-08": {
+          "days": 31,
+          "ocean_coverage_percent": 20.867130330289477,
+          "days_without_ocean_observations": 6
+        },
+        "2022-09": {
+          "days": 30,
+          "ocean_coverage_percent": 44.095940959409596,
+          "days_without_ocean_observations": 1
+        },
+        "2022-10": {
+          "days": 31,
+          "ocean_coverage_percent": 35.29285062435878,
+          "days_without_ocean_observations": 0
+        },
+        "2022-11": {
+          "days": 30,
+          "ocean_coverage_percent": 38.256311134539914,
+          "days_without_ocean_observations": 0
+        },
+        "2022-12": {
+          "days": 31,
+          "ocean_coverage_percent": 45.76836090941555,
+          "days_without_ocean_observations": 0
+        },
+        "2023-01": {
+          "days": 31,
+          "ocean_coverage_percent": 61.13274496800267,
+          "days_without_ocean_observations": 0
+        },
+        "2023-02": {
+          "days": 28,
+          "ocean_coverage_percent": 58.292542109094555,
+          "days_without_ocean_observations": 0
+        },
+        "2023-03": {
+          "days": 31,
+          "ocean_coverage_percent": 63.460699123120264,
+          "days_without_ocean_observations": 0
+        },
+        "2023-04": {
+          "days": 30,
+          "ocean_coverage_percent": 63.10431675745329,
+          "days_without_ocean_observations": 0
+        },
+        "2023-05": {
+          "days": 31,
+          "ocean_coverage_percent": 37.636109079984806,
+          "days_without_ocean_observations": 1
+        },
+        "2023-06": {
+          "days": 30,
+          "ocean_coverage_percent": 16.068646400749724,
+          "days_without_ocean_observations": 3
+        },
+        "2023-07": {
+          "days": 31,
+          "ocean_coverage_percent": 17.297827356153746,
+          "days_without_ocean_observations": 6
+        },
+        "2023-08": {
+          "days": 31,
+          "ocean_coverage_percent": 44.367733999920645,
+          "days_without_ocean_observations": 1
+        },
+        "2023-09": {
+          "days": 30,
+          "ocean_coverage_percent": 15.699056990569908,
+          "days_without_ocean_observations": 0
+        },
+        "2023-10": {
+          "days": 31,
+          "ocean_coverage_percent": 37.366866756225164,
+          "days_without_ocean_observations": 1
+        },
+        "2023-11": {
+          "days": 30,
+          "ocean_coverage_percent": 30.066772096292393,
+          "days_without_ocean_observations": 0
+        },
+        "2023-12": {
+          "days": 31,
+          "ocean_coverage_percent": 43.33894491018643,
+          "days_without_ocean_observations": 0
+        },
+        "2024-01": {
+          "days": 31,
+          "ocean_coverage_percent": 49.343898968943606,
+          "days_without_ocean_observations": 0
+        },
+        "2024-02": {
+          "days": 29,
+          "ocean_coverage_percent": 72.4434830555202,
+          "days_without_ocean_observations": 0
+        },
+        "2024-03": {
+          "days": 31,
+          "ocean_coverage_percent": 63.25437447922866,
+          "days_without_ocean_observations": 0
+        },
+        "2024-04": {
+          "days": 30,
+          "ocean_coverage_percent": 51.049024775962046,
+          "days_without_ocean_observations": 0
+        },
+        "2024-05": {
+          "days": 31,
+          "ocean_coverage_percent": 19.512416322319908,
+          "days_without_ocean_observations": 5
+        },
+        "2024-06": {
+          "days": 30,
+          "ocean_coverage_percent": 13.957125285538568,
+          "days_without_ocean_observations": 5
+        },
+        "2024-07": {
+          "days": 31,
+          "ocean_coverage_percent": 4.527805646720061,
+          "days_without_ocean_observations": 11
+        },
+        "2024-08": {
+          "days": 31,
+          "ocean_coverage_percent": 20.57351449090528,
+          "days_without_ocean_observations": 3
+        },
+        "2024-09": {
+          "days": 30,
+          "ocean_coverage_percent": 41.09236806653781,
+          "days_without_ocean_observations": 1
+        },
+        "2024-10": {
+          "days": 31,
+          "ocean_coverage_percent": 27.99666706344483,
+          "days_without_ocean_observations": 0
+        },
+        "2024-11": {
+          "days": 30,
+          "ocean_coverage_percent": 37.46734610203245,
+          "days_without_ocean_observations": 1
+        },
+        "2024-12": {
+          "days": 31,
+          "ocean_coverage_percent": 50.92987796237409,
+          "days_without_ocean_observations": 1
+        },
+        "2025-01": {
+          "days": 31,
+          "ocean_coverage_percent": 57.12188458290113,
+          "days_without_ocean_observations": 0
+        },
+        "2025-02": {
+          "days": 28,
+          "ocean_coverage_percent": 65.85649019755505,
+          "days_without_ocean_observations": 0
+        },
+        "2025-03": {
+          "days": 31,
+          "ocean_coverage_percent": 47.478474784747846,
+          "days_without_ocean_observations": 0
+        },
+        "2025-04": {
+          "days": 30,
+          "ocean_coverage_percent": 42.518010894394656,
+          "days_without_ocean_observations": 0
+        },
+        "2025-05": {
+          "days": 31,
+          "ocean_coverage_percent": 25.038969283702055,
+          "days_without_ocean_observations": 4
+        },
+        "2025-06": {
+          "days": 30,
+          "ocean_coverage_percent": 23.22848942775142,
+          "days_without_ocean_observations": 4
+        },
+        "2025-07": {
+          "days": 31,
+          "ocean_coverage_percent": 12.60620901139887,
+          "days_without_ocean_observations": 8
+        },
+        "2025-08": {
+          "days": 31,
+          "ocean_coverage_percent": 16.424348575282988,
+          "days_without_ocean_observations": 1
+        },
+        "2025-09": {
+          "days": 30,
+          "ocean_coverage_percent": 41.618930475019035,
+          "days_without_ocean_observations": 0
+        },
+        "2025-10": {
+          "days": 31,
+          "ocean_coverage_percent": 34.786675055690644,
+          "days_without_ocean_observations": 1
+        },
+        "2025-11": {
+          "days": 30,
+          "ocean_coverage_percent": 40.68294968663972,
+          "days_without_ocean_observations": 0
+        },
+        "2025-12": {
+          "days": 31,
+          "ocean_coverage_percent": 60.9326554095034,
+          "days_without_ocean_observations": 0
+        }
+      },
+      "latest_five_days": [
+        {
+          "source": "sentinel3",
+          "date": "2025-12-27",
+          "valid_grid_pixels": 3240,
+          "valid_ocean_pixels": 3176,
+          "valid_outside_ocean_pixels": 64,
+          "grid_coverage_percent": 32.142857142857146,
+          "ocean_coverage_percent": 55.807415217009314
+        },
+        {
+          "source": "sentinel3",
+          "date": "2025-12-28",
+          "valid_grid_pixels": 5133,
+          "valid_ocean_pixels": 5075,
+          "valid_outside_ocean_pixels": 58,
+          "grid_coverage_percent": 50.922619047619044,
+          "ocean_coverage_percent": 89.17589175891759
+        },
+        {
+          "source": "sentinel3",
+          "date": "2025-12-29",
+          "valid_grid_pixels": 163,
+          "valid_ocean_pixels": 159,
+          "valid_outside_ocean_pixels": 4,
+          "grid_coverage_percent": 1.6170634920634923,
+          "ocean_coverage_percent": 2.79388508170796
+        },
+        {
+          "source": "sentinel3",
+          "date": "2025-12-30",
+          "valid_grid_pixels": 4002,
+          "valid_ocean_pixels": 3931,
+          "valid_outside_ocean_pixels": 71,
+          "grid_coverage_percent": 39.70238095238095,
+          "ocean_coverage_percent": 69.07397645405025
+        },
+        {
+          "source": "sentinel3",
+          "date": "2025-12-31",
+          "valid_grid_pixels": 547,
+          "valid_ocean_pixels": 509,
+          "valid_outside_ocean_pixels": 38,
+          "grid_coverage_percent": 5.426587301587301,
+          "ocean_coverage_percent": 8.943946582322965
+        }
+      ],
+      "quality_status": "Retrieval quality unverified; saved chlorophyll/dataMask arrays contain no quality/science flags.",
+      "boundary_diagnostics": {
+        "at_0_01_mg_m3_pixels": 20,
+        "at_100_mg_m3_pixels": 525,
+        "above_100_mg_m3_pixels": 0
+      },
+      "inferred_grid_centres_match_modis": true
+    }
+  },
+  "notes": [
+    "Cloud/observation gaps remain missing; coverage is measured before imputation.",
+    "Chlorophyll anomaly labels do not establish species, toxicity, or confirmed HAB events.",
+    "Sentinel-3 remains excluded from modelling until retrieval quality is checked; boundary values are diagnostic and have not been removed."
+  ],
+  "paired_chlorophyll_comparison": {
+    "train": {
+      "jointly_observed_pixels": 370991,
+      "median_log10_sentinel_minus_modis": -0.03966149687767029,
+      "median_absolute_log10_difference": 0.08418703079223633
+    },
+    "validation": {
+      "jointly_observed_pixels": 117189,
+      "median_log10_sentinel_minus_modis": -0.03749585151672363,
+      "median_absolute_log10_difference": 0.06106942892074585
+    },
+    "test": {
+      "jointly_observed_pixels": 89222,
+      "median_log10_sentinel_minus_modis": -0.045554276555776596,
+      "median_absolute_log10_difference": 0.07627379894256592
+    }
+  },
+  "references": [
+    "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/S3OLCIL2.html",
+    "https://sentiwiki.copernicus.eu/web/olci-products"
+  ]
+}

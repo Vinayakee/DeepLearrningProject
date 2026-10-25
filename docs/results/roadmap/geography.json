@@ -1,0 +1,18 @@
+{
+  "support_cells": 5683,
+  "reference_land_cells": 4246,
+  "reference_water_cells": 5650,
+  "mixed_coastal_cells": 184,
+  "supported_land_cells": 0,
+  "unsupported_water_cells": 7,
+  "supported_mixed_cells": 40,
+  "interpretation": "Unsupported water may reflect sparse training data. Land disagreements require inspection; reference scale limits coastal precision.",
+  "candidate_policy": "Research mask excludes cells with >=95% reference land; mixed cells remain explicit. Not deployed.",
+  "source": "Natural Earth 1:10m physical land v5.1.1; https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/ (reference only; not coastal survey)",
+  "reference_sha256": "a8fa21195651b6795b062b20b7f61a873b2acb0908d4683276a2333ab2403ebf",
+  "crs": "EPSG:4326",
+  "samples_per_axis": 8,
+  "active_mask_changed": false,
+  "fraction_method": "Fraction of uniformly spaced angular subcell centers on physical land.",
+  "supported_land_examples": []
+}

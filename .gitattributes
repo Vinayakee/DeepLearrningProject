@@ -1,0 +1,4 @@
+# Frozen source/configuration hashes require exact bytes on every checkout.
+* -text
+# Preserve original scientific CSV CRLF endings without flagging their CR bytes.
+*.csv whitespace=cr-at-eol

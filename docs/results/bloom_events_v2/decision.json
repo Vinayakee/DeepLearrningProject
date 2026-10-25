@@ -1,0 +1,80 @@
+{
+  "schema": "satellite-event-decision-v2",
+  "calibration": {
+    "active": true,
+    "kind": "platt",
+    "fit_period": [
+      "2024-01-01",
+      "2024-06-30"
+    ],
+    "assessment_period": [
+      "2024-07-01",
+      "2024-12-31"
+    ],
+    "fit_valid_forecasts": 430839,
+    "fit_positive_forecasts": 47686,
+    "fit_positive_target_days": 60,
+    "assessment_valid_forecasts": 362667,
+    "assessment_positive_forecasts": 37516,
+    "assessment_positive_target_days": 61,
+    "requirements": "Fit >=100 observations of each class and >=10 positive days; assessment >=100 of each class and >=5 positive days. Retain only positive slope and non-worse second-half Brier.",
+    "independent_validation": false,
+    "limitation": "The model checkpoint used full 2024 validation loss. These chronological calibration diagnostics remain development evidence, not independent validation.",
+    "slope": 1.1409683227539062,
+    "intercept": -0.7130511403083801,
+    "raw_assessment_brier": 0.11267510801553726,
+    "calibrated_assessment_brier": 0.09178831428289413,
+    "reason": "Retained: second-half development Brier did not worsen."
+  },
+  "probability_calibrated": true,
+  "fit_split": "first-half 2024 validation, complete windows only",
+  "threshold_objective": "Maximum binary F1 on observed first-half 2024 fit targets; higher threshold breaks exact ties.",
+  "threshold": 0.14919313788414001,
+  "threshold_tuned": true,
+  "fit_metrics": {
+    "valid_target_count": 430839,
+    "positive_target_count": 47686,
+    "predicted_positive_count": 58429,
+    "tn": 340098,
+    "fp": 43055,
+    "fn": 32312,
+    "tp": 15374,
+    "precision": 0.26312276438070137,
+    "recall": 0.3224007046093193,
+    "f1": 0.2897611082316355,
+    "iou": 0.1694272710241236,
+    "csi": 0.1694272710241236,
+    "false_positive_rate": 0.11237025418044488,
+    "brier_score": 0.09458819013599047,
+    "detection_skill_assessable": true,
+    "undefined_metrics_note": "Recall is undefined without positive truth; precision is undefined without positive predictions; F1/IoU/CSI are undefined if their denominators are zero."
+  },
+  "assessment_metrics": {
+    "valid_target_count": 362667,
+    "positive_target_count": 37516,
+    "predicted_positive_count": 102634,
+    "tn": 241080,
+    "fp": 84071,
+    "fn": 18953,
+    "tp": 18563,
+    "precision": 0.18086598982793226,
+    "recall": 0.49480221772043925,
+    "f1": 0.2649018908312522,
+    "iou": 0.15267257190324623,
+    "csi": 0.15267257190324623,
+    "false_positive_rate": 0.25855986910696876,
+    "brier_score": 0.09178831751992875,
+    "detection_skill_assessable": true,
+    "undefined_metrics_note": "Recall is undefined without positive truth; precision is undefined without positive predictions; F1/IoU/CSI are undefined if their denominators are zero."
+  },
+  "model_sha256": "3e1dd685afda40808a715a69179d29a7e1847223fb4fbaa7ba9edb757d4936a2",
+  "dataset_manifest_sha256": "91cacd23b7a5a33d1a5a05bd66ed2cf79f543464843210601c6e99dc61b1a4fa",
+  "definition": {
+    "id": "A",
+    "percentile": 75,
+    "observed_duration": 1,
+    "max_unobserved_gap": 0,
+    "minimum_patch_pixels": 2
+  },
+  "test_disclosure": "2025 was previously inspected, including the strict run. This is a new, label-statistics-selected proxy definition, not an untouched-test claim."
+}

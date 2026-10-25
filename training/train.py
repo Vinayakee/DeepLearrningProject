@@ -1,332 +1,97 @@
+"""Train corrected ConvLSTM; smoke runs never overwrite the full checkpoint."""
+import argparse
+from datetime import datetime, timezone
+import json
+from pathlib import Path
+import platform
 import sys
-import os
-
-PROJECT_ROOT = os.path.dirname(
-    os.path.dirname(
-        os.path.abspath(__file__)
-    )
-)
-
-sys.path.insert(0, PROJECT_ROOT)
+import time
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np
+import config
 import tensorflow as tf
-
 from models.convlstm import build_convlstm
+from preprocessing.pipeline import EnvironmentalPipeline
+from preprocessing.data_utils import file_sha256
 from training.data_generator import HABDataGenerator
-
-
-# ============================================================
-# SETTINGS
-# ============================================================
-
-BATCH_SIZE = 1
-
-TEST_EPOCHS = 30
-
-FULL_EPOCHS = 30
-
-MODEL_DIR = "models"
-OUTPUT_DIR = "outputs"
-
-os.makedirs(MODEL_DIR, exist_ok=True)
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-
-# ============================================================
-# REPRODUCIBILITY
-# ============================================================
-
-np.random.seed(42)
-tf.random.set_seed(42)
-
-
-# ============================================================
-# GPU / DEVICE INFORMATION
-# ============================================================
-
-print("=" * 70)
-print("HAB CONVLSTM TRAINING")
-print("=" * 70)
-
-print("\nTensorFlow version:")
-print(tf.__version__)
-
-print("\nAvailable devices:")
-
-for device in tf.config.list_physical_devices():
-    print(" ", device)
-
-
-# ============================================================
-# LOAD DATA GENERATORS
-# ============================================================
-
-print("\n" + "=" * 70)
-print("CREATING DATA GENERATORS")
-print("=" * 70)
-
-train_generator = HABDataGenerator(
-    split="train",
-    batch_size=BATCH_SIZE,
-    shuffle=True
-)
-
-validation_generator = HABDataGenerator(
-    split="validation",
-    batch_size=BATCH_SIZE,
-    shuffle=False
-)
-
-print("\nTraining batches:", len(train_generator))
-print("Validation batches:", len(validation_generator))
-
-
-# ============================================================
-# CLASS WEIGHTS
-# ============================================================
-#
-# Class distribution:
-#
-# 0 = Normal
-# 1 = Elevated Risk
-# 2 = Strong Bloom Risk
-#
-# Strong bloom is rarer, so we give it more importance.
-# ============================================================
-
-CLASS_WEIGHTS = tf.constant(
-    [1.0, 3.0, 8.0],
-    dtype=tf.float32
-)
-
-
-# ============================================================
-# MASKED + CLASS-WEIGHTED LOSS
-# ============================================================
-
-def masked_weighted_loss(y_true, y_pred):
-
-    y_pred = tf.clip_by_value(
-        y_pred,
-        1e-7,
-        1.0
-    )
-
-    # Categorical cross entropy
-    ce = -tf.reduce_sum(
-        y_true * tf.math.log(y_pred),
-        axis=-1
-    )
-
-    # Give more importance to bloom classes
-    pixel_weights = tf.reduce_sum(
-        y_true * CLASS_WEIGHTS,
-        axis=-1
-    )
-
-    # Valid target pixels
-    valid_mask = tf.reduce_sum(
-        y_true,
-        axis=-1
-    )
-
-    weighted_loss = (
-        ce
-        * pixel_weights
-        * valid_mask
-    )
-
-    return (
-        tf.reduce_sum(weighted_loss)
-        /
-        (tf.reduce_sum(valid_mask) + 1e-7)
-    )
-
-# ============================================================
-# MASKED ACCURACY
-# ============================================================
-
-def masked_accuracy(y_true, y_pred):
-
-    true_class = tf.argmax(
-        y_true,
-        axis=-1
-    )
-
-    predicted_class = tf.argmax(
-        y_pred,
-        axis=-1
-    )
-
-    correct = tf.cast(
-        tf.equal(
-            true_class,
-            predicted_class
-        ),
-        tf.float32
-    )
-
-    valid_mask = tf.reduce_sum(
-        y_true,
-        axis=-1
-    )
-
-    correct = (
-        correct * valid_mask
-    )
-
-    return (
-        tf.reduce_sum(correct)
-        /
-        (tf.reduce_sum(valid_mask) + 1e-7)
-    )
-
-
-# ============================================================
-# BUILD MODEL
-# ============================================================
-
-print("\n" + "=" * 70)
-print("BUILDING MODEL")
-print("=" * 70)
-
-model = build_convlstm()
-
-model.compile(
-    optimizer=tf.keras.optimizers.Adam(
-        learning_rate=0.001
-    ),
-    loss=masked_weighted_loss,
-    metrics=[
-        masked_accuracy
-    ]
-)
-
-model.summary()
-
-
-# ============================================================
-# CALLBACKS
-# ============================================================
-
-checkpoint_path = os.path.join(
-    MODEL_DIR,
-    "best_convlstm.keras"
-)
-
-callbacks = [
-
-    tf.keras.callbacks.ModelCheckpoint(
-        checkpoint_path,
-        monitor="val_loss",
-        save_best_only=True,
-        mode="min",
-        verbose=1
-    ),
-
-    tf.keras.callbacks.ReduceLROnPlateau(
-        monitor="val_loss",
-        factor=0.5,
-        patience=3,
-        min_lr=1e-6,
-        verbose=1
-    ),
-
-    tf.keras.callbacks.EarlyStopping(
-        monitor="val_loss",
-        patience=6,
-        restore_best_weights=True,
-        verbose=1
-    ),
-
-    tf.keras.callbacks.CSVLogger(
-        os.path.join(
-            OUTPUT_DIR,
-            "training_history.csv"
-        )
-    )
-]
-
-
-# ============================================================
-# TRAIN
-# ============================================================
-
-print("\n" + "=" * 70)
-print("STARTING TRAINING")
-print("=" * 70)
-
-print("\nBatch size:", BATCH_SIZE)
-
-print(
-    "Training samples:",
-    train_generator.num_samples
-)
-
-print(
-    "Validation samples:",
-    validation_generator.num_samples
-)
-
-print(
-    "Test epochs:",
-    TEST_EPOCHS
-)
-
-print("\nStarting 1-epoch test run...")
-
-
-history = model.fit(
-    train_generator,
-    validation_data=validation_generator,
-    epochs=TEST_EPOCHS,
-    callbacks=callbacks,
-    verbose=1
-)
-
-
-# ============================================================
-# TEST RESULT
-# ============================================================
-
-print("\n" + "=" * 70)
-print("1-EPOCH TRAINING TEST COMPLETE")
-print("=" * 70)
-
-print(
-    "Training loss:",
-    history.history["loss"][-1]
-)
-
-print(
-    "Validation loss:",
-    history.history["val_loss"][-1]
-)
-
-print(
-    "Training accuracy:",
-    history.history["masked_accuracy"][-1]
-)
-
-print(
-    "Validation accuracy:",
-    history.history["val_masked_accuracy"][-1]
-)
-
-print(
-    "\nBest model saved to:",
-    checkpoint_path
-)
-
-print("\n" + "=" * 70)
-print("✅ TRAINING PIPELINE TEST PASSED")
-print("=" * 70)
-
-print(
-    "\nIf the loss and validation loss are numbers, "
-    "the training pipeline is working."
-)
-
-print(
-    "\nNext step will be the full 30-epoch training."
-)
+from training.losses import MaskedWeightedLoss, MaskedAccuracy
+
+
+def main():
+    baseline_freeze = config.ROOT / "outputs/improvement/baseline/freeze.json"
+    if baseline_freeze.exists() and "--smoke" not in sys.argv:
+        frozen = json.loads(baseline_freeze.read_text())
+        if config.MODEL_PATH.resolve() == Path(frozen["checkpoint_original"]).resolve():
+            raise ValueError("The original baseline checkpoint is frozen. Train into a separate experiment; do not overwrite it.")
+    if (config.RUN_DIR / "freeze.json").exists():
+        raise ValueError("Active final run is frozen and cannot be overwritten. Use HAB_USE_BASELINE=1 for baseline work, or a separate experiment.")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--epochs", type=int, default=30)
+    parser.add_argument("--batch-size", type=int, default=2)
+    parser.add_argument("--smoke", action="store_true")
+    parser.add_argument("--threads", type=int, default=4)
+    args = parser.parse_args()
+    if min(args.epochs, args.batch_size, args.threads) < 1:
+        parser.error("Epochs, batch size and threads must be positive.")
+    tf.config.threading.set_intra_op_parallelism_threads(args.threads)
+    tf.config.threading.set_inter_op_parallelism_threads(2)
+    tf.keras.utils.set_random_seed(42)
+    pipeline = EnvironmentalPipeline()
+    train = HABDataGenerator("train", args.batch_size, True, pipeline, limit=12 if args.smoke else None)
+    validation = HABDataGenerator("validation", args.batch_size, False, pipeline, limit=8 if args.smoke else None)
+    manifest = json.loads((config.SEQUENCE_DIR / "manifest.json").read_text())
+    counts = np.array(manifest["splits"]["train"]["class_counts"], dtype=float)
+    weights = np.sqrt(counts.max() / np.maximum(counts, 1)).tolist()
+    output = config.RUN_DIR / "smoke" if args.smoke else config.RUN_DIR
+    model_path = output / "smoke.keras" if args.smoke else config.MODEL_PATH
+    if not args.smoke and model_path.resolve() in {
+            (config.ROOT / "models" / name).resolve() for name in ("best_convlstm.keras", "best_convlstm_backup.keras")} :
+        parser.error("Choose a separate corrected checkpoint; original models are preserved.")
+    output.mkdir(parents=True, exist_ok=True)
+    model_path.parent.mkdir(parents=True, exist_ok=True)
+    # Archive an earlier corrected run before deliberately training a new one.
+    if model_path.exists():
+        import shutil
+        archive = output / ("previous_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%f"))
+        archive.mkdir()
+        shutil.copy2(model_path, archive / model_path.name)
+        for filename in ("training_config.json", "training_history.csv"):
+            if (output / filename).exists():
+                shutil.copy2(output / filename, archive / filename)
+    record = {"created_at_utc": datetime.now(timezone.utc).isoformat(), "smoke": args.smoke,
+              "epochs_requested": args.epochs, "batch_size": args.batch_size, "learning_rate": .001,
+              "class_weights": weights, "weight_method": "sqrt inverse training class frequency relative to normal",
+              "filters": [8, 4], "spatial_downsample": 2, "seed": 42,
+              "input_shape": [5, 120, 84, 14], "output_shape": [5, 120, 84, 3],
+              "train_sequences": train.num_samples, "validation_sequences": validation.num_samples,
+              "label_metadata_sha256": file_sha256(config.LABEL_DIR / "label_metadata.json"),
+              "preprocessing_sha256": file_sha256(config.SEQUENCE_DIR / "preprocessing.json"),
+              "tensorflow_version": tf.__version__, "platform": platform.platform(),
+              "model_path": str(model_path), "devices": [str(d) for d in tf.config.list_physical_devices()]}
+    (output / "training_config.json").write_text(json.dumps(record, indent=2) + "\n")
+    model = build_convlstm()
+    model.compile(optimizer=tf.keras.optimizers.Adam(.001, clipnorm=1.),
+                  loss=MaskedWeightedLoss(weights), metrics=[MaskedAccuracy()])
+    print(json.dumps(record, indent=2), flush=True)
+    started = time.monotonic()
+    history = model.fit(train, validation_data=validation, epochs=args.epochs, verbose=2, callbacks=[
+        tf.keras.callbacks.ModelCheckpoint(str(model_path), monitor="val_loss", save_best_only=True),
+        tf.keras.callbacks.ReduceLROnPlateau(monitor="val_loss", patience=2, factor=.5, min_lr=1e-5),
+        tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=4, restore_best_weights=True),
+        tf.keras.callbacks.CSVLogger(str(output / "training_history.csv")),
+        tf.keras.callbacks.TerminateOnNaN()])
+    record.update({"epochs_completed": len(history.history["loss"]),
+                   "best_epoch": int(np.argmin(history.history["val_loss"])) + 1,
+                   "duration_seconds": time.monotonic() - started,
+                   "model_sha256": file_sha256(model_path)})
+    (output / "training_config.json").write_text(json.dumps(record, indent=2) + "\n")
+    restored = tf.keras.models.load_model(model_path, compile=False)
+    X, y = validation[0]
+    prediction = restored(X, training=False).numpy()
+    assert prediction.shape == y.shape and np.isfinite(prediction).all()
+    np.testing.assert_allclose(prediction.sum(-1), 1., atol=1e-6)
+    print("Saved checkpoint reload and real-batch inference passed.", flush=True)
+
+
+if __name__ == "__main__":
+    main()

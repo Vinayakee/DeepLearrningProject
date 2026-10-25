@@ -1,0 +1,26 @@
+{
+  "purpose": "Engineering integration only; no model/2025 evaluation changed",
+  "python_tests_passed": 82,
+  "fresh_acquisition_verified": false,
+  "real_sentinel_fusion_verified": false,
+  "real_field_evaluation_verified": false,
+  "files": {
+    "operations/update.py": "df5477eea596e92d3ef63cfe4c0a7c5691d8ff4d90ce70273e214de4f2640328",
+    "operations/hindcast.py": "843f9fbb5eb3af859c0f874acd9355e0a61275cb5a9bb4955ffa2d5af8c4f568",
+    "operations/metadata.py": "f8ee2260dae8e655a6bcb8f6df9c7e2a633701c5050bf7f92cb16a7a65760760",
+    "operations/__init__.py": "c86a05541350bbd42d3fff176c41d881e208c4a1b4961f39076288acd30043af",
+    "operations/fusion.py": "4685c22df1f0fd691a41ca2c9def68eee6db001add5ff5305122fcca6a85d53f",
+    "operations/notifications.py": "80deb6d410874ee9bdfddb3b49b697eca2d1ab466c70c501da0aef28480c4694",
+    "operations/acquisition.py": "bbcc384c90a03767f24d239390f012db795a41034a88c66150ec3daf10e89f74",
+    "operations/provenance.py": "19322d825996ada0b771338b6cd7bd70a3f8b0ded25e5f1e34e6adc3ee646732",
+    "operations/validation.py": "09660b2ace7671dc86a76c239054e321682b0e96be66db8f19dc29a392a48b45",
+    "backend/app.py": "6e3a03df16c02ada878b664bf0fbecddacb2968a1157696ff87f33d40fe5dc5e",
+    "frontend/script.js": "c9a9cfa87313aeddabee0fa9937a669757b43374a042b64c43d14ccc52c19e2d",
+    ".env.example": "ce8b5faccc4e505af97ef182c6750982c136efe71cac15a6b9d500adaf8637db",
+    "tests/test_operations.py": "0681d68911e4e877ddffdcd178acad60e7f74dbdb5001f70f72106f665129b74",
+    "tests/dashboard_render.mjs": "153f062303a1faff72e40242681bae44120edca68188723436512f5d90d362b3",
+    "docs/runtime_workflows.md": "fc03532e0de9df44683948e0160d899d98e2f8b3d48461b0f3d01fc3ede2bc5c",
+    "docs/integration_completion.md": "7f8c4ec01545824777d8a821b3dd34a2ab7044a204184731f8132229cc151a4d"
+  },
+  "preserved_2025_evaluation_sha256": "0ab2518a117360ed3f0e187557d087b19f06cb370e34bb9f8397ab4fd42fbc89"
+}

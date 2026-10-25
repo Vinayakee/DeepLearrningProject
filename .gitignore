@@ -1,13 +1,32 @@
-﻿.venv/
+# Local environments, credentials and caches
+.venv/
+venv/
+node_modules/
 __pycache__/
 *.pyc
-
-data/raw/
-data/processed/
-
+.pytest_cache/
+.runtime/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Runtime data/checkpoints come from the versioned GitHub Release asset.
+data/**
+!data/README.md
+outputs/
 models/*.keras
 models/*.h5
-
-outputs/
-.ipynb_checkpoints/
-.env
+*.npy
+*.npz
+*.nc
+*.zip
+# Machine-local proof/logs are never published.
+*.log
+.submission/*
+!.submission/timestamps.json
+!.submission/source_file_identity.json
+!.submission/aliases.json
+!.submission/relocation.json
+!.submission/package.json

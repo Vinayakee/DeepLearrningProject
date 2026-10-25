@@ -1,0 +1,58 @@
+[
+  {
+    "product": "S3A_OL_2_WFR____20240211T043418_20240211T043718_20240212T104147_0179_109_033_2700_MAR_O_NT_003.SEN3",
+    "all_five_components_checksum_passed": true,
+    "native_qc_flag_mapping_contract_passed": true,
+    "rejected_flags": [
+      "CLOUD",
+      "CLOUD_AMBIGUOUS",
+      "CLOUD_MARGIN",
+      "INVALID",
+      "COSMETIC",
+      "SATURATED",
+      "SUSPECT",
+      "HISOLZEN",
+      "SNOW_ICE",
+      "HIGHGLINT",
+      "AC_FAIL",
+      "WHITECAPS",
+      "ADJAC",
+      "RWNEG_O2",
+      "RWNEG_O3",
+      "RWNEG_O4",
+      "RWNEG_O5",
+      "RWNEG_O6",
+      "RWNEG_O7",
+      "RWNEG_O8",
+      "OC4ME_FAIL"
+    ]
+  },
+  {
+    "product": "S3A_OL_2_WFR____20240211T043718_20240211T044018_20240212T104159_0180_109_033_2880_MAR_O_NT_003.SEN3",
+    "all_five_components_checksum_passed": true,
+    "native_qc_flag_mapping_contract_passed": true,
+    "rejected_flags": [
+      "CLOUD",
+      "CLOUD_AMBIGUOUS",
+      "CLOUD_MARGIN",
+      "INVALID",
+      "COSMETIC",
+      "SATURATED",
+      "SUSPECT",
+      "HISOLZEN",
+      "SNOW_ICE",
+      "HIGHGLINT",
+      "AC_FAIL",
+      "WHITECAPS",
+      "ADJAC",
+      "RWNEG_O2",
+      "RWNEG_O3",
+      "RWNEG_O4",
+      "RWNEG_O5",
+      "RWNEG_O6",
+      "RWNEG_O7",
+      "RWNEG_O8",
+      "OC4ME_FAIL"
+    ]
+  }
+]

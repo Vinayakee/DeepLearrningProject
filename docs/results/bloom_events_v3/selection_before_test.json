@@ -1,0 +1,12 @@
+{
+  "chosen_variant": "V3",
+  "mean_validation_f1": {
+    "V0": 0.27872309890125696,
+    "V1": 0.3797733660575664,
+    "V2": 0.3717253525326952,
+    "V3": 0.4158292810601262
+  },
+  "test_used": false,
+  "created_at_utc": "2026-10-24T21:11:15.447184+00:00",
+  "limitation": "Nested ablation; a selected later variant cannot isolate any intermediate non-improving group without an undeclared extra variant. Such attribution is not claimed."
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "satellite-bloom-event-training-v1",
+  "title": "Satellite bloom-event forecast",
+  "state": "trained",
+  "dataset_dir": "/Users/vinayaks/Documents/HAB-Early-Warning/data/processed/bloom_events_v2/dataset_02",
+  "dataset_manifest_sha256": "91cacd23b7a5a33d1a5a05bd66ed2cf79f543464843210601c6e99dc61b1a4fa",
+  "seed": 42,
+  "input_shape": [
+    5,
+    120,
+    84,
+    16
+  ],
+  "output_shape": [
+    5,
+    120,
+    84
+  ],
+  "batch_size": 2,
+  "class_weight_method": "sqrt(training negative/positive pixel-days)",
+  "training_class_counts": {
+    "positive": 138034,
+    "negative": 424703
+  },
+  "positive_weight": 1.7540809328136973,
+  "learning_rate": 0.001,
+  "clipnorm": 1.0,
+  "maximum_epochs": 15,
+  "checkpoint_selection": "2024 validation masked weighted BCE",
+  "train_sequences": 1012,
+  "validation_sequences": 325,
+  "parameter_count": 8737,
+  "source_sha256": {
+    "preprocessing/bloom_events.py": "852af4704b85b21f266a4e36257feb6bd7ab80145762b3bb8e0a5592e8dfc748",
+    "preprocessing/pipeline.py": "439208fdb9bbf2fabcc38112ec6b05f26f6cec20d39192456b79fb5d6db99b61",
+    "preprocessing/data_utils.py": "26bd6362aa38a97860548064aacd2e4563748dfa5d9dd242c47584a741c12519",
+    "preprocessing/features.py": "a33fb019e805ead2906614bce3b2d8978b487baf5b9655a523f29b5b9bba028d",
+    "models/bloom_events.py": "3ad7ae4d216420a1a3b450132ab6419d2182c379eeda0c0cb6c0d37186e782e9",
+    "models/convlstm.py": "eae4326361f56d656d65d84f2a48426d2d2a7c365bf1edca50f1a45cea7b6c4d",
+    "models/hab_convlstm.py": "fa0035c0b9c5be63a030c26707f29a67f790f69401e937d18d5e163471d698ab",
+    "training/train_bloom_events.py": "d43840767c10afaf5fffd07ba3538ac9434cda8b03d8a151a569c727f51c5f7d",
+    "training/data_generator.py": "692f107359a737f3f92ba892df078eb702d4c8dced280d396369802e26a783dd",
+    "config.py": "f7a1ec64a6a64ad8e64521add61b6d3192809dd036d2f79a6f48feb03d34dbca",
+    "requirements-lock.txt": "80db4820bc01f9703f2460310ec041e2418562698fd47b2e3cd6bfe1113f2011",
+    "preprocessing/bloom_events_v2.py": "7818658fba51f4afbe965a4fbe65f364ba0603908fb93bed04f278b039f00a03"
+  },
+  "dependencies": {
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0"
+  },
+  "test_disclosure": "2025 was previously inspected, including the strict run. This is a new, label-statistics-selected proxy definition, not an untouched-test claim.",
+  "operational_warning_validated": false,
+  "label_definition": "Observed daily four-connected chlorophyll-anomaly patches >= 2 pixels above training monthly P75; 1 observed high days; bounded missing gap 0 days.",
+  "label_schema": "satellite-bloom-events-v2",
+  "epochs_completed": 14,
+  "best_epoch": 10,
+  "duration_seconds": 418.91907504200935,
+  "model_sha256": "3e1dd685afda40808a715a69179d29a7e1847223fb4fbaa7ba9edb757d4936a2"
+}

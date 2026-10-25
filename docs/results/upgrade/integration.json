@@ -1,0 +1,65 @@
+{
+  "baseline_verified": true,
+  "frozen_training_contract_verified": true,
+  "saved_2025_evaluation_sha256": "0ab2518a117360ed3f0e187557d087b19f06cb370e34bb9f8397ab4fd42fbc89",
+  "saved_2025_evaluation_preserved": true,
+  "real_http_forecast_id": "8386a00579ba43b9b60eecbfbcb12199",
+  "input_dates": [
+    "2024-02-11",
+    "2024-02-12",
+    "2024-02-13",
+    "2024-02-14",
+    "2024-02-15"
+  ],
+  "real_five_map_http_integration": true,
+  "development_calibration_transform_finite_normalized": true,
+  "production_calibration_changed": false,
+  "new_independent_evaluation_performed": false,
+  "system_endpoints": {
+    "/api/system": {
+      "status": "success",
+      "live_update": {
+        "last_attempt_utc": "2026-09-13T03:44:17.749924+00:00",
+        "state": "not_configured",
+        "live": false,
+        "last_successful_update_utc": null,
+        "reason": "No acquisition adapter configured. Static archive is not live."
+      },
+      "satellite_sources": {
+        "active": "MODIS",
+        "sentinel3": {
+          "state": "sentinel3_unavailable",
+          "quality_controlled": false,
+          "fusion_active": false,
+          "reason": "No georeferenced observations with retained retrieval quality flags are available."
+        }
+      },
+      "calibration": {
+        "active": false,
+        "interpretation": "Raw model score; 2024-only temperature experiment is not independently validated."
+      },
+      "model": {
+        "version": "frozen_final",
+        "independent_evaluation": "Saved 2025 results preserved; no repeat evaluation"
+      },
+      "notifications": {
+        "external_delivery": false,
+        "mode": "local outbox only",
+        "reason": "Regional warning reliability has not been validated."
+      }
+    },
+    "/api/live/prediction": {
+      "status": "unavailable",
+      "warning_level": "INSUFFICIENT DATA",
+      "update": {
+        "last_attempt_utc": "2026-09-13T03:44:17.749924+00:00",
+        "state": "not_configured",
+        "live": false,
+        "last_successful_update_utc": null,
+        "reason": "No acquisition adapter configured. Static archive is not live."
+      },
+      "maps": [],
+      "alerts": []
+    }
+  }
+}

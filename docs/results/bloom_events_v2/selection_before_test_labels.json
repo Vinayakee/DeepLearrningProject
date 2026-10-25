@@ -1,0 +1,193 @@
+{
+  "chosen_definition": {
+    "id": "A",
+    "percentile": 75,
+    "observed_duration": 1,
+    "max_unobserved_gap": 0,
+    "minimum_patch_pixels": 2
+  },
+  "criterion": {
+    "minimum_training_components": 50,
+    "minimum_validation_components": 10,
+    "minimum_training_positive_pixel_days": 1000,
+    "minimum_validation_positive_pixel_days": 100,
+    "minimum_validation_positive_fraction": 0.01
+  },
+  "train_validation_candidates": [
+    {
+      "definition": {
+        "id": "A",
+        "percentile": 75,
+        "observed_duration": 1,
+        "max_unobserved_gap": 0,
+        "minimum_patch_pixels": 2
+      },
+      "train": {
+        "events": 4364,
+        "positive_pixel_days": 138034,
+        "negative_pixel_days": 424703,
+        "unknown_pixel_days": 10474863,
+        "valid_pixel_days": 562737,
+        "positive_fraction_of_valid": 0.2452904287438004,
+        "observed_chlorophyll_pixel_days": 564463,
+        "uncertain_observed_pixel_days": 1726
+      },
+      "validation": {
+        "events": 847,
+        "positive_pixel_days": 17378,
+        "negative_pixel_days": 148521,
+        "unknown_pixel_days": 3523381,
+        "valid_pixel_days": 165899,
+        "positive_fraction_of_valid": 0.10475048071416947,
+        "observed_chlorophyll_pixel_days": 166275,
+        "uncertain_observed_pixel_days": 376
+      }
+    },
+    {
+      "definition": {
+        "id": "B",
+        "percentile": 80,
+        "observed_duration": 1,
+        "max_unobserved_gap": 0,
+        "minimum_patch_pixels": 2
+      },
+      "train": {
+        "events": 3811,
+        "positive_pixel_days": 110136,
+        "negative_pixel_days": 452773,
+        "unknown_pixel_days": 10474691,
+        "valid_pixel_days": 562909,
+        "positive_fraction_of_valid": 0.195655070357731,
+        "observed_chlorophyll_pixel_days": 564463,
+        "uncertain_observed_pixel_days": 1554
+      },
+      "validation": {
+        "events": 680,
+        "positive_pixel_days": 13781,
+        "negative_pixel_days": 152192,
+        "unknown_pixel_days": 3523307,
+        "valid_pixel_days": 165973,
+        "positive_fraction_of_valid": 0.08303157742524386,
+        "observed_chlorophyll_pixel_days": 166275,
+        "uncertain_observed_pixel_days": 302
+      }
+    },
+    {
+      "definition": {
+        "id": "C",
+        "percentile": 75,
+        "observed_duration": 2,
+        "max_unobserved_gap": 1,
+        "minimum_patch_pixels": 2
+      },
+      "train": {
+        "events": 1136,
+        "positive_pixel_days": 45975,
+        "negative_pixel_days": 424703,
+        "unknown_pixel_days": 10566922,
+        "valid_pixel_days": 470678,
+        "positive_fraction_of_valid": 0.09767824287517156,
+        "observed_chlorophyll_pixel_days": 564463,
+        "uncertain_observed_pixel_days": 93785
+      },
+      "validation": {
+        "events": 112,
+        "positive_pixel_days": 3319,
+        "negative_pixel_days": 148521,
+        "unknown_pixel_days": 3537440,
+        "valid_pixel_days": 151840,
+        "positive_fraction_of_valid": 0.02185853530031612,
+        "observed_chlorophyll_pixel_days": 166275,
+        "uncertain_observed_pixel_days": 14435
+      }
+    },
+    {
+      "definition": {
+        "id": "D",
+        "percentile": 80,
+        "observed_duration": 2,
+        "max_unobserved_gap": 1,
+        "minimum_patch_pixels": 2
+      },
+      "train": {
+        "events": 937,
+        "positive_pixel_days": 35079,
+        "negative_pixel_days": 452773,
+        "unknown_pixel_days": 10549748,
+        "valid_pixel_days": 487852,
+        "positive_fraction_of_valid": 0.07190500397661585,
+        "observed_chlorophyll_pixel_days": 564463,
+        "uncertain_observed_pixel_days": 76611
+      },
+      "validation": {
+        "events": 86,
+        "positive_pixel_days": 2695,
+        "negative_pixel_days": 152192,
+        "unknown_pixel_days": 3534393,
+        "valid_pixel_days": 154887,
+        "positive_fraction_of_valid": 0.017399781776391822,
+        "observed_chlorophyll_pixel_days": 166275,
+        "uncertain_observed_pixel_days": 11388
+      }
+    },
+    {
+      "definition": {
+        "id": "E",
+        "percentile": 75,
+        "observed_duration": 2,
+        "max_unobserved_gap": 2,
+        "minimum_patch_pixels": 2
+      },
+      "train": {
+        "events": 1210,
+        "positive_pixel_days": 51489,
+        "negative_pixel_days": 424703,
+        "unknown_pixel_days": 10561408,
+        "valid_pixel_days": 476192,
+        "positive_fraction_of_valid": 0.10812655399502721,
+        "observed_chlorophyll_pixel_days": 564463,
+        "uncertain_observed_pixel_days": 88271
+      },
+      "validation": {
+        "events": 128,
+        "positive_pixel_days": 3679,
+        "negative_pixel_days": 148521,
+        "unknown_pixel_days": 3537080,
+        "valid_pixel_days": 152200,
+        "positive_fraction_of_valid": 0.02417214191852825,
+        "observed_chlorophyll_pixel_days": 166275,
+        "uncertain_observed_pixel_days": 14075
+      }
+    },
+    {
+      "definition": {
+        "id": "F",
+        "percentile": 80,
+        "observed_duration": 2,
+        "max_unobserved_gap": 2,
+        "minimum_patch_pixels": 1
+      },
+      "train": {
+        "events": 1340,
+        "positive_pixel_days": 40084,
+        "negative_pixel_days": 451567,
+        "unknown_pixel_days": 10545949,
+        "valid_pixel_days": 491651,
+        "positive_fraction_of_valid": 0.08152937754626757,
+        "observed_chlorophyll_pixel_days": 564463,
+        "uncertain_observed_pixel_days": 72812
+      },
+      "validation": {
+        "events": 138,
+        "positive_pixel_days": 3021,
+        "negative_pixel_days": 151959,
+        "unknown_pixel_days": 3534300,
+        "valid_pixel_days": 154980,
+        "positive_fraction_of_valid": 0.019492837785520713,
+        "observed_chlorophyll_pixel_days": 166275,
+        "uncertain_observed_pixel_days": 11295
+      }
+    }
+  ],
+  "test_statistics_used": false
+}

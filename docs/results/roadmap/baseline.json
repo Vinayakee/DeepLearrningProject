@@ -1,0 +1,118 @@
+{
+  "status": "verified",
+  "created_at_utc": "2026-10-15T07:14:31.639817+00:00",
+  "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc",
+  "evaluation_sha256": "0ab2518a117360ed3f0e187557d087b19f06cb370e34bb9f8397ab4fd42fbc89",
+  "preprocessing_sha256": "a1f935b3be972f41412acbcd929bfbe6466fed57e85440497bc568815ad4534f",
+  "checks": {
+    "baseline_freeze": true,
+    "final_freeze": true,
+    "post_freeze_evidence": true,
+    "confusion_metrics_reconciled": true,
+    "split_safe_sequences": true
+  },
+  "sequence_counts": {
+    "train": 1012,
+    "test": 328,
+    "validation": 325
+  },
+  "saved_metrics": {
+    "validation": {
+      "accuracy": 0.8445518296155285,
+      "macro_f1": 0.46522802281749875,
+      "valid_pixel_forecasts": 798993,
+      "confusion_matrix": [
+        [
+          655942,
+          42730,
+          10931
+        ],
+        [
+          39433,
+          9639,
+          4348
+        ],
+        [
+          18949,
+          7811,
+          9210
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9182695807504718,
+          "recall": 0.9243788428177445,
+          "f1": 0.9213140842192051,
+          "support": 709603
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.16016949152542373,
+          "recall": 0.1804380381879446,
+          "f1": 0.1697007042253521,
+          "support": 53420
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.3760872228347421,
+          "recall": 0.25604670558799,
+          "f1": 0.30466928000793925,
+          "support": 35970
+        }
+      ],
+      "false_warning_pixel_rate": 0.07562115718225543,
+      "missed_risk_pixel_rate": 0.6531155610247231
+    },
+    "test": {
+      "accuracy": 0.7928643550156605,
+      "macro_f1": 0.3980793136553303,
+      "valid_pixel_forecasts": 640783,
+      "confusion_matrix": [
+        [
+          490127,
+          53613,
+          9673
+        ],
+        [
+          35312,
+          16518,
+          1434
+        ],
+        [
+          18930,
+          13767,
+          1409
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9003580292044551,
+          "recall": 0.8856441753265645,
+          "f1": 0.8929404927389956,
+          "support": 553413
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.19688192805549595,
+          "recall": 0.3101156503454491,
+          "f1": 0.24085388081246992,
+          "support": 53264
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.11257590284435923,
+          "recall": 0.04131237905353897,
+          "f1": 0.060443567414525334,
+          "support": 34106
+        }
+      ],
+      "false_warning_pixel_rate": 0.11435582467343557,
+      "missed_risk_pixel_rate": 0.620830948838274
+    }
+  },
+  "new_test_inference": false,
+  "label_semantics": "Training-defined chlorophyll anomaly proxies, not confirmed HAB events.",
+  "test_disclosure": "2025 was inspected in earlier work. It was excluded from this improvement development; the final frozen configuration is evaluated once. This is a previously inspected holdout, not an untouched test."
+}

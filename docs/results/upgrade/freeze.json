@@ -1,0 +1,66 @@
+{
+  "created_at_utc": "2026-09-13T04:04:05.339821+00:00",
+  "purpose": "2024 development extension; historical deployment and 2025 evaluation unchanged",
+  "development_selection": "existing_frozen_final",
+  "operational_warning_validated": false,
+  "sampling_strategy": "50% uniform + 50% class-balanced sequence mass; cap unnormalized probability at 3/N, renormalize; replacement N draws/epoch.",
+  "class_weights": [
+    0.7973402827710556,
+    2.6660631961316086,
+    3.613398024973734
+  ],
+  "loss": "Existing masked weighted CE",
+  "features": "Existing seven fields + seven masks + month sine/cosine",
+  "architecture": "Unchanged ConvLSTM 8/4, pooling2, bilinear restoration, 8787 parameters",
+  "decision_rule": {
+    "type": "score_ratios",
+    "scales": [
+      1.0,
+      1.2840254166877414,
+      0.7788007830714049
+    ]
+  },
+  "regional_thresholds": {
+    "regional_elevated_percent": 13.72073536133259,
+    "regional_strong_percent": 24.172538490914004
+  },
+  "coverage_policy": {
+    "minimum_chlorophyll_mean_percent": 5.0,
+    "minimum_chlorophyll_observed_days": 2,
+    "minimum_environment_observed_days": 1,
+    "minimum_target_coverage_percent": 5.0
+  },
+  "freshness_maximum_age_days": 3,
+  "development_temperature": 0.4839709279729785,
+  "active_temperature": null,
+  "files": {
+    "upgrade/audit.py": "17ec088a1d5c2c5a31948031218a0c6f417ec893ddb53557bb1de0992e96b680",
+    "upgrade/regional_experiment.py": "44d27658a342551481e8a10deb424ad6d58274d5f623658fd8ac23b8fe9f9687",
+    "upgrade/field_records.py": "b0bde2e61decdf8b6269bc91332b7a3c299ac118bd12ea1dc7ca3f00da6f60b2",
+    "upgrade/diagnostics.py": "0660a812777c2c4616c4f436b2164fe16733a9f3841b51546812067c9cac3303",
+    "upgrade/satellite.py": "e0423df8e3e425b71729ae14feddfef4bd522358d0cd740b751732879e62c11e",
+    "upgrade/__init__.py": "33e87c83b9da64eb388fbb3944d9b99d123f430689ebe651aa933d3fc8b1444a",
+    "upgrade/modis.py": "81d1607fcdd685755c2dbb198554d785aa7984fd9ba1acc5350b9dd8d68d30f1",
+    "upgrade/sampling.py": "e6ea96393eb4bf389be90fbebcfa29930ec7e74967f59f3d50e61c1548a6a020",
+    "upgrade/live.py": "dd1a4575a6c9f45adc20bdc62ed8034743cadbaa0b68210898f975da6e499407",
+    "upgrade/notifications.py": "18f1c47bcb106a5d7e80d77c82edd7acf0ba75033c241aa5ecda8e1be9a58054",
+    "upgrade/verify.py": "7db90fe7f68e4058418612b88ed9b955b03f811f2292b2c3709d624e4006f67f",
+    "upgrade/coverage_windows.py": "a849c3d303a7f17a408a0b0379768f1d63cf3e53cf79ec78d712a8adf63a1e76",
+    "upgrade/compare.py": "a4af3707a6893dc7dda64986498c178bd7448bb89db165462f4cb7e41eb6acfa",
+    "upgrade/repair_month_strata.py": "1c6854b912699d83e19adedafcea1b3a3c6f50072d16f3a392ce9384ff697620",
+    "upgrade/calibration.py": "c332586ade4657e163b15fd234240b1f7ae65d056ae8c9fb2bc5030289e0793b",
+    "outputs/upgrade/strong_diagnostics_2024.json": "6b0dd855e825f38c460c57f6b753de353ed584c40b8fbc623d965df038c30637",
+    "outputs/upgrade/calibration_2024.json": "c905d6523098fe429c2d858e5a3a7495037bb8739c37861c4c502b4df81d9aa7",
+    "outputs/upgrade/sampling_comparison_2024.json": "4f3853a99e3cc1b400b8ac76c3992957ac8d6c0c5f764e30f2dcfb5cb7295382",
+    "outputs/upgrade/regional_support_2024.json": "922847fa69d2cd4bd9b1d962e265a893446d6bca24b594ce9adf111d1b114b0e",
+    "outputs/upgrade/data_audit.json": "8b2c4a9fc2e004c8c8edf5ec4d1bda8c0f957a77c523b59892e68b5eda984e40",
+    "outputs/upgrade/balanced_sampling/model.keras": "16cd5b787177e55ad0694ebc5a5885a67a42f88b62d1e5b0aedef9d56dba78ff",
+    "outputs/upgrade/balanced_sampling/training_config.json": "4c4891e0e9a27723df21cde67f56784bb0bd0f3a021a1be0d343cc191cf0597f",
+    "outputs/upgrade/balanced_sampling/training_history.csv": "5af3b1eb87c88b61305a3092e401eefc5c4cedcf6b20af08c84eb8753d5fb88c",
+    "outputs/improvement/final/freeze.json": "aa7f335575ff40d99ee02dee948d581170604ad4a1c906aee671786e393e1f22",
+    "outputs/improvement/final/calibration.json": "0ecc45e3cf4fbb02224958d60f4314d78262225b0c6c3354795dbf97fc9c9796",
+    "outputs/improvement/final_preprocessing/preprocessing.json": "a1f935b3be972f41412acbcd929bfbe6466fed57e85440497bc568815ad4534f"
+  },
+  "preserved_2025_evaluation_sha256": "0ab2518a117360ed3f0e187557d087b19f06cb370e34bb9f8397ab4fd42fbc89",
+  "independent_evaluation": "Not performed: no new independent observations. Existing 2025 result is reused as historical evidence only."
+}

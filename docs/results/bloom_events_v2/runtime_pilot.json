@@ -1,0 +1,13 @@
+{
+  "epochs_timed": 3,
+  "epoch_seconds": [
+    30.153675290988758,
+    28.67052358298679,
+    28.58258470799774
+  ],
+  "estimated_seconds_for_max_epochs": 437.03391790986643,
+  "maximum_epochs": 15,
+  "decision": "Continue the same model/optimizer for at most 15 total epochs if estimated runtime is <=2 hours; otherwise stop after the pilot.",
+  "deadline_budget_seconds": 7200,
+  "continuing": true
+}
