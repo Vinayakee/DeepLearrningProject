@@ -1,0 +1,15 @@
+{
+  "full_suite": {
+    "run": 137,
+    "passed": 136,
+    "skipped": 1,
+    "failed": 0
+  },
+  "skip_reason": "Optional raw-MODIS source product is excluded from the release",
+  "team_runtime_installer_tests": 4,
+  "frozen_scientific_audit": "passed",
+  "release_scientific_payloads": "Byte-identical to the verified submission; only README/local audit metadata sanitized",
+  "git_payload_MiB_approx": 3.63,
+  "automatic_ci_enabled": false,
+  "original_and_submission_sources_modified": false
+}

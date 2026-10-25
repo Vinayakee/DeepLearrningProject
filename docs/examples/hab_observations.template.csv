@@ -1,0 +1,1 @@
+record_id,event_id,zone_id,observed_at_utc,available_at_utc,latitude,longitude,confirmed_hab,observation_scope,definition_id,species,verification_method,source_reference,verified_by

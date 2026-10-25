@@ -1,0 +1,32 @@
+{
+  "status": "blocked_partial_public_archive",
+  "pilot_period": [
+    "2024-02-11",
+    "2024-02-14"
+  ],
+  "region_bbox_lon_lat": [
+    74,
+    8,
+    77.5,
+    13
+  ],
+  "required_pilot_products": 10,
+  "downloaded_verified_products": [
+    "S3A_OL_2_WFR____20240211T043418_20240211T043718_20240212T104147_0179_109_033_2700_MAR_O_NT_003.SEN3",
+    "S3A_OL_2_WFR____20240211T043718_20240211T044018_20240212T104159_0180_109_033_2880_MAR_O_NT_003.SEN3"
+  ],
+  "first_missing_product": "S3B_OL_2_WFR____20240212T051009_20240212T051309_20240213T115221_0179_089_290_2700_MAR_O_NT_003.SEN3",
+  "remaining_products": 8,
+  "download_attempt_stopped": true,
+  "qc_processing_performed": false,
+  "model_evaluation_performed": false,
+  "production_integration_performed": false,
+  "remaining_full_product_bytes": 3698909338,
+  "native_components_required": [
+    "xfdumanifest.xml",
+    "geo_coordinates.nc",
+    "chl_oc4me.nc",
+    "wqsf.nc",
+    "time_coordinates.nc"
+  ]
+}

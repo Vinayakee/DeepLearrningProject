@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Satellite bloom-event forecast</title><link rel="stylesheet" href="hab.css"></head>
+<body><main>
+<nav><a href="./">Chlorophyll anomaly baseline</a> · <a href="hab.html">Verified-HAB workflow availability</a></nav>
+<h1>Satellite bloom-event forecast</h1>
+<p>Five future daily maps from five days of environmental observations.</p>
+<p class="notice">Chlorophyll-derived satellite labels, not confirmed HAB, harmful species or toxicity. Run_01 is preserved: strict labels had no positive validation/test targets. Run_02 uses the separately selected relaxed definition; persistence has higher F1 and IoU on matched targets at all five horizons. Run_03 tests added causal inputs with unchanged labels; its 2025 F1/IoU exceeds matched persistence at all five horizons. No operational warnings; 2025 was previously inspected.</p>
+<label>Experiment <select id="bloom-run"><option value="run_02">run_02 · relaxed P75, one observed day, patch ≥2 pixels</option><option value="run_03" selected>run_03 · controlled input experiment</option>
+        <option value="run_01">run_01 · preserved strict P90, three days, patch ≥3 pixels</option></select></label>
+<section><h2>Model availability</h2><p id="bloom-status" role="status">Checking model…</p></section>
+<form id="bloom-form"><label>Input ending date <input id="bloom-date" type="date" value="2024-02-15" required></label>
+<label><input id="bloom-demo" type="checkbox" checked> Historical demonstration</label>
+<button id="bloom-submit" disabled>Generate satellite bloom-event forecast</button></form>
+<p id="bloom-message" role="status" aria-live="polite"></p>
+<p id="bloom-definition"></p><p><a id="bloom-evaluation">Read this run's saved evaluation</a></p>
+<section id="bloom-results" hidden>
+<div class="toolbar"><label>Forecast day <select id="bloom-day"></select></label><a id="bloom-export">Download five-day CSV</a></div>
+<p id="bloom-context"></p><p id="bloom-coverage"></p>
+<img id="bloom-map" style="width:100%" alt="Satellite bloom-event forecast map">
+<p id="bloom-score"></p>
+<table><thead><tr><th>Forecast date</th><th>Event pixels</th><th>Supported pixels</th><th id="bloom-score-kind">Maximum score</th></tr></thead><tbody id="bloom-table"></tbody></table>
+</section>
+<details><summary>How the runs differ</summary><p>Strict run_01 requires a common patch ≥3 pixels above training P90 on three consecutive observed days: 23 training components, no positive validation/test targets. Relaxed run_02 uses P75 and a patch ≥2 pixels on one observed day: the first passing definition from a bounded training/2024-validation label comparison. It does not establish multi-day persistence. Gap-tolerant candidates were checked but not selected; missing days never become event labels. Any probability calibration is a 2024 development fit, not operational approval. See the selected run's evaluation for actual metrics and matched persistence comparisons.</p></details>
+</main><script src="bloom.js?v=inputs-v3"></script></body></html>

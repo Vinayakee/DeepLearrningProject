@@ -1,0 +1,11 @@
+-r requirements.txt
+# Optional: original manual satellite/environment acquisition scripts.
+copernicusmarine==2.4.1
+cdsapi==0.7.7
+earthaccess==0.19.0
+requests==2.34.2
+python-dotenv==1.2.3
+
+# Compatible with the async Copernicus downloader as well as Earthaccess.
+boto3==1.43.56
+botocore==1.43.56

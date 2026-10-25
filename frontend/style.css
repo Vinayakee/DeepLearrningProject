@@ -218,6 +218,12 @@ body {
     display: block;
 }
 
+[hidden] { display: none !important; }
+.map-container { overflow: auto; max-height: 700px; }
+.map-tools { flex-wrap: wrap; margin-bottom: 8px; }
+.map-tools select { padding: 9px; border: 1px solid #cbd5e1; border-radius: 6px; background: white; }
+.map-tools a { padding: 9px; color: #075985; }
+
 
 /* =========================
    MAP INFO
@@ -465,92 +471,50 @@ footer {
     .model-grid {
         grid-template-columns: 1fr;
     }
-    /* =========================
-   WARNING LEVELS
-========================= */
-
-.warning-normal {
-    color: #247a3b;
 }
-
-.warning-elevated {
-    color: #b77900;
-}
-
-.warning-strong {
-    color: #c0392b;
-    font-weight: 700;
-}
-/* ============================================================
-   DYNAMIC WARNING DISPLAY
-============================================================ */
-
-.warning-normal {
-    color: #247a3b;
-    font-weight: 700;
-}
-
-.warning-elevated {
-    color: #b77900;
-    font-weight: 700;
-}
-
-.warning-strong {
-    color: #c0392b;
-    font-weight: 700;
-}
-
-
-/* Smooth warning transition */
-
-#warning-level {
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-/* Slight emphasis for strong warning */
-
-.warning-strong {
-    transform: scale(1.03);
-}
-/* ============================================================
-   WARNING LEVEL DISPLAY
-============================================================ */
-
+/* Dynamic warning states, available on desktop and mobile. */
 #warning-level {
     display: inline-block;
     margin-top: 8px;
     padding: 6px 12px;
     border-radius: 8px;
     font-weight: 700;
-    transition: all 0.3s ease;
+    transition: color .3s ease, background .3s ease;
 }
+.warning-normal { color: #247a3b; background: #e8f5e9; }
+.warning-elevated { color: #9a6700; background: #fff4cc; }
+.warning-strong { color: #b42318; background: #fde8e7; }
+.legend-section > p { color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 12px; }
 
+[hidden] { display: none !important; }
+.controls { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
+.controls label { font-size: 13px; }
+.controls button, .controls input[type=date] { padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: white; }
+.controls button { cursor: pointer; }
+.controls button:disabled { opacity: .6; cursor: wait; }
+#generated-at { color: #64748b; font-size: 12px; }
+.data-notice { padding: 16px; border-radius: 8px; background: #edf2f7; border-left: 4px solid #64748b; margin-bottom: 12px; line-height: 1.5; }
+.data-notice.attention { background: #fff4cc; border-color: #b77900; }
+.project-note { color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 20px; }
+.observed-status { background: white; padding: 16px; border: 1px solid #e1e5e8; border-radius: 8px; margin-bottom: 20px; }
+.observed-status p { color: #64748b; margin-top: 6px; font-size: 13px; }
+.environment-values { margin-bottom: 20px; overflow-x: auto; }
+.environment-values table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.environment-values td, .environment-values th { padding: 9px 5px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+.status.unavailable { background: #fff4cc; color: #9a6700; }
+.status.unavailable .status-dot { background: #b77900; }
 
-/* Normal */
+.map-link { margin-top: 10px; font-size: 13px; }
+.map-link a { color: #2563eb; }
 
-.warning-normal {
-    color: #247a3b;
-    background: #e8f5e9;
+.day-button:disabled { opacity: .45; cursor: not-allowed; }
+.map-tools button:disabled { opacity: .45; cursor: not-allowed; }
+#covered-date { background: #075985; color: white; border-color: #075985; font-weight: 600; }
+#forecast-progress { color: #075985; font-size: 13px; }
+#forecast-progress:not(:empty)::before {
+    content: ""; display: inline-block; width: 12px; height: 12px;
+    margin-right: 7px; border: 2px solid #bae6fd; border-top-color: #075985;
+    border-radius: 50%; vertical-align: -2px; animation: forecast-spin .8s linear infinite;
 }
-
-
-/* Elevated */
-
-.warning-elevated {
-    color: #9a6700;
-    background: #fff4cc;
-}
-
-
-/* Strong */
-
-.warning-strong {
-    color: #b42318;
-    background: #fde8e7;
-    transform: scale(1.03);
-}
-
-}
+@keyframes forecast-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { #forecast-progress::before { animation: none; } }

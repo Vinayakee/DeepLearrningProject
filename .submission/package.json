@@ -1,0 +1,25 @@
+{
+  "folder_name": "HAB-Early-Warning-Submission",
+  "zip_name": "HAB-Early-Warning-Submission.zip",
+  "layout": "Original relative paths plus internal aliases",
+  "zip_symlinks": "Unix symlink entries; no external targets",
+  "scientific_results_reevaluated": false,
+  "original_preserved": true,
+  "folder_size_MiB": 1946.14,
+  "zip_size_MiB": 622.4,
+  "largest_groups_MiB": {
+    "data/processed/bloom_events_v3": 1053.25,
+    "data/processed/training_only_labels": 88.75,
+    "data/processed/sentinel3_chl_2021_2025.npy": 70.21,
+    "data/processed/current_u_2021_2025.npy": 70.21,
+    "data/processed/current_v_2021_2025.npy": 70.21,
+    "data/processed/sst_2021_2025.npy": 70.21,
+    "data/processed/wind_u_2021_2025.npy": 70.21,
+    "data/processed/wind_v_2021_2025.npy": 70.21,
+    "data/processed/chlorophyll_2021_2025.npy": 70.21,
+    "data/processed/rainfall_2021_2025.npy": 70.21,
+    "data/processed/bloom_events": 35.24,
+    "data/processed/bloom_events_v2": 35.24
+  },
+  "archive_extraction_verified": true
+}

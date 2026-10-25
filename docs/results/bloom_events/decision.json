@@ -1,0 +1,11 @@
+{
+  "schema": "satellite-event-decision-v1",
+  "threshold": 0.5,
+  "selection": "Fixed sigmoid threshold 0.5: validation has no positive events, so detection threshold optimization and probability calibration are unsupported.",
+  "fit_split": "validation (2024)",
+  "validation_positive_forecasts": 0,
+  "validation_valid_forecasts": 764381,
+  "probability_calibrated": false,
+  "model_sha256": "ee8a3f5f2a56523fd987810eb52e1929e0f6fa96356282a169e4469a6943324c",
+  "dataset_manifest_sha256": "8bb842d996e6864be6ba9a12e63e063c325201d8d8eeac51891186a749364a81"
+}

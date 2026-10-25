@@ -1,0 +1,10 @@
+{
+  "repository": "Vinayakee/DeepLearrningProject",
+  "tag": "submission-run03-2026-10-25",
+  "asset_name": "HAB-Early-Warning-Submission.zip",
+  "archive_root": "HAB-Early-Warning-Submission",
+  "sha256": "535cd1a54eea0fd11d25b0149c858480fa07863b605790761c47f3478c72e094",
+  "bytes": 649925899,
+  "download_url": "https://github.com/Vinayakee/DeepLearrningProject/releases/download/submission-run03-2026-10-25/HAB-Early-Warning-Submission.zip",
+  "notes": "All scientific data/checkpoints/results unchanged; local machine-wide audit listing excluded."
+}

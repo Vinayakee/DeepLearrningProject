@@ -1,0 +1,3 @@
+# Abstract
+
+**Presentation abstract extension:** A controlled input ablation compares the original environmental/mask/seasonal inputs with causally carried satellite-event state and observation age, environmental dynamics, and physical coast distance. The best configuration on 2024 development F1 is frozen before one 2025 assessment, with observed-target and matched-persistence pixel and 10×10 block metrics reported separately. The selected configuration yields mean pixel F1 0.380 and IoU 0.234; matched model/persistence F1 is 0.342/0.320. These remain satellite-derived targets, not verified harmful occurrence. 2025 was previously inspected, rolling forecasts are correlated, and block aggregation is not biological event detection.

@@ -1,0 +1,6 @@
+{
+  "status": "not_performed",
+  "reason": "Catalogued records have month/locality precision and no verified daily coordinates; they cannot support an honest detected-X-of-N match. Satellite-event labels also do not establish verified HAB occurrence.",
+  "source_audit": "docs/results/hab_submission/source_audit.json",
+  "claimed_detection_count": null
+}

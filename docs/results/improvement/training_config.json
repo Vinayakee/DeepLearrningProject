@@ -1,0 +1,61 @@
+{
+  "name": "final",
+  "created_at_utc": "2026-09-13T02:38:08.906241+00:00",
+  "smoke": false,
+  "weight_power": 0.75,
+  "class_weights": [
+    0.7973402827710556,
+    2.6660631961316086,
+    3.613398024973734
+  ],
+  "normalization": "expected training-pixel weight equals frozen square-root baseline",
+  "seasonal_features": true,
+  "channels": 16,
+  "filters": [
+    8,
+    4
+  ],
+  "spatial_downsample": 2,
+  "seed": 42,
+  "learning_rate": 0.001,
+  "clipnorm": 1.0,
+  "batch_size": 2,
+  "epochs_requested": 30,
+  "train_sequences": 1012,
+  "validation_sequences": 325,
+  "fitting_period": [
+    "2021-01-01",
+    "2023-12-31"
+  ],
+  "development_period": [
+    "2024-01-01",
+    "2024-12-31"
+  ],
+  "baseline_model_sha256": "0dff8dd0ded97db428cb9694a03a1caf20aa2605322d32ff3dd90992fbea678d",
+  "label_metadata_sha256": "438afedd96230c92adb8b840c33b476b1dae712fe42336c54c02368ae97c2c1f",
+  "preprocessing_sha256": "a1f935b3be972f41412acbcd929bfbe6466fed57e85440497bc568815ad4534f",
+  "input_shape": [
+    5,
+    120,
+    84,
+    16
+  ],
+  "output_shape": [
+    5,
+    120,
+    84,
+    3
+  ],
+  "tensorflow_version": "2.21.0",
+  "parameters": 8787,
+  "callbacks": {
+    "early_stopping_patience": 4,
+    "reduce_lr_patience": 2,
+    "reduce_lr_factor": 0.5,
+    "minimum_lr": 1e-05
+  },
+  "epochs_completed": 14,
+  "best_epoch": 10,
+  "duration_seconds": 664.281011041021,
+  "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc"
+}

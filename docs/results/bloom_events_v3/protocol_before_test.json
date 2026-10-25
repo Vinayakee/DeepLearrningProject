@@ -1,0 +1,57 @@
+{
+  "created_at_utc": "2026-10-24T20:38:15.658339+00:00",
+  "deadline_utc": "2026-10-24T23:33:48+00:00",
+  "variants": {
+    "V0": [],
+    "V1": [
+      "last_event",
+      "last_event_known",
+      "observation_age"
+    ],
+    "V2": [
+      "last_event",
+      "last_event_known",
+      "observation_age",
+      "chl_change",
+      "chl_change_valid",
+      "sst_front",
+      "sst_front_valid",
+      "wind_speed",
+      "wind_direction_u",
+      "wind_direction_v",
+      "wind_valid",
+      "wind_history_u",
+      "wind_history_v",
+      "wind_history_valid"
+    ],
+    "V3": [
+      "last_event",
+      "last_event_known",
+      "observation_age",
+      "chl_change",
+      "chl_change_valid",
+      "sst_front",
+      "sst_front_valid",
+      "wind_speed",
+      "wind_direction_u",
+      "wind_direction_v",
+      "wind_valid",
+      "wind_history_u",
+      "wind_history_v",
+      "wind_history_valid",
+      "distance_to_coast_km"
+    ]
+  },
+  "order": [
+    "V1",
+    "V0",
+    "V2",
+    "V3"
+  ],
+  "epochs": 15,
+  "seed": 42,
+  "selection": "Highest mean per-horizon pixel F1 on full 2024 development targets; first variant in V0,V1,V2,V3 order breaks ties. No test selection.",
+  "block_rule": "Nonoverlapping 10x10, top-left anchored, pad partial edges invalid. >=10 observed valid target pixels per block/horizon. True/predicted event if any valid pixel is event. Matched block: same >=10 requirement on intersection of target-known and persistence-known pixels.",
+  "test_disclosure": "2025 previously inspected including run_01/run_02. No new 2025 metrics until single best validation variant is frozen.",
+  "stretch": "V4 skipped to prioritize controlled V0\u2013V3 comparisons within three hours."
+}

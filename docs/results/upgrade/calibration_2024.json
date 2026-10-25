@@ -1,0 +1,587 @@
+{
+  "period": "2024 only",
+  "model_sha256": "1504b6589f86e733f7235000669a1e6ac1ba7fdb8eecb521d542165817a491cc",
+  "method": "Scalar temperature on log clipped softmax scores; class decisions remain on original scores.",
+  "fit_complete_windows": "2024-01-01 through 2024-06-30",
+  "assessment_complete_windows": "2024-07-01 through 2024-12-31",
+  "excluded_boundary_origins": 9,
+  "fit_pixels": 431607,
+  "temperature": 0.4839709279729785,
+  "before": {
+    "pixels": 363698,
+    "nll": 0.5963878016201013,
+    "brier": 0.31343354231757636,
+    "class_brier": [
+      0.17126873327681305,
+      0.09004599824557713,
+      0.05211881079524915
+    ],
+    "class_counts": [
+      324471,
+      26275,
+      12952
+    ],
+    "reliability": {
+      "top_label": {
+        "ece": 0.2143794317611216,
+        "bins": [
+          {
+            "bin": 5,
+            "count": 29446,
+            "mean_score": 0.3714976976904898,
+            "observed_frequency": 0.4215173538001766
+          },
+          {
+            "bin": 6,
+            "count": 36781,
+            "mean_score": 0.43426025241782734,
+            "observed_frequency": 0.6148554960441532
+          },
+          {
+            "bin": 7,
+            "count": 39591,
+            "mean_score": 0.5011286993609185,
+            "observed_frequency": 0.745548230658483
+          },
+          {
+            "bin": 8,
+            "count": 31385,
+            "mean_score": 0.5646818098054107,
+            "observed_frequency": 0.863692846901386
+          },
+          {
+            "bin": 9,
+            "count": 34880,
+            "mean_score": 0.6359040634894589,
+            "observed_frequency": 0.9361525229357798
+          },
+          {
+            "bin": 10,
+            "count": 73080,
+            "mean_score": 0.7093954817080471,
+            "observed_frequency": 0.9472495894909688
+          },
+          {
+            "bin": 11,
+            "count": 118518,
+            "mean_score": 0.7597299286217354,
+            "observed_frequency": 0.9532391704213706
+          },
+          {
+            "bin": 12,
+            "count": 17,
+            "mean_score": 0.8017483353614807,
+            "observed_frequency": 1.0
+          }
+        ]
+      },
+      "0": {
+        "ece": 0.27478727657842417,
+        "bins": [
+          {
+            "bin": 1,
+            "count": 87,
+            "mean_score": 0.11986374649508245,
+            "observed_frequency": 0.7471264367816092
+          },
+          {
+            "bin": 2,
+            "count": 2281,
+            "mean_score": 0.17636274893599505,
+            "observed_frequency": 0.6966242875931609
+          },
+          {
+            "bin": 3,
+            "count": 9688,
+            "mean_score": 0.23908711485656994,
+            "observed_frequency": 0.731626754748142
+          },
+          {
+            "bin": 4,
+            "count": 14604,
+            "mean_score": 0.30112441637742293,
+            "observed_frequency": 0.709531635168447
+          },
+          {
+            "bin": 5,
+            "count": 17239,
+            "mean_score": 0.3670797100773308,
+            "observed_frequency": 0.7282324960844596
+          },
+          {
+            "bin": 6,
+            "count": 26810,
+            "mean_score": 0.43635787457861325,
+            "observed_frequency": 0.8064155165982843
+          },
+          {
+            "bin": 7,
+            "count": 35936,
+            "mean_score": 0.5019132423854018,
+            "observed_frequency": 0.8145870436331255
+          },
+          {
+            "bin": 8,
+            "count": 30595,
+            "mean_score": 0.5649807266500149,
+            "observed_frequency": 0.8840987089393691
+          },
+          {
+            "bin": 9,
+            "count": 34843,
+            "mean_score": 0.6359298569639545,
+            "observed_frequency": 0.937146629165112
+          },
+          {
+            "bin": 10,
+            "count": 73080,
+            "mean_score": 0.7093954817080471,
+            "observed_frequency": 0.9472495894909688
+          },
+          {
+            "bin": 11,
+            "count": 118518,
+            "mean_score": 0.7597299286217354,
+            "observed_frequency": 0.9532391704213706
+          },
+          {
+            "bin": 12,
+            "count": 17,
+            "mean_score": 0.8017483353614807,
+            "observed_frequency": 1.0
+          }
+        ]
+      },
+      "1": {
+        "ece": 0.156815923936451,
+        "bins": [
+          {
+            "bin": 1,
+            "count": 30,
+            "mean_score": 0.13141247729460398,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 2,
+            "count": 170469,
+            "mean_score": 0.16721918004380332,
+            "observed_frequency": 0.03761387700989623
+          },
+          {
+            "bin": 3,
+            "count": 69708,
+            "mean_score": 0.23334707141755376,
+            "observed_frequency": 0.050510701784587136
+          },
+          {
+            "bin": 4,
+            "count": 97365,
+            "mean_score": 0.3011468672271209,
+            "observed_frequency": 0.11543162327325014
+          },
+          {
+            "bin": 5,
+            "count": 25683,
+            "mean_score": 0.3516241030713384,
+            "observed_frequency": 0.1954600319277343
+          },
+          {
+            "bin": 6,
+            "count": 443,
+            "mean_score": 0.40840836457958607,
+            "observed_frequency": 0.1873589164785553
+          }
+        ]
+      },
+      "2": {
+        "ece": 0.11797135104941055,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 43,
+            "mean_score": 0.06473536746099938,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 1,
+            "count": 216803,
+            "mean_score": 0.0906099459458391,
+            "observed_frequency": 0.012296877810731402
+          },
+          {
+            "bin": 2,
+            "count": 59288,
+            "mean_score": 0.1672396404082324,
+            "observed_frequency": 0.05049925785993793
+          },
+          {
+            "bin": 3,
+            "count": 40820,
+            "mean_score": 0.2291915339831626,
+            "observed_frequency": 0.0697452229299363
+          },
+          {
+            "bin": 4,
+            "count": 20055,
+            "mean_score": 0.297087527220459,
+            "observed_frequency": 0.09972575417601595
+          },
+          {
+            "bin": 5,
+            "count": 12665,
+            "mean_score": 0.36479417116473517,
+            "observed_frequency": 0.0971969996052112
+          },
+          {
+            "bin": 6,
+            "count": 9542,
+            "mean_score": 0.42952493115794205,
+            "observed_frequency": 0.09557744707608468
+          },
+          {
+            "bin": 7,
+            "count": 3655,
+            "mean_score": 0.4934150637582291,
+            "observed_frequency": 0.0667578659370725
+          },
+          {
+            "bin": 8,
+            "count": 790,
+            "mean_score": 0.553105403652674,
+            "observed_frequency": 0.07341772151898734
+          },
+          {
+            "bin": 9,
+            "count": 37,
+            "mean_score": 0.611614278844885,
+            "observed_frequency": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "after": {
+    "pixels": 363698,
+    "nll": 0.46556694892822226,
+    "brier": 0.242892501001801,
+    "class_brier": [
+      0.12284672399981755,
+      0.07183278485671821,
+      0.048212992145262513
+    ],
+    "class_counts": [
+      324471,
+      26275,
+      12952
+    ],
+    "reliability": {
+      "top_label": {
+        "ece": 0.0382351154093727,
+        "bins": [
+          {
+            "bin": 5,
+            "count": 11089,
+            "mean_score": 0.3741595351811693,
+            "observed_frequency": 0.3914690233564794
+          },
+          {
+            "bin": 6,
+            "count": 17221,
+            "mean_score": 0.4325364487962056,
+            "observed_frequency": 0.43905696533302363
+          },
+          {
+            "bin": 7,
+            "count": 16786,
+            "mean_score": 0.500835595857751,
+            "observed_frequency": 0.5292505659478136
+          },
+          {
+            "bin": 8,
+            "count": 19550,
+            "mean_score": 0.5670279952015908,
+            "observed_frequency": 0.669923273657289
+          },
+          {
+            "bin": 9,
+            "count": 20371,
+            "mean_score": 0.6338623445647563,
+            "observed_frequency": 0.7182759805606008
+          },
+          {
+            "bin": 10,
+            "count": 24866,
+            "mean_score": 0.7008219827919702,
+            "observed_frequency": 0.7735864232285048
+          },
+          {
+            "bin": 11,
+            "count": 21944,
+            "mean_score": 0.7659962570075763,
+            "observed_frequency": 0.8631972293109734
+          },
+          {
+            "bin": 12,
+            "count": 27578,
+            "mean_score": 0.8362451831080707,
+            "observed_frequency": 0.9325911958807745
+          },
+          {
+            "bin": 13,
+            "count": 65336,
+            "mean_score": 0.908357179059775,
+            "observed_frequency": 0.9442420717521733
+          },
+          {
+            "bin": 14,
+            "count": 138957,
+            "mean_score": 0.9496989046066578,
+            "observed_frequency": 0.9529350806364559
+          }
+        ]
+      },
+      "0": {
+        "ece": 0.10932227168893621,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 837,
+            "mean_score": 0.05213260463908405,
+            "observed_frequency": 0.6726403823178017
+          },
+          {
+            "bin": 1,
+            "count": 3801,
+            "mean_score": 0.10550407030004048,
+            "observed_frequency": 0.7345435411733754
+          },
+          {
+            "bin": 2,
+            "count": 7182,
+            "mean_score": 0.16862224167080336,
+            "observed_frequency": 0.7293233082706767
+          },
+          {
+            "bin": 3,
+            "count": 7433,
+            "mean_score": 0.2330497914334672,
+            "observed_frequency": 0.7198977532624782
+          },
+          {
+            "bin": 4,
+            "count": 7680,
+            "mean_score": 0.30097102258028635,
+            "observed_frequency": 0.6942708333333333
+          },
+          {
+            "bin": 5,
+            "count": 8085,
+            "mean_score": 0.3664293194235585,
+            "observed_frequency": 0.7187384044526902
+          },
+          {
+            "bin": 6,
+            "count": 8316,
+            "mean_score": 0.4334729146378143,
+            "observed_frequency": 0.7344877344877345
+          },
+          {
+            "bin": 7,
+            "count": 10720,
+            "mean_score": 0.5021010689147157,
+            "observed_frequency": 0.7671641791044777
+          },
+          {
+            "bin": 8,
+            "count": 15385,
+            "mean_score": 0.5678701435699841,
+            "observed_frequency": 0.8269743256418589
+          },
+          {
+            "bin": 9,
+            "count": 17685,
+            "mean_score": 0.6343211651146057,
+            "observed_frequency": 0.8175289793610404
+          },
+          {
+            "bin": 10,
+            "count": 23363,
+            "mean_score": 0.7011299079563884,
+            "observed_frequency": 0.8186876685357188
+          },
+          {
+            "bin": 11,
+            "count": 21399,
+            "mean_score": 0.7662362701876813,
+            "observed_frequency": 0.8840132716482079
+          },
+          {
+            "bin": 12,
+            "count": 27519,
+            "mean_score": 0.8362894881734525,
+            "observed_frequency": 0.934517969402958
+          },
+          {
+            "bin": 13,
+            "count": 65336,
+            "mean_score": 0.908357179059775,
+            "observed_frequency": 0.9442420717521733
+          },
+          {
+            "bin": 14,
+            "count": 138957,
+            "mean_score": 0.9496989046066578,
+            "observed_frequency": 0.9529350806364559
+          }
+        ]
+      },
+      "1": {
+        "ece": 0.060005498896368234,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 167758,
+            "mean_score": 0.043283096545406755,
+            "observed_frequency": 0.037411032558804944
+          },
+          {
+            "bin": 1,
+            "count": 55181,
+            "mean_score": 0.09592976708422812,
+            "observed_frequency": 0.04389191932005582
+          },
+          {
+            "bin": 2,
+            "count": 38878,
+            "mean_score": 0.16744672025622154,
+            "observed_frequency": 0.08318329132157004
+          },
+          {
+            "bin": 3,
+            "count": 43887,
+            "mean_score": 0.23262717420018414,
+            "observed_frequency": 0.11780253833709299
+          },
+          {
+            "bin": 4,
+            "count": 38433,
+            "mean_score": 0.298122628628371,
+            "observed_frequency": 0.13134545833008093
+          },
+          {
+            "bin": 5,
+            "count": 14807,
+            "mean_score": 0.3587847475512816,
+            "observed_frequency": 0.1888296076180185
+          },
+          {
+            "bin": 6,
+            "count": 4231,
+            "mean_score": 0.4255956278826571,
+            "observed_frequency": 0.29142046797447413
+          },
+          {
+            "bin": 7,
+            "count": 518,
+            "mean_score": 0.4851939835029166,
+            "observed_frequency": 0.18532818532818532
+          },
+          {
+            "bin": 8,
+            "count": 5,
+            "mean_score": 0.538607507057971,
+            "observed_frequency": 0.0
+          }
+        ]
+      },
+      "2": {
+        "ece": 0.049316772792568096,
+        "bins": [
+          {
+            "bin": 0,
+            "count": 248313,
+            "mean_score": 0.018010605010865214,
+            "observed_frequency": 0.014602537925924136
+          },
+          {
+            "bin": 1,
+            "count": 46093,
+            "mean_score": 0.09572476395321174,
+            "observed_frequency": 0.06673464517388758
+          },
+          {
+            "bin": 2,
+            "count": 22230,
+            "mean_score": 0.16268412233559007,
+            "observed_frequency": 0.07782276203328835
+          },
+          {
+            "bin": 3,
+            "count": 12066,
+            "mean_score": 0.23086753657350742,
+            "observed_frequency": 0.10127631360848666
+          },
+          {
+            "bin": 4,
+            "count": 8564,
+            "mean_score": 0.2984437108165429,
+            "observed_frequency": 0.1034563288183092
+          },
+          {
+            "bin": 5,
+            "count": 6458,
+            "mean_score": 0.3647126417176309,
+            "observed_frequency": 0.1031279033756581
+          },
+          {
+            "bin": 6,
+            "count": 5473,
+            "mean_score": 0.43310319307107664,
+            "observed_frequency": 0.09099214324867531
+          },
+          {
+            "bin": 7,
+            "count": 5548,
+            "mean_score": 0.49985082369285205,
+            "observed_frequency": 0.10165825522710886
+          },
+          {
+            "bin": 8,
+            "count": 4160,
+            "mean_score": 0.5639476225556735,
+            "observed_frequency": 0.08990384615384615
+          },
+          {
+            "bin": 9,
+            "count": 2686,
+            "mean_score": 0.6308414058365047,
+            "observed_frequency": 0.06478034251675353
+          },
+          {
+            "bin": 10,
+            "count": 1503,
+            "mean_score": 0.6960355186427345,
+            "observed_frequency": 0.07252162341982701
+          },
+          {
+            "bin": 11,
+            "count": 545,
+            "mean_score": 0.756572326656993,
+            "observed_frequency": 0.045871559633027525
+          },
+          {
+            "bin": 12,
+            "count": 59,
+            "mean_score": 0.8155802493073381,
+            "observed_frequency": 0.03389830508474576
+          }
+        ]
+      }
+    }
+  },
+  "declared_criterion": "Lower temporal assessment NLL and Brier, with no per-class Brier degradation.",
+  "criterion_passed": true,
+  "active_probability_calibration": false,
+  "reason": "Temporal assessment is development evidence only; no new independent observations exist. Frozen production probabilities and 2025 evaluation are unchanged.",
+  "limits": "Pixels/horizons are correlated; ECE depends on bins and prevalence. Global improvement does not establish reliable event confidence."
+}

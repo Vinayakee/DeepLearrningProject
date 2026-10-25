@@ -1,0 +1,235 @@
+{
+  "period": "2024 only",
+  "criterion": {
+    "minimum_macro_f1_gain": 0.01,
+    "maximum_elevated_f1_decrease": 0.01,
+    "description": "Retain calendar inputs only for >=0.01 absolute validation macro-F1 gain, without >0.01 elevated-F1 loss, under the baseline selected rule held fixed. All inputs/labels/weights/training settings otherwise fixed."
+  },
+  "macro_f1_gain": 0.024215667603040336,
+  "retained": true,
+  "results": {
+    "baseline": {
+      "argmax": {
+        "accuracy": 0.8837962285026277,
+        "macro_f1": 0.3230212643805565,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            705514,
+            1109,
+            2980
+          ],
+          [
+            52655,
+            91,
+            674
+          ],
+          [
+            35320,
+            108,
+            542
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.889128897817109,
+            "recall": 0.9942376230089219,
+            "f1": 0.9387502561386796,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.06957186544342507,
+            "recall": 0.001703481842006739,
+            "f1": 0.0033255372021634266,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.12917063870352716,
+            "recall": 0.015068112315818737,
+            "f1": 0.02698799980082657,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.00576237699107811,
+        "missed_risk_pixel_rate": 0.984170488869001,
+        "decision_rule": {
+          "type": "argmax"
+        }
+      },
+      "baseline_boundary_fixed": {
+        "accuracy": 0.7810794337372167,
+        "macro_f1": 0.407542928717103,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            601394,
+            31080,
+            77129
+          ],
+          [
+            30807,
+            4011,
+            18602
+          ],
+          [
+            13201,
+            4097,
+            18672
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.931813040554569,
+            "recall": 0.8475076909201342,
+            "f1": 0.8876631451544459,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.1023527610493008,
+            "recall": 0.07508423811306626,
+            "f1": 0.08662318590186593,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.1632125031686232,
+            "recall": 0.5190992493744787,
+            "f1": 0.2483424550949971,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.15249230907986577,
+        "missed_risk_pixel_rate": 0.4923145765745609,
+        "decision_rule": {
+          "type": "score_ratios",
+          "scales": [
+            1.0,
+            2.117000016612675,
+            2.718281828459045
+          ]
+        }
+      }
+    },
+    "seasonal_root": {
+      "argmax": {
+        "accuracy": 0.8837461654858053,
+        "macro_f1": 0.3728867730178828,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            701698,
+            1425,
+            6480
+          ],
+          [
+            50815,
+            375,
+            2230
+          ],
+          [
+            31581,
+            355,
+            4034
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.8949156606223233,
+            "recall": 0.9888599681793905,
+            "f1": 0.9395453026952588,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.1740139211136891,
+            "recall": 0.007019842755522276,
+            "f1": 0.013495276653171389,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.316541117388575,
+            "recall": 0.11214901306644426,
+            "f1": 0.1656197397052182,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.011140031820609552,
+        "missed_risk_pixel_rate": 0.9217585859715852,
+        "decision_rule": {
+          "type": "argmax"
+        }
+      },
+      "baseline_boundary_fixed": {
+        "accuracy": 0.8330723798581464,
+        "macro_f1": 0.43175859632014335,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            648974,
+            33891,
+            26738
+          ],
+          [
+            38675,
+            7451,
+            7294
+          ],
+          [
+            20630,
+            6146,
+            9194
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.916268871447551,
+            "recall": 0.9145592676468391,
+            "f1": 0.9154132713441597,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.15690279649595687,
+            "recall": 0.13947959565705728,
+            "f1": 0.14767907400800728,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.21269606255494378,
+            "recall": 0.2556018904642758,
+            "f1": 0.23218344360826304,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.08544073235316085,
+        "missed_risk_pixel_rate": 0.6634411007942723,
+        "decision_rule": {
+          "type": "score_ratios",
+          "scales": [
+            1.0,
+            2.117000016612675,
+            2.718281828459045
+          ]
+        }
+      }
+    }
+  },
+  "rule_held_fixed": {
+    "type": "score_ratios",
+    "scales": [
+      1.0,
+      2.117000016612675,
+      2.718281828459045
+    ]
+  },
+  "features": "sin/cos(2*pi*month/12) appended per input date. Availability remains channels 7..13; no future labels/dates as inputs."
+}

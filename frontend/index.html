@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HAB Early Warning System</title>
+    <title>Chlorophyll Risk Research Dashboard</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261015-interactions">
 </head>
 
 <body>
@@ -16,13 +16,16 @@
     <header class="header">
 
         <div>
-            <h1>HAB Early Warning System</h1>
-            <p>ConvLSTM-Based Harmful Algal Bloom Prediction</p>
+            <h1>Chlorophyll Risk Forecast</h1>
+
+            <p>
+                ConvLSTM chlorophyll-anomaly baseline · Kerala coastline
+            </p>
         </div>
 
         <div class="status">
             <span class="status-dot"></span>
-            Model Active
+            <span id="system-status">Checking availability</span>
         </div>
 
     </header>
@@ -30,6 +33,29 @@
 
     <!-- MAIN -->
     <main class="container">
+        <p class="project-note"><a href="bloom.html">Satellite bloom-event forecast</a> — separate binary event model; chlorophyll-derived, not confirmed HAB.</p>
+        <p class="project-note"><a href="hab.html">Open verified HAB occurrence forecasts</a> — separate zone workflow; verified training observations are required.</p>
+        <section class="controls" aria-label="Forecast controls">
+            <label>Input ending date <input id="input-end-date" type="date"></label>
+            <label><input id="historical-demo" type="checkbox"> Historical demonstration</label>
+            <button id="generate-forecast" type="button">Generate forecast</button>
+            <button id="refresh-forecast" type="button">Reload saved forecast</button>
+            <button id="covered-date" type="button">Load historical example</button>
+            <button id="list-covered-dates" type="button">Show eligible dates</button>
+            <label>Eligible historical date <select id="eligible-input-date" disabled aria-describedby="eligible-date-help"><option value="">Load eligible dates first</option></select></label>
+            <span id="forecast-progress" role="status" aria-live="polite"></span>
+            <span id="generated-at">No prediction loaded</span>
+        </section>
+        <p id="eligible-date-help" class="project-note" role="status">Eligible dates are selected using observed inputs only. Choose one, then generate a historical forecast.</p>
+        <div id="data-notice" class="data-notice" role="status" aria-live="polite">Checking data and model availability…</div>
+        <p id="coverage-details" class="project-note"></p>
+        <p class="project-note">No current observations are connected. Use <strong>Load historical example</strong> to try all five forecast days with real archived inputs.</p>
+        <p id="source-update-status" class="project-note">Checking satellite sources and update status…</p>
+        <p class="project-note">Student research prototype: chlorophyll anomaly risk, not confirmed toxicity or harmful species. Model scores are not guaranteed calibrated.</p>
+        <section class="observed-status">
+            <strong>Observed proxy status at input end: <span id="observed-status">Unavailable</span></strong>
+            <p id="observed-coverage">Observation coverage has not been loaded.</p>
+        </section>
 
 
         <!-- ====================================================
@@ -54,11 +80,11 @@
             <div class="info-card">
 
                 <span class="label">
-                    Forecast
+                    Forecast Period
                 </span>
 
-                <strong>
-                    5 Days Ahead
+                <strong id="forecast-period">
+                    Loading...
                 </strong>
 
             </div>
@@ -105,11 +131,11 @@
                 <div>
 
                     <h2>
-                        5-Day HAB Forecast
+                        5-Day Chlorophyll Anomaly Forecast
                     </h2>
 
                     <p>
-                        Predicted strong bloom probability
+                        Predicted chlorophyll anomaly classes and model scores
                     </p>
 
                 </div>
@@ -167,17 +193,32 @@
 
             <!-- MAP -->
 
+            <div class="controls map-tools" aria-label="Map view controls">
+                <label for="map-view">View</label>
+                <select id="map-view">
+                    <option value="forecast">Selected forecast day</option>
+                    <option value="observations">Observed proxy and input coverage</option>
+                </select>
+                <button id="map-zoom-in" type="button" aria-label="Zoom map in">Zoom +</button>
+                <button id="map-zoom-out" type="button" aria-label="Zoom map out">Zoom −</button>
+                <button id="map-zoom-reset" type="button">Reset zoom</button>
+                <a id="forecast-export" hidden>Download five-day CSV</a>
+            </div>
+            <p id="map-context-note" class="project-note" aria-live="polite"></p>
+
             <div class="map-container">
 
                 <img
                     id="prediction-map"
-                    src="../outputs/maps/day_1.png"
+                    hidden
                     alt="HAB prediction map"
                 >
 
             </div>
 
 
+
+            <p class="map-link"><a id="map-link" target="_blank" rel="noopener" hidden>Open forecast map at full size</a></p>
 
             <!-- MAP INFORMATION -->
 
@@ -216,6 +257,22 @@
 
 
 
+                <!-- Latest Input Date -->
+
+                <div>
+
+                    <span class="label">
+                        Forecast Input End Date
+                    </span>
+
+                    <strong id="latest-input-date">
+                        --
+                    </strong>
+
+                </div>
+
+
+
                 <!-- Warning Level -->
 
                 <div>
@@ -237,7 +294,7 @@
                 <div>
 
                     <span class="label">
-                        Maximum Bloom Probability
+                        Maximum Strong-Class Model Score
                     </span>
 
                     <strong id="max-probability">
@@ -264,6 +321,9 @@
 
 
 
+                <!-- Supported domain -->
+                <div><span class="label">Supported Forecast Cells</span><strong id="supported-pixels">--</strong></div>
+
                 <!-- Regional Risk Coverage -->
 
                 <div>
@@ -289,6 +349,8 @@
         ===================================================== -->
 
         <section class="legend-section">
+            <p id="warning-rule">Warning parameters unavailable.</p>
+            <p>Grey map cells are outside the supported label domain. Regional risk percentages use supported forecast cells.</p>
 
             <h2>
                 Risk Classification
@@ -309,7 +371,7 @@
                         </strong>
 
                         <small>
-                            Low bloom probability
+                            Normal proxy class
                         </small>
 
                     </div>
@@ -329,7 +391,7 @@
                         </strong>
 
                         <small>
-                            Increased bloom probability
+                            Elevated proxy class
                         </small>
 
                     </div>
@@ -349,7 +411,7 @@
                         </strong>
 
                         <small>
-                            High bloom probability
+                            Strong proxy class
                         </small>
 
                     </div>
@@ -387,6 +449,8 @@
 
 
 
+            <p id="elevated-summary">Elevated predictions unavailable.</p>
+            <div id="environment-values" class="environment-values"></div>
             <div class="environment-grid">
 
 
@@ -533,7 +597,7 @@
                     </span>
 
                     <strong>
-                        120 × 84
+                        <span id="model-grid">Unavailable</span>
                     </strong>
 
                 </div>
@@ -557,11 +621,11 @@
                 <div>
 
                     <span class="label">
-                        Strong Bloom Threshold
+                        Class Decision Rule
                     </span>
 
                     <strong>
-                        50%
+                        <span id="model-threshold">Unavailable</span>
                     </strong>
 
                 </div>
@@ -581,7 +645,7 @@
     <footer>
 
         <p>
-            ConvLSTM-Based Harmful Algal Bloom Early Warning System
+            Chlorophyll-anomaly research baseline · verified HAB workflow available separately
         </p>
 
         <p>
@@ -594,7 +658,7 @@
 
     <!-- JAVASCRIPT -->
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261024-submission"></script>
 
 </body>
 

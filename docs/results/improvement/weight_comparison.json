@@ -1,0 +1,438 @@
+{
+  "period": "2024 only",
+  "criterion": "Highest macro F1 under the SAME direct-argmax reference rule. Ties: minimum rare-class F1, rare-class precision, lower false-warning pixel rate. Frozen legacy rule also reported without retuning.",
+  "selected_weight_experiment": "intermediate",
+  "results": {
+    "baseline": {
+      "argmax": {
+        "accuracy": 0.8837962285026277,
+        "macro_f1": 0.3230212643805565,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            705514,
+            1109,
+            2980
+          ],
+          [
+            52655,
+            91,
+            674
+          ],
+          [
+            35320,
+            108,
+            542
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.889128897817109,
+            "recall": 0.9942376230089219,
+            "f1": 0.9387502561386796,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.06957186544342507,
+            "recall": 0.001703481842006739,
+            "f1": 0.0033255372021634266,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.12917063870352716,
+            "recall": 0.015068112315818737,
+            "f1": 0.02698799980082657,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.00576237699107811,
+        "missed_risk_pixel_rate": 0.984170488869001,
+        "decision_rule": {
+          "type": "argmax"
+        }
+      },
+      "legacy_fixed": {
+        "accuracy": 0.8215879237990821,
+        "macro_f1": 0.38776877017429445,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            638405,
+            6,
+            71192
+          ],
+          [
+            35651,
+            0,
+            17769
+          ],
+          [
+            17932,
+            0,
+            18038
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.922566576299011,
+            "recall": 0.8996650239641039,
+            "f1": 0.9109718883754249,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.16858101477583903,
+            "recall": 0.5014734500973033,
+            "f1": 0.25233442214745855,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.10033497603589613,
+        "missed_risk_pixel_rate": 0.5994294663832643,
+        "decision_rule": {
+          "type": "strong_override",
+          "strong_threshold": 0.225
+        }
+      }
+    },
+    "inverse": {
+      "argmax": {
+        "accuracy": 0.7351028106629219,
+        "macro_f1": 0.4025076091929547,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            561964,
+            63844,
+            83795
+          ],
+          [
+            28992,
+            9082,
+            15346
+          ],
+          [
+            13200,
+            6474,
+            16296
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9301637325458988,
+            "recall": 0.7919414094923499,
+            "f1": 0.8555054618084443,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.11438287153652393,
+            "recall": 0.17001123174840885,
+            "f1": 0.13675651257340765,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.1411679097689649,
+            "recall": 0.4530442035029191,
+            "f1": 0.21526085319701205,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.20805859050765005,
+        "missed_risk_pixel_rate": 0.47199910504530707,
+        "decision_rule": {
+          "type": "argmax"
+        }
+      },
+      "legacy_fixed": {
+        "accuracy": 0.6112343912900363,
+        "macro_f1": 0.3097928444043075,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            460603,
+            102,
+            248898
+          ],
+          [
+            23083,
+            21,
+            30316
+          ],
+          [
+            8126,
+            96,
+            27748
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9365428253072312,
+            "recall": 0.6490995669409515,
+            "f1": 0.76676751996604,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0958904109589041,
+            "recall": 0.0003931111943092475,
+            "f1": 0.0007830123604094036,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.09039555384705598,
+            "recall": 0.7714206283013623,
+            "f1": 0.16182800088647312,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.3509004330590485,
+        "missed_risk_pixel_rate": 0.34913301264123503,
+        "decision_rule": {
+          "type": "strong_override",
+          "strong_threshold": 0.225
+        }
+      },
+      "training": {
+        "name": "inverse",
+        "created_at_utc": "2026-09-12T17:59:51.636782+00:00",
+        "smoke": false,
+        "weight_power": 1.0,
+        "class_weights": [
+          0.6041252881285386,
+          3.0206193055012824,
+          4.530607900398372
+        ],
+        "normalization": "expected training-pixel weight equals frozen square-root baseline",
+        "seasonal_features": false,
+        "channels": 14,
+        "filters": [
+          8,
+          4
+        ],
+        "spatial_downsample": 2,
+        "seed": 42,
+        "learning_rate": 0.001,
+        "clipnorm": 1.0,
+        "batch_size": 2,
+        "epochs_requested": 30,
+        "train_sequences": 1012,
+        "validation_sequences": 325,
+        "fitting_period": [
+          "2021-01-01",
+          "2023-12-31"
+        ],
+        "development_period": [
+          "2024-01-01",
+          "2024-12-31"
+        ],
+        "baseline_model_sha256": "0dff8dd0ded97db428cb9694a03a1caf20aa2605322d32ff3dd90992fbea678d",
+        "label_metadata_sha256": "438afedd96230c92adb8b840c33b476b1dae712fe42336c54c02368ae97c2c1f",
+        "preprocessing_sha256": "1b72db343dddfae94d79c923fb33070c3225130dc700e5292d0e11952e126238",
+        "input_shape": [
+          5,
+          120,
+          84,
+          14
+        ],
+        "output_shape": [
+          5,
+          120,
+          84,
+          3
+        ],
+        "tensorflow_version": "2.21.0",
+        "parameters": 8211,
+        "callbacks": {
+          "early_stopping_patience": 4,
+          "reduce_lr_patience": 2,
+          "reduce_lr_factor": 0.5,
+          "minimum_lr": 1e-05
+        },
+        "epochs_completed": 14,
+        "best_epoch": 10,
+        "duration_seconds": 542.7107723749941,
+        "model_sha256": "2736bded98d6bdeaaa468efb0f952171c90c42f42e279e22e731c09a0b377d59"
+      }
+    },
+    "intermediate": {
+      "argmax": {
+        "accuracy": 0.8430411780829119,
+        "macro_f1": 0.408696994851572,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            661219,
+            19158,
+            29226
+          ],
+          [
+            42609,
+            3334,
+            7477
+          ],
+          [
+            25027,
+            1912,
+            9031
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9072023927941771,
+            "recall": 0.9318153953689599,
+            "f1": 0.9193441866220633,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.1366169480413047,
+            "recall": 0.06241108199176339,
+            "f1": 0.08568050986842105,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.19746796693925744,
+            "recall": 0.25107033639143733,
+            "f1": 0.22106628806423187,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.06818460463104017,
+        "missed_risk_pixel_rate": 0.7566394451280903,
+        "decision_rule": {
+          "type": "argmax"
+        }
+      },
+      "legacy_fixed": {
+        "accuracy": 0.7616061717687138,
+        "macro_f1": 0.3681577211712887,
+        "valid_pixel_forecasts": 798993,
+        "confusion_matrix": [
+          [
+            584667,
+            7,
+            124929
+          ],
+          [
+            30134,
+            9,
+            23277
+          ],
+          [
+            12121,
+            7,
+            23842
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9325992707226737,
+            "recall": 0.8239353554029507,
+            "f1": 0.8749061932997886,
+            "support": 709603
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.391304347826087,
+            "recall": 0.00016847622613253463,
+            "f1": 0.0003368074397021125,
+            "support": 53420
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.13857760624941876,
+            "recall": 0.6628301362246316,
+            "f1": 0.22923016277437527,
+            "support": 35970
+          }
+        ],
+        "false_warning_pixel_rate": 0.17606464459704935,
+        "missed_risk_pixel_rate": 0.47270388186598056,
+        "decision_rule": {
+          "type": "strong_override",
+          "strong_threshold": 0.225
+        }
+      },
+      "training": {
+        "name": "intermediate",
+        "created_at_utc": "2026-09-12T18:09:06.568571+00:00",
+        "smoke": false,
+        "weight_power": 0.75,
+        "class_weights": [
+          0.7973402827710556,
+          2.6660631961316086,
+          3.613398024973734
+        ],
+        "normalization": "expected training-pixel weight equals frozen square-root baseline",
+        "seasonal_features": false,
+        "channels": 14,
+        "filters": [
+          8,
+          4
+        ],
+        "spatial_downsample": 2,
+        "seed": 42,
+        "learning_rate": 0.001,
+        "clipnorm": 1.0,
+        "batch_size": 2,
+        "epochs_requested": 30,
+        "train_sequences": 1012,
+        "validation_sequences": 325,
+        "fitting_period": [
+          "2021-01-01",
+          "2023-12-31"
+        ],
+        "development_period": [
+          "2024-01-01",
+          "2024-12-31"
+        ],
+        "baseline_model_sha256": "0dff8dd0ded97db428cb9694a03a1caf20aa2605322d32ff3dd90992fbea678d",
+        "label_metadata_sha256": "438afedd96230c92adb8b840c33b476b1dae712fe42336c54c02368ae97c2c1f",
+        "preprocessing_sha256": "1b72db343dddfae94d79c923fb33070c3225130dc700e5292d0e11952e126238",
+        "input_shape": [
+          5,
+          120,
+          84,
+          14
+        ],
+        "output_shape": [
+          5,
+          120,
+          84,
+          3
+        ],
+        "tensorflow_version": "2.21.0",
+        "parameters": 8211,
+        "callbacks": {
+          "early_stopping_patience": 4,
+          "reduce_lr_patience": 2,
+          "reduce_lr_factor": 0.5,
+          "minimum_lr": 1e-05
+        },
+        "epochs_completed": 13,
+        "best_epoch": 9,
+        "duration_seconds": 534.8010827089893,
+        "model_sha256": "bd230fbffb2aa342b5099642fbfb1601f27c422f45797107862fa33f4cd217a3"
+      }
+    }
+  }
+}

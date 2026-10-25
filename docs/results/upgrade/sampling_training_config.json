@@ -1,0 +1,79 @@
+{
+  "name": "balanced_sampling",
+  "created_at_utc": "2026-09-13T03:43:10.383784+00:00",
+  "smoke": false,
+  "weight_power": 0.75,
+  "class_weights": [
+    0.7973402827710556,
+    2.6660631961316086,
+    3.613398024973734
+  ],
+  "normalization": "expected training-pixel weight equals frozen square-root baseline",
+  "seasonal_features": true,
+  "channels": 16,
+  "filters": [
+    8,
+    4
+  ],
+  "spatial_downsample": 2,
+  "seed": 42,
+  "learning_rate": 0.001,
+  "clipnorm": 1.0,
+  "batch_size": 2,
+  "epochs_requested": 30,
+  "train_sequences": 1012,
+  "validation_sequences": 325,
+  "fitting_period": [
+    "2021-01-01",
+    "2023-12-31"
+  ],
+  "development_period": [
+    "2024-01-01",
+    "2024-12-31"
+  ],
+  "baseline_model_sha256": "0dff8dd0ded97db428cb9694a03a1caf20aa2605322d32ff3dd90992fbea678d",
+  "label_metadata_sha256": "438afedd96230c92adb8b840c33b476b1dae712fe42336c54c02368ae97c2c1f",
+  "preprocessing_sha256": "a1f935b3be972f41412acbcd929bfbe6466fed57e85440497bc568815ad4534f",
+  "input_shape": [
+    5,
+    120,
+    84,
+    16
+  ],
+  "output_shape": [
+    5,
+    120,
+    84,
+    3
+  ],
+  "tensorflow_version": "2.21.0",
+  "parameters": 8787,
+  "callbacks": {
+    "early_stopping_patience": 4,
+    "reduce_lr_patience": 2,
+    "reduce_lr_factor": 0.5,
+    "minimum_lr": 1e-05
+  },
+  "epochs_completed": 17,
+  "sampling": "50% uniform + 50% class-balanced sequence mass; cap unnormalized probability at 3/N, renormalize; replacement N draws/epoch.",
+  "sampling_seed": 42,
+  "only_changed_variable": "training sequence sampling; weights/features/architecture/optimizer/callbacks fixed",
+  "sequence_probability_range": [
+    0.0005010775743895738,
+    0.003005971955533972
+  ],
+  "uniform_pixel_forecast_class_counts": [
+    2054779,
+    420605,
+    281517
+  ],
+  "expected_sampled_pixel_forecast_class_counts": [
+    2981012.598305835,
+    719209.4242462125,
+    518357.52571882727
+  ],
+  "retention_criterion": "Under SAME frozen pixel and regional rules: macro F1 gain >=0.005, neither rare-class F1 decreases, regional any/strong recall does not decrease, false warning days do not increase. No post-hoc threshold retuning.",
+  "best_epoch": 13,
+  "duration_seconds": 731.3223853340023,
+  "model_sha256": "16cd5b787177e55ad0694ebc5a5885a67a42f88b62d1e5b0aedef9d56dba78ff"
+}

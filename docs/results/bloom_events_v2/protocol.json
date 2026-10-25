@@ -1,0 +1,57 @@
+{
+  "candidate_order": [
+    {
+      "id": "A",
+      "percentile": 75,
+      "observed_duration": 1,
+      "max_unobserved_gap": 0,
+      "minimum_patch_pixels": 2
+    },
+    {
+      "id": "B",
+      "percentile": 80,
+      "observed_duration": 1,
+      "max_unobserved_gap": 0,
+      "minimum_patch_pixels": 2
+    },
+    {
+      "id": "C",
+      "percentile": 75,
+      "observed_duration": 2,
+      "max_unobserved_gap": 1,
+      "minimum_patch_pixels": 2
+    },
+    {
+      "id": "D",
+      "percentile": 80,
+      "observed_duration": 2,
+      "max_unobserved_gap": 1,
+      "minimum_patch_pixels": 2
+    },
+    {
+      "id": "E",
+      "percentile": 75,
+      "observed_duration": 2,
+      "max_unobserved_gap": 2,
+      "minimum_patch_pixels": 2
+    },
+    {
+      "id": "F",
+      "percentile": 80,
+      "observed_duration": 2,
+      "max_unobserved_gap": 2,
+      "minimum_patch_pixels": 1
+    }
+  ],
+  "selection": "First candidate satisfying all training/2024 validation support requirements. No test statistics participate.",
+  "criterion": {
+    "minimum_training_components": 50,
+    "minimum_validation_components": 10,
+    "minimum_training_positive_pixel_days": 1000,
+    "minimum_validation_positive_pixel_days": 100,
+    "minimum_validation_positive_fraction": 0.01
+  },
+  "stop_rule": "If no candidate qualifies, stop without training or further relaxation.",
+  "model_selection_protocol": "Same architecture/seed/15-epoch maximum; checkpoint on full 2024 validation loss. Decision/Platt fit uses chronological first-half 2024; second-half validation assesses it. 2025 evaluated once after freeze.",
+  "disclosure": "2025 was previously inspected, including the strict run. This is a new, label-statistics-selected proxy definition, not an untouched-test claim."
+}

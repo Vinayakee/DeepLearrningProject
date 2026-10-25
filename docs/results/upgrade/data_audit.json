@@ -1,0 +1,151 @@
+{
+  "period": "2024 audit; no 2025 predictions or tuning",
+  "retained_coverage_results": {
+    "modis": {
+      "period": "2024 only",
+      "marine_support_pixels": 5683,
+      "marine_coverage_percent": 8.298164692126552,
+      "days_without_marine_observations": 207,
+      "longest_empty_run_days": 12,
+      "marine_cells_never_observed_in_2024": 0,
+      "marine_cell_observed_days_quantiles": [
+        7.0,
+        26.0,
+        30.0,
+        34.0,
+        53.0
+      ],
+      "months": {
+        "1": {
+          "mean_coverage_percent": 13.331781828089435,
+          "empty_days": 11
+        },
+        "2": {
+          "mean_coverage_percent": 24.481969819243115,
+          "empty_days": 12
+        },
+        "3": {
+          "mean_coverage_percent": 6.9335255686172115,
+          "empty_days": 20
+        },
+        "4": {
+          "mean_coverage_percent": 6.909496158132441,
+          "empty_days": 14
+        },
+        "5": {
+          "mean_coverage_percent": 2.9022608458730907,
+          "empty_days": 25
+        },
+        "6": {
+          "mean_coverage_percent": 0.8387588714880637,
+          "empty_days": 20
+        },
+        "7": {
+          "mean_coverage_percent": 1.5149881082799295,
+          "empty_days": 23
+        },
+        "8": {
+          "mean_coverage_percent": 3.287109829542552,
+          "empty_days": 18
+        },
+        "9": {
+          "mean_coverage_percent": 7.447944160947856,
+          "empty_days": 19
+        },
+        "10": {
+          "mean_coverage_percent": 7.985332599206461,
+          "empty_days": 15
+        },
+        "11": {
+          "mean_coverage_percent": 7.212739750131972,
+          "empty_days": 16
+        },
+        "12": {
+          "mean_coverage_percent": 17.42832329585124,
+          "empty_days": 14
+        }
+      },
+      "latitude_bands": {
+        "8..9N": {
+          "marine_cells": 1684,
+          "valid_cell_days": 54779
+        },
+        "9..10N": {
+          "marine_cells": 1349,
+          "valid_cell_days": 42527
+        },
+        "10..11N": {
+          "marine_cells": 1166,
+          "valid_cell_days": 31364
+        },
+        "11..12N": {
+          "marine_cells": 920,
+          "valid_cell_days": 26274
+        },
+        "12..13N": {
+          "marine_cells": 564,
+          "valid_cell_days": 17656
+        }
+      },
+      "missing_cause": "Processed masks cannot distinguish each cloud, glint, retrieval failure or missing acquisition. These are plausible mechanisms, not proven causes for individual gaps.",
+      "handling": "Missing values remain masked. Model inputs use zero standardized value plus observation flag 0. Missing targets remain class 255 and excluded from loss/scoring."
+    },
+    "sentinel3": {
+      "fusion_retained": false,
+      "reason": "Only CHL_OC4ME and dataMask were requested/retained. No per-pixel science/quality flags or independent source georeferencing are available in the saved bundle. dataMask and tile-level cloud filtering do not establish valid chlorophyll retrievals.",
+      "documentation": "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/S3OLCIL2.html",
+      "future_requirement": "Acquire original OLCI water products and documented per-pixel quality flags; apply appropriate retrieval/cloud/land/glint checks before resampling, validate georeferencing and MODIS agreement on training/development data, preserve source provenance. No blind fusion or boundary-value clipping.",
+      "available": true,
+      "2024_unverified_availability_percent": 37.5473202120407,
+      "2024_empty_days": 27
+    }
+  },
+  "saved_sentinel_product": "Sentinel Hub sentinel-3-olci-l2, CHL_OC4ME + dataMask export",
+  "saved_unit_conversion": "LOG10_MILLIGRAMS_M3 decoded via 10**x after bilinear resampling of log10 values.",
+  "timestamp_limitation": "Daily request windows saved, but individual acquisition IDs/times and processing baselines were not retained.",
+  "coordinates": {
+    "declared_crs": "EPSG:4326 from request/reprojection source code",
+    "project_latitude_direction": "descending",
+    "project_longitude_direction": "ascending",
+    "latitude_center_max_deviation_degrees": 2.86102294921875e-06,
+    "longitude_center_max_deviation_degrees": 1.0172526046403618e-05,
+    "conclusion": "Bbox-derived centers agree numerically with project grid, but independent georeferencing was not saved; this does not validate each acquisition."
+  },
+  "invalid_saved_2024_sentinel_observations": {
+    "flagged_present_but_nonfinite": 0,
+    "flagged_present_but_nonpositive": 0
+  },
+  "quality_controlled_sentinel": {
+    "state": "sentinel3_unavailable",
+    "quality_controlled": false,
+    "fusion_active": false,
+    "reason": "No georeferenced observations with retained retrieval quality flags are available."
+  },
+  "field_records": {
+    "state": "verified_field_records_unavailable",
+    "record_count": 0,
+    "target": "chlorophyll anomaly proxy; no verified toxicity/species labels"
+  },
+  "quality_reference": "https://user.eumetsat.int/news-events/news/new-sentinel-3-olci-level-2-water-processing",
+  "flag_mapping_reference": "https://user.eumetsat.int/s3/eup-strapi-media/Sentinel_3_OLCI_L2_report_for_baseline_collection_OL_L2_M_003_2_B_c8bbc6d986.pdf",
+  "fusion_experiment": "Not run: source retrieval flags/acquisition provenance unavailable. QC adapter exists, but coverage and classification improvements cannot be claimed.",
+  "modis_native_product_example": {
+    "product_ids": [
+      "AQUA_MODIS.20240201.L3m.DAY.CHL.chlor_a.4km.nc"
+    ],
+    "source": "NASA Aqua MODIS L3m daily chlor_a OCI",
+    "quality_reference": "Source CF decoding/_FillValue and valid_min/valid_max; upstream L3 processing. Individual L2 retrieval flags are unavailable in this mapped file.",
+    "native_qc_applied": true,
+    "units": "mg/m3",
+    "valid_min": 0.0010000000474974513,
+    "valid_max": 100.0,
+    "valid_observations": 0,
+    "invalid_observations": 10080,
+    "product_name": "AQUA_MODIS.20240201.L3m.DAY.CHL.chlor_a.4km.nc",
+    "processing_version": "R2022.0.3",
+    "time_coverage_start": "2024-01-31T23:40:00.732Z",
+    "time_coverage_end": "2024-02-02T05:25:00.275Z",
+    "date_created": "2026-07-08T17:57:51.000Z"
+  },
+  "timing_limitation": "Nominal 2024-02-01 MODIS composite has global acquisition bounds 2024-01-31 through 2024-02-02; the inspected reprocessed file was created in July 2026. Nominal calendar windows alone do not establish historical source availability or operational forecast lead time. Region-specific acquisition/publication timing must be validated separately."
+}

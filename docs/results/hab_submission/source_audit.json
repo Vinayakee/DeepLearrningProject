@@ -1,0 +1,131 @@
+{
+  "schema": "hab-label-source-audit-v1",
+  "environment_period": [
+    "2021-01-01",
+    "2025-12-31"
+  ],
+  "study_bbox": [
+    74,
+    8,
+    78,
+    12
+  ],
+  "zenodo": {
+    "doi": "10.5281/zenodo.14690930",
+    "license": "cc-by-4.0",
+    "published_md5_verified": true,
+    "catalogue_rows": 218,
+    "all_india_2021_2025_rows": 6,
+    "kerala_named_recent_rows": 3,
+    "daily_dates_present": false,
+    "coordinates_present": false,
+    "monitored_negatives_present": false
+  },
+  "haedat": {
+    "india_rows": 29,
+    "actual_event_date_range": [
+      "1908-01-01",
+      "2018-09-09"
+    ],
+    "india_2021_2025_event_rows": 0,
+    "source": "https://haedat.iode.org/events/export/filtered/csv/?country=57"
+  },
+  "obis": {
+    "bbox_all_years_records": 1,
+    "bbox_period_records": 0,
+    "all_years_record_summary": [
+      {
+        "eventID": "HAEDAT:IN-01:IND-16-002",
+        "eventDate": "2018-09-09",
+        "decimalLatitude": 10.5525,
+        "decimalLongitude": 76.015833,
+        "coordinateUncertaintyInMeters": 10000,
+        "occurrenceStatus": "present"
+      }
+    ]
+  },
+  "candidates_for_evidence_followup_only": [
+    {
+      "source": "zenodo:14690930",
+      "sheet_row": 215,
+      "catalogue_id": "213",
+      "year": 2021,
+      "month": "1",
+      "location_text": "Cochin (Kochi) Estuary",
+      "region_text": "Kerala",
+      "reported_taxon": "Akashiwo sanguinea",
+      "reference": "Table 13.1 in Thomas, L.C., Sathish, T., & Padmakumar, K. (2023). Harmful Algal Blooms: An Ecological Perspective and Its Implications to Productivity Patterns in Tropical Oceans. In Dynamics of Planktonic Primary Productivity in the Indian Ocean (Springer), pp. 301\u2013341.",
+      "training_eligible": false,
+      "blockers": [
+        "No exact daily observation date or coordinates in catalogue",
+        "Literature report requires original-evidence adjudication",
+        "No monitored zone-wide negative observations"
+      ]
+    },
+    {
+      "source": "zenodo:14690930",
+      "sheet_row": 216,
+      "catalogue_id": "214",
+      "year": 2021,
+      "month": "10",
+      "location_text": "Kannur",
+      "region_text": "Kerala",
+      "reported_taxon": "Gonyaulax polygramma",
+      "reference": "Dias, A. B., Kurian, S., Vijayan, N. T., Gauns, M., Khichi, R., Pratihary, A. K., Sidhesh, G. B. & Shenoy, D. M. (2023). Recurrence of Gonyaulax polygramma bloom in the southeastern Arabian Sea.\u00a0Environmental Monitoring and Assessment,\u00a0195(6), 635.",
+      "training_eligible": false,
+      "blockers": [
+        "No exact daily observation date or coordinates in catalogue",
+        "Literature report requires original-evidence adjudication",
+        "No monitored zone-wide negative observations"
+      ]
+    },
+    {
+      "source": "zenodo:14690930",
+      "sheet_row": 218,
+      "catalogue_id": "216",
+      "year": 2021,
+      "month": "11",
+      "location_text": "Cochin (Kochi) Estuary",
+      "region_text": "Kerala",
+      "reported_taxon": "Noctiluca scintillans",
+      "reference": "Sathish, T., Thomas, L. C., & Padmakumar, K. B. (2023). Patterns and Variabilities in the Microphytoplankton Assemblage in a Tropical Estuarine Complex Along the Southwest Coast of India.\u00a0Estuaries and Coasts,\u00a046(3), 788-801.",
+      "training_eligible": false,
+      "blockers": [
+        "No exact daily observation date or coordinates in catalogue",
+        "Literature report requires original-evidence adjudication",
+        "No monitored zone-wide negative observations"
+      ]
+    },
+    {
+      "source": "zenodo:14690930",
+      "sheet_row": 219,
+      "catalogue_id": "217",
+      "year": 2021,
+      "month": "12",
+      "location_text": "Southwest Coast",
+      "region_text": "Arabian Sea",
+      "reported_taxon": "Noctiluca scintillans",
+      "reference": "Samanta, A., Baliarsingh, S. K., Lotliker, A. A., Joseph, S., & Nair, T. B. (2023). Satellite-Based Detection of Noctiluca Bloom in the Coastal Waters of the South-eastern Arabian Sea: A Case Study Implicating Monitoring Needs.\u00a0National Academy Science Letters,\u00a046(2), 103-107.",
+      "training_eligible": false,
+      "blockers": [
+        "No exact daily observation date or coordinates in catalogue",
+        "Literature report requires original-evidence adjudication",
+        "No monitored zone-wide negative observations"
+      ]
+    }
+  ],
+  "accepted_training_records": 0,
+  "accepted_monitored_negative_zone_days": 0,
+  "training_decision": "blocked_by_insufficient_verified_daily_labels_and_monitored_absences",
+  "source_files_sha256": {
+    "haedat_india.csv": "70d0ed590ac4f1efb12936329182c918e1bdaa17c69680981e211a4dcff7d642",
+    "obis_kerala_all_years.json": "b828108ba14029740fd7584bf1478291c9d337cb350d87429b2f5d8ba3f50f38",
+    "haedat_india.html": "ec6012a2c1d844bd9fbc150157d1b410ff3ed315733535a0da056c63db154651",
+    "Kolluru_Nayak_List_Indian_HABs_2025.xlsx": "cd4febb2d8197a20850e15b1cb15b031b4d8255004158a0311a671e329b988e9",
+    "obis_kerala_2021_2025.json": "583475f72c772029dd4c54f41e19f42507eeed27df40ebf7b3e88d72e7c582d6",
+    "frontiers_1706039.html": "b285f78741143b02c67a1cb4894362c62105f9ce6cbb72e29530dc18084677a8",
+    "zenodo_record.json": "47c2310fbf8a17e7d63eff2b0954c4e447efddd9a5e4066dd9d355b0df570476",
+    "retrieval.json": "e9e9d739ad1290aa306b5a9b749278e1bb0d66f2c9b12326b8bc3b9133546631"
+  },
+  "limitations": "A finite source search, not proof that no suitable observations exist. No automatic species, date, coordinate, absence or event-duration inference. Public occurrence records are not daily monitoring negatives."
+}

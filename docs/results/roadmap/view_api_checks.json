@@ -1,0 +1,14 @@
+[
+  {
+    "route": "/api/forecasts/9a29bdd13e9d44c0a39de5a6377a25f4/summary.csv",
+    "without_demo": 409,
+    "with_demo": 200,
+    "bytes": 973
+  },
+  {
+    "route": "/api/forecasts/9a29bdd13e9d44c0a39de5a6377a25f4/observations.png",
+    "without_demo": 409,
+    "with_demo": 200,
+    "bytes": 58526
+  }
+]

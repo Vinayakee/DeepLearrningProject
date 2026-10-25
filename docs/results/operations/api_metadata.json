@@ -1,0 +1,74 @@
+{
+  "/api/health": {
+    "status": "success",
+    "active_model": "final",
+    "seasonal_features": true,
+    "model_file_available": true,
+    "training_complete": true,
+    "calibration_available": false,
+    "probability_calibration": {
+      "artifact_exists": true,
+      "tested": true,
+      "decision_rule_artifact_exists": true,
+      "active": false,
+      "operationally_approved": false,
+      "interpretation": "Raw model scores. Temperature scaling was assessed on 2024 development data only; it is not deployed."
+    },
+    "latest_data_date": "2025-12-31",
+    "external_notifications": "not configured; dashboard alerts only"
+  },
+  "/api/system": {
+    "status": "success",
+    "live_update": {
+      "state": "not_configured",
+      "live": false,
+      "last_attempt_utc": "2026-09-13T09:39:28.327044+00:00",
+      "last_successful_update_utc": null,
+      "latest_successful_bundle": null,
+      "reason": "Real acquisition/validation unavailable (AcquisitionUnavailable); no prediction claimed."
+    },
+    "satellite_sources": {
+      "active": "MODIS",
+      "sentinel3": {
+        "state": "sentinel3_unavailable",
+        "quality_controlled": false,
+        "fusion_active": false,
+        "reason": "No georeferenced observations with retained retrieval quality flags are available."
+      }
+    },
+    "calibration": {
+      "artifact_exists": true,
+      "tested": true,
+      "decision_rule_artifact_exists": true,
+      "active": false,
+      "operationally_approved": false,
+      "interpretation": "Raw model scores. Temperature scaling was assessed on 2024 development data only; it is not deployed."
+    },
+    "model": {
+      "version": "frozen_final",
+      "independent_evaluation": "Saved 2025 results preserved; no repeat evaluation"
+    },
+    "notifications": {
+      "external_delivery": false,
+      "mode": "local outbox only",
+      "reason": "Regional warning reliability has not been validated."
+    }
+  },
+  "/api/live/prediction": {
+    "status": "unavailable",
+    "warning_level": "INSUFFICIENT DATA",
+    "update": {
+      "state": "not_configured",
+      "live": false,
+      "last_attempt_utc": "2026-09-13T09:39:28.327044+00:00",
+      "last_successful_update_utc": null,
+      "latest_successful_bundle": null,
+      "reason": "Real acquisition/validation unavailable (AcquisitionUnavailable); no prediction claimed."
+    },
+    "data_quality": null,
+    "freshness": null,
+    "message": "Real acquisition/validation unavailable (AcquisitionUnavailable); no prediction claimed.",
+    "maps": [],
+    "alerts": []
+  }
+}

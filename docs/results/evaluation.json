@@ -1,0 +1,1246 @@
+{
+  "created_at_utc": "2026-09-12T17:31:27.169373+00:00",
+  "model_sha256": "0dff8dd0ded97db428cb9694a03a1caf20aa2605322d32ff3dd90992fbea678d",
+  "calibration": {
+    "strong_probability_threshold": 0.225,
+    "threshold_fit_split": "validation (2024)",
+    "threshold_selection": "Maximum strong-class binary F1 on validation; first/lower threshold wins ties.",
+    "threshold_sweep": [
+      {
+        "threshold": 0.1,
+        "f1": 0.15238048880740296,
+        "tp_fp_fn": [
+          28175,
+          305653,
+          7795
+        ]
+      },
+      {
+        "threshold": 0.125,
+        "f1": 0.19060765557101267,
+        "tp_fp_fn": [
+          26581,
+          216357,
+          9389
+        ]
+      },
+      {
+        "threshold": 0.15000000000000002,
+        "f1": 0.21643527529086112,
+        "tp_fp_fn": [
+          25021,
+          170219,
+          10949
+        ]
+      },
+      {
+        "threshold": 0.17500000000000002,
+        "f1": 0.23561175631879383,
+        "tp_fp_fn": [
+          23300,
+          138513,
+          12670
+        ]
+      },
+      {
+        "threshold": 0.2,
+        "f1": 0.24707531182013828,
+        "tp_fp_fn": [
+          21067,
+          113494,
+          14903
+        ]
+      },
+      {
+        "threshold": 0.225,
+        "f1": 0.25233442214745855,
+        "tp_fp_fn": [
+          18038,
+          88961,
+          17932
+        ]
+      },
+      {
+        "threshold": 0.25,
+        "f1": 0.22338906631598723,
+        "tp_fp_fn": [
+          11891,
+          58599,
+          24079
+        ]
+      },
+      {
+        "threshold": 0.275,
+        "f1": 0.16738668219552824,
+        "tp_fp_fn": [
+          6180,
+          31691,
+          29790
+        ]
+      },
+      {
+        "threshold": 0.30000000000000004,
+        "f1": 0.09373933487543135,
+        "tp_fp_fn": [
+          2472,
+          14300,
+          33498
+        ]
+      },
+      {
+        "threshold": 0.325,
+        "f1": 0.044124101924365285,
+        "tp_fp_fn": [
+          955,
+          6362,
+          35015
+        ]
+      },
+      {
+        "threshold": 0.35,
+        "f1": 0.021888790820829656,
+        "tp_fp_fn": [
+          434,
+          3251,
+          35536
+        ]
+      },
+      {
+        "threshold": 0.375,
+        "f1": 0.013686418458311485,
+        "tp_fp_fn": [
+          261,
+          1909,
+          35709
+        ]
+      },
+      {
+        "threshold": 0.4,
+        "f1": 0.009583980296621513,
+        "tp_fp_fn": [
+          179,
+          1205,
+          35791
+        ]
+      },
+      {
+        "threshold": 0.42500000000000004,
+        "f1": 0.00747076656561282,
+        "tp_fp_fn": [
+          138,
+          836,
+          35832
+        ]
+      },
+      {
+        "threshold": 0.45000000000000007,
+        "f1": 0.006379324445898422,
+        "tp_fp_fn": [
+          117,
+          594,
+          35853
+        ]
+      },
+      {
+        "threshold": 0.475,
+        "f1": 0.005477651183172656,
+        "tp_fp_fn": [
+          100,
+          442,
+          35870
+        ]
+      },
+      {
+        "threshold": 0.5,
+        "f1": 0.004996019654670729,
+        "tp_fp_fn": [
+          91,
+          368,
+          35879
+        ]
+      },
+      {
+        "threshold": 0.525,
+        "f1": 0.00407488986784141,
+        "tp_fp_fn": [
+          74,
+          276,
+          35896
+        ]
+      },
+      {
+        "threshold": 0.55,
+        "f1": 0.0035883846748371423,
+        "tp_fp_fn": [
+          65,
+          193,
+          35905
+        ]
+      },
+      {
+        "threshold": 0.5750000000000001,
+        "f1": 0.002599917023924768,
+        "tp_fp_fn": [
+          47,
+          138,
+          35923
+        ]
+      },
+      {
+        "threshold": 0.6,
+        "f1": 0.002106955726206648,
+        "tp_fp_fn": [
+          38,
+          63,
+          35932
+        ]
+      },
+      {
+        "threshold": 0.625,
+        "f1": 0.001609456947026667,
+        "tp_fp_fn": [
+          29,
+          38,
+          35941
+        ]
+      },
+      {
+        "threshold": 0.65,
+        "f1": 0.001221916743036463,
+        "tp_fp_fn": [
+          22,
+          17,
+          35948
+        ]
+      },
+      {
+        "threshold": 0.675,
+        "f1": 0.0006112809113642679,
+        "tp_fp_fn": [
+          11,
+          9,
+          35959
+        ]
+      },
+      {
+        "threshold": 0.7000000000000001,
+        "f1": 0.00022236428829529978,
+        "tp_fp_fn": [
+          4,
+          3,
+          35966
+        ]
+      },
+      {
+        "threshold": 0.725,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      },
+      {
+        "threshold": 0.75,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      },
+      {
+        "threshold": 0.775,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      },
+      {
+        "threshold": 0.8,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      },
+      {
+        "threshold": 0.8250000000000001,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      },
+      {
+        "threshold": 0.85,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      },
+      {
+        "threshold": 0.875,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      },
+      {
+        "threshold": 0.9,
+        "f1": 0.0,
+        "tp_fp_fn": [
+          0,
+          0,
+          35970
+        ]
+      }
+    ],
+    "regional_elevated_percent": 13.72073536133259,
+    "regional_strong_percent": 24.172538490914004,
+    "regional_fit_days": 332,
+    "regional_fit_split": "train (2021-2023)",
+    "regional_method": "P75/P90 of daily observed strong-label fractions on training days with >=5% support coverage. Demonstration heuristic; not operationally validated.",
+    "model_sha256": "0dff8dd0ded97db428cb9694a03a1caf20aa2605322d32ff3dd90992fbea678d",
+    "preprocessing_sha256": "1b72db343dddfae94d79c923fb33070c3225130dc700e5292d0e11952e126238",
+    "created_at_utc": "2026-09-12T17:31:27.168727+00:00"
+  },
+  "validation": {
+    "model": {
+      "accuracy": 0.8215879237990821,
+      "macro_f1": 0.38776877017429445,
+      "valid_pixel_forecasts": 798993,
+      "confusion_matrix": [
+        [
+          638405,
+          6,
+          71192
+        ],
+        [
+          35651,
+          0,
+          17769
+        ],
+        [
+          17932,
+          0,
+          18038
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.922566576299011,
+          "recall": 0.8996650239641039,
+          "f1": 0.9109718883754249,
+          "support": 709603
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 53420
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.16858101477583903,
+          "recall": 0.5014734500973033,
+          "f1": 0.25233442214745855,
+          "support": 35970
+        }
+      ]
+    },
+    "argmax": {
+      "accuracy": 0.8837962285026277,
+      "macro_f1": 0.3230212643805565,
+      "valid_pixel_forecasts": 798993,
+      "confusion_matrix": [
+        [
+          705514,
+          1109,
+          2980
+        ],
+        [
+          52655,
+          91,
+          674
+        ],
+        [
+          35320,
+          108,
+          542
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.889128897817109,
+          "recall": 0.9942376230089219,
+          "f1": 0.9387502561386796,
+          "support": 709603
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.06957186544342507,
+          "recall": 0.001703481842006739,
+          "f1": 0.0033255372021634266,
+          "support": 53420
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.12917063870352716,
+          "recall": 0.015068112315818737,
+          "f1": 0.02698799980082657,
+          "support": 35970
+        }
+      ]
+    },
+    "persistence": {
+      "accuracy": 0.8782705230208525,
+      "macro_f1": 0.4572859806986825,
+      "valid_pixel_forecasts": 798993,
+      "confusion_matrix": [
+        [
+          688383,
+          14376,
+          6844
+        ],
+        [
+          44265,
+          5124,
+          4031
+        ],
+        [
+          24453,
+          3292,
+          8225
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.9092353596151637,
+          "recall": 0.9700959550621967,
+          "f1": 0.9386801972313433,
+          "support": 709603
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.22481572481572482,
+          "recall": 0.09591913141145639,
+          "f1": 0.13446701306880807,
+          "support": 53420
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.4306282722513089,
+          "recall": 0.22866277453433417,
+          "f1": 0.29871073179589613,
+          "support": 35970
+        }
+      ]
+    },
+    "majority": {
+      "accuracy": 0.8881216731560853,
+      "macro_f1": 0.31358207675657807,
+      "valid_pixel_forecasts": 798993,
+      "confusion_matrix": [
+        [
+          709603,
+          0,
+          0
+        ],
+        [
+          53420,
+          0,
+          0
+        ],
+        [
+          35970,
+          0,
+          0
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8881216731560853,
+          "recall": 1.0,
+          "f1": 0.9407462302697343,
+          "support": 709603
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 53420
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 35970
+        }
+      ]
+    },
+    "split": "validation",
+    "sequences": 325,
+    "horizons": [
+      {
+        "accuracy": 0.8257560839267452,
+        "macro_f1": 0.3885513012635366,
+        "valid_pixel_forecasts": 157423,
+        "confusion_matrix": [
+          [
+            126602,
+            0,
+            12921
+          ],
+          [
+            7355,
+            0,
+            3342
+          ],
+          [
+            3812,
+            0,
+            3391
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9189440294986535,
+            "recall": 0.9073916128523613,
+            "f1": 0.9131312839894407,
+            "support": 139523
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10697
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.17253485295614124,
+            "recall": 0.47077606552825213,
+            "f1": 0.25252261980116913,
+            "support": 7203
+          }
+        ]
+      },
+      {
+        "accuracy": 0.8185684176495092,
+        "macro_f1": 0.38406886074241003,
+        "valid_pixel_forecasts": 160843,
+        "confusion_matrix": [
+          [
+            128121,
+            0,
+            14802
+          ],
+          [
+            7128,
+            0,
+            3589
+          ],
+          [
+            3663,
+            0,
+            3540
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9223177263303386,
+            "recall": 0.8964337440439957,
+            "f1": 0.9091915482463142,
+            "support": 142923
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10717
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.16141534813733985,
+            "recall": 0.4914618908788005,
+            "f1": 0.24301503398091576,
+            "support": 7203
+          }
+        ]
+      },
+      {
+        "accuracy": 0.8192005625066704,
+        "macro_f1": 0.38764390451221103,
+        "valid_pixel_forecasts": 159287,
+        "confusion_matrix": [
+          [
+            126796,
+            0,
+            14636
+          ],
+          [
+            7014,
+            0,
+            3653
+          ],
+          [
+            3496,
+            0,
+            3692
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.923455639229167,
+            "recall": 0.8965156400248883,
+            "f1": 0.9097862508879306,
+            "support": 141432
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10667
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.16796324098084708,
+            "recall": 0.5136338341680579,
+            "f1": 0.25314546264870236,
+            "support": 7188
+          }
+        ]
+      },
+      {
+        "accuracy": 0.8261753940999579,
+        "macro_f1": 0.3903347696577273,
+        "valid_pixel_forecasts": 159287,
+        "confusion_matrix": [
+          [
+            128062,
+            0,
+            13370
+          ],
+          [
+            7322,
+            0,
+            3345
+          ],
+          [
+            3651,
+            0,
+            3537
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9210774265472723,
+            "recall": 0.9054669381752362,
+            "f1": 0.9132054751539398,
+            "support": 141432
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10667
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.17464941734149714,
+            "recall": 0.4920701168614357,
+            "f1": 0.257798833819242,
+            "support": 7188
+          }
+        ]
+      },
+      {
+        "accuracy": 0.8183752382009584,
+        "macro_f1": 0.3883255087054474,
+        "valid_pixel_forecasts": 162153,
+        "confusion_matrix": [
+          [
+            128824,
+            6,
+            15463
+          ],
+          [
+            6832,
+            0,
+            3840
+          ],
+          [
+            3310,
+            0,
+            3878
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9270181195400313,
+            "recall": 0.8927945222567969,
+            "f1": 0.9095845145255754,
+            "support": 144293
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10672
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.16729217893964884,
+            "recall": 0.5395102949360044,
+            "f1": 0.2553920115907669,
+            "support": 7188
+          }
+        ]
+      }
+    ],
+    "strong_probability_brier_score": 0.04727883828815317,
+    "reliability_bins": [
+      {
+        "count": 465165,
+        "mean_score": 0.08162883045686299,
+        "observed_frequency": 0.016757494652435156
+      },
+      {
+        "count": 199267,
+        "mean_score": 0.13586175122420663,
+        "observed_frequency": 0.03567073323731476
+      },
+      {
+        "count": 117789,
+        "mean_score": 0.2474405241806128,
+        "observed_frequency": 0.15786703342417374
+      },
+      {
+        "count": 15388,
+        "mean_score": 0.3251596284526213,
+        "observed_frequency": 0.14901221731219133
+      },
+      {
+        "count": 925,
+        "mean_score": 0.43461258018339005,
+        "observed_frequency": 0.09513513513513513
+      },
+      {
+        "count": 358,
+        "mean_score": 0.5470941817627273,
+        "observed_frequency": 0.14804469273743018
+      },
+      {
+        "count": 94,
+        "mean_score": 0.6411523616060297,
+        "observed_frequency": 0.3617021276595745
+      },
+      {
+        "count": 7,
+        "mean_score": 0.7101595061165946,
+        "observed_frequency": 0.5714285714285714
+      },
+      {
+        "count": 0,
+        "mean_score": null,
+        "observed_frequency": null
+      },
+      {
+        "count": 0,
+        "mean_score": null,
+        "observed_frequency": null
+      }
+    ],
+    "scoring_note": "Pixel-forecast metrics over rolling windows; overlapping target dates are scored at distinct origins/horizons, not independent observations. Probabilities are model scores, not guaranteed calibrated."
+  },
+  "test": {
+    "model": {
+      "accuracy": 0.7875895583996454,
+      "macro_f1": 0.38334026928946363,
+      "valid_pixel_forecasts": 640783,
+      "confusion_matrix": [
+        [
+          487041,
+          10,
+          66362
+        ],
+        [
+          34374,
+          0,
+          18890
+        ],
+        [
+          16473,
+          0,
+          17633
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.905469168302695,
+          "recall": 0.8800678697464642,
+          "f1": 0.8925878378192635,
+          "support": 553413
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 53264
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.1713855275307382,
+          "recall": 0.5170058054301296,
+          "f1": 0.25743297004912735,
+          "support": 34106
+        }
+      ]
+    },
+    "argmax": {
+      "accuracy": 0.8584278921257275,
+      "macro_f1": 0.31908521376894855,
+      "valid_pixel_forecasts": 640783,
+      "confusion_matrix": [
+        [
+          549395,
+          805,
+          3213
+        ],
+        [
+          52487,
+          126,
+          651
+        ],
+        [
+          33469,
+          92,
+          545
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8647110022648898,
+          "recall": 0.9927395995395843,
+          "f1": 0.9243129839059729,
+          "support": 553413
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.12316715542521994,
+          "recall": 0.002365575247822169,
+          "f1": 0.004641995321163447,
+          "support": 53264
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.12361079609888864,
+          "recall": 0.015979593033483844,
+          "f1": 0.02830066207970921,
+          "support": 34106
+        }
+      ]
+    },
+    "persistence": {
+      "accuracy": 0.8379638660825895,
+      "macro_f1": 0.3839075170188382,
+      "valid_pixel_forecasts": 640783,
+      "confusion_matrix": [
+        [
+          529879,
+          15590,
+          7944
+        ],
+        [
+          47190,
+          3949,
+          2125
+        ],
+        [
+          28974,
+          2007,
+          3125
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8743257491630132,
+          "recall": 0.9574747973032798,
+          "f1": 0.9140131233957993,
+          "support": 553413
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.18328227977350783,
+          "recall": 0.07414013217182337,
+          "f1": 0.10557412110680389,
+          "support": 53264
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.23685008337122934,
+          "recall": 0.09162610684337066,
+          "f1": 0.1321353065539112,
+          "support": 34106
+        }
+      ]
+    },
+    "majority": {
+      "accuracy": 0.8636511892481542,
+      "macro_f1": 0.3089459351731207,
+      "valid_pixel_forecasts": 640783,
+      "confusion_matrix": [
+        [
+          553413,
+          0,
+          0
+        ],
+        [
+          53264,
+          0,
+          0
+        ],
+        [
+          34106,
+          0,
+          0
+        ]
+      ],
+      "classes": [
+        {
+          "name": "Normal",
+          "precision": 0.8636511892481542,
+          "recall": 1.0,
+          "f1": 0.926837805519362,
+          "support": 553413
+        },
+        {
+          "name": "Elevated risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 53264
+        },
+        {
+          "name": "Strong bloom risk",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 34106
+        }
+      ]
+    },
+    "split": "test",
+    "sequences": 328,
+    "horizons": [
+      {
+        "accuracy": 0.7989495863415239,
+        "macro_f1": 0.3820135268357458,
+        "valid_pixel_forecasts": 129092,
+        "confusion_matrix": [
+          [
+            100055,
+            0,
+            11532
+          ],
+          [
+            7159,
+            0,
+            3476
+          ],
+          [
+            3787,
+            0,
+            3083
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9013882757812993,
+            "recall": 0.8966546282273025,
+            "f1": 0.8990152209463224,
+            "support": 111587
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10635
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.17041622906417556,
+            "recall": 0.4487627365356623,
+            "f1": 0.24702535956091504,
+            "support": 6870
+          }
+        ]
+      },
+      {
+        "accuracy": 0.7892509652509653,
+        "macro_f1": 0.3804024679385938,
+        "valid_pixel_forecasts": 129500,
+        "confusion_matrix": [
+          [
+            98850,
+            0,
+            13089
+          ],
+          [
+            6841,
+            0,
+            3850
+          ],
+          [
+            3512,
+            0,
+            3358
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.905194912227686,
+            "recall": 0.8830702436148259,
+            "f1": 0.893995713161679,
+            "support": 111939
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10691
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.16544316894122285,
+            "recall": 0.4887918486171761,
+            "f1": 0.24721169065410242,
+            "support": 6870
+          }
+        ]
+      },
+      {
+        "accuracy": 0.7831645658977355,
+        "macro_f1": 0.38486973129445085,
+        "valid_pixel_forecasts": 127493,
+        "confusion_matrix": [
+          [
+            96081,
+            9,
+            13968
+          ],
+          [
+            6655,
+            0,
+            3991
+          ],
+          [
+            3022,
+            0,
+            3767
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.908498647856427,
+            "recall": 0.8730033255192716,
+            "f1": 0.8903973755421285,
+            "support": 110058
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10646
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.17338672558225168,
+            "recall": 0.5548681690970688,
+            "f1": 0.2642118183412239,
+            "support": 6789
+          }
+        ]
+      },
+      {
+        "accuracy": 0.7917062113214058,
+        "macro_f1": 0.38964551794892666,
+        "valid_pixel_forecasts": 127493,
+        "confusion_matrix": [
+          [
+            97236,
+            0,
+            12822
+          ],
+          [
+            6959,
+            0,
+            3687
+          ],
+          [
+            3088,
+            0,
+            3701
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9063504935544308,
+            "recall": 0.8834977920732705,
+            "f1": 0.8947782516874406,
+            "support": 110058
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10646
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.1831271647699159,
+            "recall": 0.5451465606127559,
+            "f1": 0.27415830215933923,
+            "support": 6789
+          }
+        ]
+      },
+      {
+        "accuracy": 0.7746786682913408,
+        "macro_f1": 0.3794071322174613,
+        "valid_pixel_forecasts": 127205,
+        "confusion_matrix": [
+          [
+            94819,
+            1,
+            14951
+          ],
+          [
+            6760,
+            0,
+            3886
+          ],
+          [
+            3064,
+            0,
+            3724
+          ]
+        ],
+        "classes": [
+          {
+            "name": "Normal",
+            "precision": 0.9061188994963829,
+            "recall": 0.8637891610716856,
+            "f1": 0.8844478438907908,
+            "support": 109771
+          },
+          {
+            "name": "Elevated risk",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10646
+          },
+          {
+            "name": "Strong bloom risk",
+            "precision": 0.16506360533664288,
+            "recall": 0.5486152032999411,
+            "f1": 0.25377355276159325,
+            "support": 6788
+          }
+        ]
+      }
+    ],
+    "strong_probability_brier_score": 0.05571270575166621,
+    "reliability_bins": [
+      {
+        "count": 313872,
+        "mean_score": 0.08176393179377615,
+        "observed_frequency": 0.026093439363817097
+      },
+      {
+        "count": 191819,
+        "mean_score": 0.13822603050566792,
+        "observed_frequency": 0.030320249818839635
+      },
+      {
+        "count": 118960,
+        "mean_score": 0.24473909630021173,
+        "observed_frequency": 0.15110961667787493
+      },
+      {
+        "count": 14869,
+        "mean_score": 0.32807254645745704,
+        "observed_frequency": 0.13827426188714775
+      },
+      {
+        "count": 685,
+        "mean_score": 0.4373374842379215,
+        "observed_frequency": 0.08759124087591241
+      },
+      {
+        "count": 448,
+        "mean_score": 0.5495941239808287,
+        "observed_frequency": 0.017857142857142856
+      },
+      {
+        "count": 128,
+        "mean_score": 0.631044203415513,
+        "observed_frequency": 0.0
+      },
+      {
+        "count": 2,
+        "mean_score": 0.7026691436767578,
+        "observed_frequency": 0.0
+      },
+      {
+        "count": 0,
+        "mean_score": null,
+        "observed_frequency": null
+      },
+      {
+        "count": 0,
+        "mean_score": null,
+        "observed_frequency": null
+      }
+    ],
+    "scoring_note": "Pixel-forecast metrics over rolling windows; overlapping target dates are scored at distinct origins/horizons, not independent observations. Probabilities are model scores, not guaranteed calibrated."
+  }
+}
